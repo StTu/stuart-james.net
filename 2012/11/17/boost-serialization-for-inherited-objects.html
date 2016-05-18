@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+  	<head>
+  		<title>Stuart James' Journal</title>
+  		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  		<meta name="description" content="" />
+  		<meta name="keywords" content="" />
+  		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+  		<script src="/js/jquery.min.js"></script>
+  		<script src="/js/jquery.poptrox.min.js"></script>
+  		<script src="/js/skel.min.js"></script>
+  		<script src="/js/init.js"></script>
+  		<noscript>
+  			<link rel="stylesheet" href="/css/skel.css" />
+  			<link rel="stylesheet" href="/css/style.css" />
+  			<link rel="stylesheet" href="/css/style-xlarge.css" />
+  		</noscript>
+  		<!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
+  	</head>
+
+	<body id="top">
+
+      <header id="header">
+          <a href="/" class="image avatar"><img src="/images/avatar.jpg" alt="" /></a>
+          <h1><strong>Stuart James'</strong> journal, a simple <br />
+          little place for me to scribble down<br />
+	  my thoughts and help my terrible memory<br /></h1>
+	  <hr />
+	  <h1>A little about me...</h1>
+	  <h1>
+		I'm a Computer Vision and Machine learning<br />
+		researcher at <strong>UCL</strong>. Working in the VECG with<br /> 
+		Tim Weyrich. Previously from <strong>University of Surrey</strong><br />  where I completed a Post-Doc and PhD studies.
+	  </h1>
+    <h4>
+    <a href="http://stuart-james.com" >Read more about my research interests</a> 
+    </h4>
+    <hr />
+      </header>
+
+
+        <div id="main">
+    <article>
+        <header class="major">
+            <h2 class="post-title">Boost Serialization for inherited objects</h2>
+                <p class="post-meta">Nov 17, 2012</p>
+        </header>
+
+        <section>
+            <p>Preface:</p> <p>When chatting with a colleague yesterday, I referenced a blog post I never actually wrote. So to remedy that here we go, how to use boost in the case of inheritance.</p> <p>How To:</p> <p>Inheritance in C++ is very important, a long with classes and templates I would say the most important triplet (of course inheritance cant exist without classes). As I mentioned in a previous blog post I found a new love of boost serialization allowing me to easily be able to save out my objects in binary,text or xml, but there is a spanner in the works when it comes to inheritance, this is due to the serializer not being able to know it has a parent or even what that parent is.This is actually solved with a small amount additional of code but is critical to put in or your objects wont behave in the expected way.</p> <div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9D7513F9-C04C-4721-824A-2B34F0212519:b89b25f2-4794-4ac9-99e1-d0411e210bfe" class="wlWriterEditableSmartContent"><pre style=" width: 709px; height: 487px;background-color:White;overflow: hidden;"><div><!--
+
+Code highlighting produced by Actipro CodeHighlighter (freeware)
+http://www.CodeHighlighter.com/
+
+--><span style="color: #008080;"> 1</span> <span style="color: #0000FF;">class</span><span style="color: #000000;"> MyParent {
+</span><span style="color: #008080;"> 2</span> <span style="color: #000000;"></span><span style="color: #0000FF;">public</span><span style="color: #000000;">:
+</span><span style="color: #008080;"> 3</span> <span style="color: #000000;">    MyParent() {};
+</span><span style="color: #008080;"> 4</span> <span style="color: #000000;">    </span><span style="color: #0000FF;">virtual</span><span style="color: #000000;"> </span><span style="color: #000000;">~</span><span style="color: #000000;">MyParent() {};
+</span><span style="color: #008080;"> 5</span> <span style="color: #000000;">    </span><span style="color: #0000FF;">int</span><span style="color: #000000;"> getID(){ </span><span style="color: #0000FF;">return</span><span style="color: #000000;"> ID;  } ;
+</span><span style="color: #008080;"> 6</span> <span style="color: #000000;">    </span><span style="color: #0000FF;">int</span><span style="color: #000000;"> setID(</span><span style="color: #0000FF;">int</span><span style="color: #000000;"> num){ ID </span><span style="color: #000000;">=</span><span style="color: #000000;"> num;  } ;
+</span><span style="color: #008080;"> 7</span> <span style="color: #000000;">
+</span><span style="color: #008080;"> 8</span> <span style="color: #000000;"></span><span style="color: #0000FF;">private</span><span style="color: #000000;">:
+</span><span style="color: #008080;"> 9</span> <span style="color: #000000;">    </span><span style="color: #0000FF;">int</span><span style="color: #000000;"> ID;
+</span><span style="color: #008080;">10</span> <span style="color: #000000;">    friend </span><span style="color: #0000FF;">class</span><span style="color: #000000;"> boost::serialization::access;
+</span><span style="color: #008080;">11</span> <span style="color: #000000;">    template</span><span style="color: #000000;">&lt;</span><span style="color: #0000FF;">class</span><span style="color: #000000;"> Archive</span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> </span><span style="color: #0000FF;">void</span><span style="color: #000000;"> serialize(Archive</span><span style="color: #000000;">&amp;</span><span style="color: #000000;"> ar,
+</span><span style="color: #008080;">12</span> <span style="color: #000000;">        </span><span style="color: #0000FF;">const</span><span style="color: #000000;"> unsigned </span><span style="color: #0000FF;">int</span><span style="color: #000000;"> version) {
+</span><span style="color: #008080;">13</span> <span style="color: #000000;">            ar </span><span style="color: #000000;">&amp;</span><span style="color: #000000;"> BOOST_SERIALIZATION_NVP(ID);
+</span><span style="color: #008080;">14</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">15</span> <span style="color: #000000;">};
+</span><span style="color: #008080;">16</span> <span style="color: #000000;">
+</span><span style="color: #008080;">17</span> <span style="color: #000000;"></span><span style="color: #0000FF;">class</span><span style="color: #000000;"> MyChild : </span><span style="color: #0000FF;">public</span><span style="color: #000000;"> MyParent {
+</span><span style="color: #008080;">18</span> <span style="color: #000000;"></span><span style="color: #0000FF;">public</span><span style="color: #000000;">:
+</span><span style="color: #008080;">19</span> <span style="color: #000000;">    MyChild() {};
+</span><span style="color: #008080;">20</span> <span style="color: #000000;">    </span><span style="color: #000000;">~</span><span style="color: #000000;">MyChild() {};
+</span><span style="color: #008080;">21</span> <span style="color: #000000;">
+</span><span style="color: #008080;">22</span> <span style="color: #000000;"></span><span style="color: #0000FF;">private</span><span style="color: #000000;">:
+</span><span style="color: #008080;">23</span> <span style="color: #000000;">    friend </span><span style="color: #0000FF;">class</span><span style="color: #000000;"> boost::serialization::access;
+</span><span style="color: #008080;">24</span> <span style="color: #000000;">    template</span><span style="color: #000000;">&lt;</span><span style="color: #0000FF;">class</span><span style="color: #000000;"> Archive</span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> </span><span style="color: #0000FF;">void</span><span style="color: #000000;"> serialize(Archive</span><span style="color: #000000;">&amp;</span><span style="color: #000000;"> ar,
+</span><span style="color: #008080;">25</span> <span style="color: #000000;">        </span><span style="color: #0000FF;">const</span><span style="color: #000000;"> unsigned </span><span style="color: #0000FF;">int</span><span style="color: #000000;"> version) {
+</span><span style="color: #008080;">26</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">27</span> <span style="color: #000000;">};</span></div></pre><!-- Code inserted with Steve Dunn's Windows Live Writer Code Formatter Plugin.  http://dunnhq.com --></div>
+<p>So we serialize out the child class and what do we get? Well actually it is very clean elegant empty file. Not what was intended, but with a small change to tell the compiler of the classes parent we are able to serialize out child classes and parents without a problem</p>
+<div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9D7513F9-C04C-4721-824A-2B34F0212519:4dd2414d-0b90-4e20-9584-2fb513379093" class="wlWriterEditableSmartContent"><pre style=" width: 709px; height: 43px;background-color:White;overflow: hidden;"><div><!--
+
+Code highlighting produced by Actipro CodeHighlighter (freeware)
+http://www.CodeHighlighter.com/
+
+--><span style="color: #008080;">1</span> <span style="color: #000000;">ar </span><span style="color: #000000;">&amp;</span><span style="color: #000000;"> boost::serialization::make_nvp(</span><span style="color: #800000;">&quot;</span><span style="color: #800000;">MyParent</span><span style="color: #800000;">&quot;</span><span style="color: #000000;">,
+</span><span style="color: #008080;">2</span> <span style="color: #000000;">    boost::serialization::base_object</span><span style="color: #000000;">&lt;</span><span style="color: #000000;">MyParent</span><span style="color: #000000;">&gt;</span><span style="color: #000000;">(</span><span style="color: #000000;">*</span><span style="color: #0000FF;">this</span><span style="color: #000000;">))</span></div></pre><!-- Code inserted with Steve Dunn's Windows Live Writer Code Formatter Plugin.  http://dunnhq.com --></div>
+<p>As you hopefully can see this tells the compiler what the object parent is and provides a reference to it so therefore you can serialize that out. Of course you can put this line at the beginning or end depending on how you want to structure your outputs, but to my brain coming first makes sense.</p>
+<p>The final solution being:</p>
+<div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9D7513F9-C04C-4721-824A-2B34F0212519:afc26a73-55e3-420a-a29c-d5b689b3d069" class="wlWriterEditableSmartContent"><pre style=" width: 709px; height: 563px;background-color:White;overflow: hidden;"><div><!--
+
+Code highlighting produced by Actipro CodeHighlighter (freeware)
+http://www.CodeHighlighter.com/
+
+--><span style="color: #008080;"> 1</span> <span style="color: #0000FF;">class</span><span style="color: #000000;"> MyParent {
+</span><span style="color: #008080;"> 2</span> <span style="color: #000000;"></span><span style="color: #0000FF;">public</span><span style="color: #000000;">:
+</span><span style="color: #008080;"> 3</span> <span style="color: #000000;">    MyParent() {};
+</span><span style="color: #008080;"> 4</span> <span style="color: #000000;">    </span><span style="color: #0000FF;">virtual</span><span style="color: #000000;"> </span><span style="color: #000000;">~</span><span style="color: #000000;">MyParent() {};
+</span><span style="color: #008080;"> 5</span> <span style="color: #000000;">    </span><span style="color: #0000FF;">int</span><span style="color: #000000;"> getID(){ </span><span style="color: #0000FF;">return</span><span style="color: #000000;"> ID;  } ;
+</span><span style="color: #008080;"> 6</span> <span style="color: #000000;">    </span><span style="color: #0000FF;">int</span><span style="color: #000000;"> setID(</span><span style="color: #0000FF;">int</span><span style="color: #000000;"> num){ ID </span><span style="color: #000000;">=</span><span style="color: #000000;"> num;  } ;
+</span><span style="color: #008080;"> 7</span> <span style="color: #000000;">
+</span><span style="color: #008080;"> 8</span> <span style="color: #000000;"></span><span style="color: #0000FF;">private</span><span style="color: #000000;">:
+</span><span style="color: #008080;"> 9</span> <span style="color: #000000;">    </span><span style="color: #0000FF;">int</span><span style="color: #000000;"> ID;
+</span><span style="color: #008080;">10</span> <span style="color: #000000;">    friend </span><span style="color: #0000FF;">class</span><span style="color: #000000;"> boost::serialization::access;
+</span><span style="color: #008080;">11</span> <span style="color: #000000;">    template</span><span style="color: #000000;">&lt;</span><span style="color: #0000FF;">class</span><span style="color: #000000;"> Archive</span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> </span><span style="color: #0000FF;">void</span><span style="color: #000000;"> serialize(Archive</span><span style="color: #000000;">&amp;</span><span style="color: #000000;"> ar,
+</span><span style="color: #008080;">12</span> <span style="color: #000000;">        </span><span style="color: #0000FF;">const</span><span style="color: #000000;"> unsigned </span><span style="color: #0000FF;">int</span><span style="color: #000000;"> version) {
+</span><span style="color: #008080;">13</span> <span style="color: #000000;">            ar </span><span style="color: #000000;">&amp;</span><span style="color: #000000;"> BOOST_SERIALIZATION_NVP(ID);
+</span><span style="color: #008080;">14</span> <span style="color: #000000;">
+</span><span style="color: #008080;">15</span> <span style="color: #000000;">            
+</span><span style="color: #008080;">16</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">17</span> <span style="color: #000000;">};
+</span><span style="color: #008080;">18</span> <span style="color: #000000;">
+</span><span style="color: #008080;">19</span> <span style="color: #000000;"></span><span style="color: #0000FF;">class</span><span style="color: #000000;"> MyChild : </span><span style="color: #0000FF;">public</span><span style="color: #000000;"> MyParent {
+</span><span style="color: #008080;">20</span> <span style="color: #000000;"></span><span style="color: #0000FF;">public</span><span style="color: #000000;">:
+</span><span style="color: #008080;">21</span> <span style="color: #000000;">    MyChild() {};
+</span><span style="color: #008080;">22</span> <span style="color: #000000;">    </span><span style="color: #000000;">~</span><span style="color: #000000;">MyChild() {};
+</span><span style="color: #008080;">23</span> <span style="color: #000000;">
+</span><span style="color: #008080;">24</span> <span style="color: #000000;"></span><span style="color: #0000FF;">private</span><span style="color: #000000;">:
+</span><span style="color: #008080;">25</span> <span style="color: #000000;">    friend </span><span style="color: #0000FF;">class</span><span style="color: #000000;"> boost::serialization::access;
+</span><span style="color: #008080;">26</span> <span style="color: #000000;">    template</span><span style="color: #000000;">&lt;</span><span style="color: #0000FF;">class</span><span style="color: #000000;"> Archive</span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> </span><span style="color: #0000FF;">void</span><span style="color: #000000;"> serialize(Archive</span><span style="color: #000000;">&amp;</span><span style="color: #000000;"> ar,
+</span><span style="color: #008080;">27</span> <span style="color: #000000;">        </span><span style="color: #0000FF;">const</span><span style="color: #000000;"> unsigned </span><span style="color: #0000FF;">int</span><span style="color: #000000;"> version) {
+</span><span style="color: #008080;">28</span> <span style="color: #000000;">            ar </span><span style="color: #000000;">&amp;</span><span style="color: #000000;"> boost::serialization::make_nvp(</span><span style="color: #800000;">&quot;</span><span style="color: #800000;">MyParent</span><span style="color: #800000;">&quot;</span><span style="color: #000000;">,
+</span><span style="color: #008080;">29</span> <span style="color: #000000;">                        boost::serialization::base_object</span><span style="color: #000000;">&lt;</span><span style="color: #000000;">MyParent</span><span style="color: #000000;">&gt;</span><span style="color: #000000;">(</span><span style="color: #000000;">*</span><span style="color: #0000FF;">this</span><span style="color: #000000;">))
+</span><span style="color: #008080;">30</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">31</span> <span style="color: #000000;">};</span></div></pre><!-- Code inserted with Steve Dunn's Windows Live Writer Code Formatter Plugin.  http://dunnhq.com --></div><br /><a href='http://stuartjames.info/Journal/boost-serialization-for-inherited-objects.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/boost-serialization-for-inherited-objects.aspx'>...</a>
+
+        </section>
+        
+        <footer>
+            <div class="row">
+            
+            
+                <article class="6u 12u(small) excerpt">
+                    <header>
+                        <h2><a href="/2012/10/12/asus-reason-you-may-not-want-to-purchase-one.html">Asus reason you may not want to purchase one</a></h2>
+                    </header>
+                    <section>
+                        <p><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/transformer.jpg"><img style="display: inline" title="transformer" alt="transformer" src="http://stuartjames.info/Data/Sites/5/media/wlw/transformer_thumb.jpg" width="640" height="134"></a></p> <p>A year and a half ago, I order an Asus N73SV. At the time I was incredible impressed with it’s state of the art spec great expandability. I knew at the time it was a bit of a gamble with Asus not being a major player in the laptop market and the price being quite a bit cheaper than its rivals for similar spec. After using for a year I have done upgrades to RAM 6gb –&gt; 10gb and replaced HDD for a hybrid and a larger second drive. It has been a great laptop till recently things have gone a little wrong. </p> <p>Now I am not blaming asus for its product the two components that have gone wrong are completely under my control but my issue comes with the service and availability of replacements(in the UK). The two parts that have gone wrong is the battery is now completely shot, lasting about 10 mins going to 70% and turning off, and the power cable getting damaged as seen above.</p> <p>These are normal issues you hit with portable electrical products, replacing the parts though is proving not to be so easy. The battery is out of warranty so I just need a replacement, the transformer is in warranty but I don't really want to loose my laptop for a couple of weeks since it has become a very important part of my life replacing my home computer completely and having heavy usage in the office although accompanied by other computers. So sending it away wasn’t really tempting when I would be ordering another part anyway, also I am not about to pay £150 in labour fees to replace a battery.</p> <p>So customer support was out, but I want the official replacements so called them, first time they just hung up on me a little concerning they don't have a queue system. Second time I got through promptly, and found out they don't sell the items over the phone you can go to the asus shop website (<a href="http://shop.asus.co.uk/">http://shop.asus.co.uk/</a>) and order there. I am slightly embarrassed that I never actually found this in my googling around for official products. So went on the site after the call and they are sold out of most things and don't actually list anything to do with my laptop.</p> <p>So what do you do? well look at contact page and call this UK website help line, and what charming welcoming voice do you hear? A nice recorded German lady speaking German that I don't understand, I assume it leads to options but I don't understand. So I have resorted to emailing them.</p> <p>In summary, the point of this rant was to express that Asus sell great products but there are no official replacements easily available. For a company of which I have enjoyed many great products from, I am shocked they fell down so badly on such an easy thing they can make a great deal of money from.</p> <p>Hopefully will be able to get the replacement parts soon and have something better to say about Asus!</p><br /><a href='http://stuartjames.info/Journal/asus-reason-you-may-not-want-to-purchase-one.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/asus-reason-you-may-not-want-to-purchase-one.aspx'>...</a>
+
+                    </section>
+                    <footer>
+                        <ul class="actions">
+                            <li><a href="/2012/10/12/asus-reason-you-may-not-want-to-purchase-one.html" class="button">Read More</a></li>
+                        </ul>
+                    </footer>
+                </article>
+            
+            
+            
+            
+                <article class="6u$ 12u(small) excerpt f-right">
+                    <header>
+                        <h2><a href="/2012/12/25/alternative-boost-graph-construction-based-on-defining-edges-independently.html">Alternative Boost Graph Construction based on defining edges independently</a></h2>
+                    </header>
+                    <section>
+                        <p>So you may of seen previous posts on Boost Graph construction, here I present an easier way of constructing the graph but at a performance cost. This shouldn’t be used if can be avoided, but it may be useful if you want to adapt your edges on the fly.</p>
+<p>So we start with the normal code:</p>
+<p> <div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9D7513F9-C04C-4721-824A-2B34F0212519:8ccca690-b01d-40c9-b33a-1d57caf3c457" class="wlWriterEditableSmartContent"><pre style=" width: 952px; height: 633px;background-color:White;overflow: hidden;"><div><!--
+
+Code highlighting produced by Actipro CodeHighlighter (freeware)
+http://www.CodeHighlighter.com/
+
+--><span style="color: #008080;"> 1</span> <span style="color: #000000;">typedef adjacency_list </span><span style="color: #000000;">&lt;</span><span style="color: #000000;"> listS, vecS, directedS,
+</span><span style="color: #008080;"> 2</span> <span style="color: #000000;">    no_property, property </span><span style="color: #000000;">&lt;</span><span style="color: #000000;"> edge_weight_t, </span><span style="color: #0000FF;">float</span><span style="color: #000000;"> </span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> </span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> graph_t;
+</span><span style="color: #008080;"> 3</span> <span style="color: #000000;">typedef graph_traits </span><span style="color: #000000;">&lt;</span><span style="color: #000000;"> graph_t </span><span style="color: #000000;">&gt;</span><span style="color: #000000;">::vertex_descriptor vertex_descriptor;
+</span><span style="color: #008080;"> 4</span> <span style="color: #000000;">typedef graph_traits </span><span style="color: #000000;">&lt;</span><span style="color: #000000;"> graph_t </span><span style="color: #000000;">&gt;</span><span style="color: #000000;">::edge_descriptor edge_descriptor;
+</span><span style="color: #008080;"> 5</span> <span style="color: #000000;">typedef std::pair</span><span style="color: #000000;">&lt;</span><span style="color: #0000FF;">int</span><span style="color: #000000;">, </span><span style="color: #0000FF;">int</span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> Edge;
+</span><span style="color: #008080;"> 6</span> <span style="color: #000000;">
+</span><span style="color: #008080;"> 7</span> <span style="color: #000000;"></span><span style="color: #0000FF;">const</span><span style="color: #000000;"> </span><span style="color: #0000FF;">int</span><span style="color: #000000;"> num_nodes </span><span style="color: #000000;">=</span><span style="color: #000000;"> </span><span style="color: #800080;">5</span><span style="color: #000000;">;
+</span><span style="color: #008080;"> 8</span> <span style="color: #000000;"></span><span style="color: #0000FF;">enum</span><span style="color: #000000;"> nodes { A, B, C, D, E };
+</span><span style="color: #008080;"> 9</span> <span style="color: #000000;"></span><span style="color: #0000FF;">char</span><span style="color: #000000;"> name[] </span><span style="color: #000000;">=</span><span style="color: #000000;"> </span><span style="color: #800000;">&quot;</span><span style="color: #800000;">ABCDE</span><span style="color: #800000;">&quot;</span><span style="color: #000000;">;
+</span><span style="color: #008080;">10</span> <span style="color: #000000;">Edge edge_array[] </span><span style="color: #000000;">=</span><span style="color: #000000;"> { Edge(A, C), Edge(B, B), Edge(B, D), Edge(B, E),
+</span><span style="color: #008080;">11</span> <span style="color: #000000;">    Edge(C, B), Edge(C, D), Edge(D, E), Edge(E, A), Edge(E, B)
+</span><span style="color: #008080;">12</span> <span style="color: #000000;">};
+</span><span style="color: #008080;">13</span> <span style="color: #000000;"></span><span style="color: #0000FF;">float</span><span style="color: #000000;"> weights[] </span><span style="color: #000000;">=</span><span style="color: #000000;"> { </span><span style="color: #800080;">1.5</span><span style="color: #000000;">, </span><span style="color: #800080;">2.10</span><span style="color: #000000;">, </span><span style="color: #800080;">1.4</span><span style="color: #000000;">, </span><span style="color: #800080;">2.2</span><span style="color: #000000;">, </span><span style="color: #800080;">7.6</span><span style="color: #000000;">, </span><span style="color: #800080;">3.222</span><span style="color: #000000;">, </span><span style="color: #800080;">1.125</span><span style="color: #000000;">, </span><span style="color: #800080;">1.324</span><span style="color: #000000;">, </span><span style="color: #800080;">1.983</span><span style="color: #000000;"> };
+</span><span style="color: #008080;">14</span> <span style="color: #000000;"></span><span style="color: #0000FF;">int</span><span style="color: #000000;"> num_arcs </span><span style="color: #000000;">=</span><span style="color: #000000;"> </span><span style="color: #0000FF;">sizeof</span><span style="color: #000000;">(edge_array) </span><span style="color: #000000;">/</span><span style="color: #000000;"> </span><span style="color: #0000FF;">sizeof</span><span style="color: #000000;">(Edge);
+</span><span style="color: #008080;">15</span> <span style="color: #000000;">
+</span><span style="color: #008080;">16</span> <span style="color: #000000;">graph_t g(edge_array, edge_array </span><span style="color: #000000;">+</span><span style="color: #000000;"> num_arcs, weights, num_nodes);
+</span><span style="color: #008080;">17</span> <span style="color: #000000;">property_map</span><span style="color: #000000;">&lt;</span><span style="color: #000000;">graph_t, edge_weight_t</span><span style="color: #000000;">&gt;</span><span style="color: #000000;">::type weightmap </span><span style="color: #000000;">=</span><span style="color: #000000;"> </span><span style="color: #0000FF;">get</span><span style="color: #000000;">(edge_weight, g);
+</span><span style="color: #008080;">18</span> <span style="color: #000000;">
+</span><span style="color: #008080;">19</span> <span style="color: #000000;">std::vector</span><span style="color: #000000;">&lt;</span><span style="color: #000000;">vertex_descriptor</span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> p(num_vertices(g));
+</span><span style="color: #008080;">20</span> <span style="color: #000000;">std::vector</span><span style="color: #000000;">&lt;</span><span style="color: #0000FF;">float</span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> d(num_vertices(g));
+</span><span style="color: #008080;">21</span> <span style="color: #000000;">vertex_descriptor s </span><span style="color: #000000;">=</span><span style="color: #000000;"> vertex(A, g);
+</span><span style="color: #008080;">22</span> <span style="color: #000000;">
+</span><span style="color: #008080;">23</span> <span style="color: #000000;">
+</span><span style="color: #008080;">24</span> <span style="color: #000000;">dijkstra_shortest_paths_no_color_map(g, s, predecessor_map(</span><span style="color: #000000;">&amp;</span><span style="color: #000000;">p[</span><span style="color: #800080;">0</span><span style="color: #000000;">]).distance_map(</span><span style="color: #000000;">&amp;</span><span style="color: #000000;">d[</span><span style="color: #800080;">0</span><span style="color: #000000;">]));
+</span><span style="color: #008080;">25</span> <span style="color: #000000;">
+</span><span style="color: #008080;">26</span> <span style="color: #000000;">std::vector</span><span style="color: #000000;">&lt;</span><span style="color: #0000FF;">float</span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> distances;
+</span><span style="color: #008080;">27</span> <span style="color: #000000;">std::vector</span><span style="color: #000000;">&lt;</span><span style="color: #0000FF;">float</span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> node_index_ids;
+</span><span style="color: #008080;">28</span> <span style="color: #000000;">
+</span><span style="color: #008080;">29</span> <span style="color: #000000;"></span><span style="color: #0000FF;">int</span><span style="color: #000000;"> target </span><span style="color: #000000;">=</span><span style="color: #000000;"> vertex(D, g);
+</span><span style="color: #008080;">30</span> <span style="color: #000000;"></span><span style="color: #0000FF;">do</span><span style="color: #000000;">{
+</span><span style="color: #008080;">31</span> <span style="color: #000000;">    node_index_ids.push_back(target);
+</span><span style="color: #008080;">32</span> <span style="color: #000000;">    distances.push_back(d[target]);
+</span><span style="color: #008080;">33</span> <span style="color: #000000;">    std::cout </span><span style="color: #000000;">&lt;&lt;</span><span style="color: #000000;"> </span><span style="color: #800000;">&quot;</span><span style="color: #800000;">Target </span><span style="color: #800000;">&quot;</span><span style="color: #000000;"> </span><span style="color: #000000;">&lt;&lt;</span><span style="color: #000000;"> target </span><span style="color: #000000;">&lt;&lt;</span><span style="color: #000000;"> </span><span style="color: #800000;">&quot;</span><span style="color: #800000;"> dist </span><span style="color: #800000;">&quot;</span><span style="color: #000000;"> </span><span style="color: #000000;">&lt;&lt;</span><span style="color: #000000;"> d[target] </span><span style="color: #000000;">&lt;&lt;</span><span style="color: #000000;"> </span><span style="color: #800000;">&quot;</span><span style="color: #800000;"> Source </span><span style="color: #800000;">&quot;</span><span style="color: #000000;"> </span><span style="color: #000000;">&lt;&lt;</span><span style="color: #000000;"> s </span><span style="color: #000000;">&lt;&lt;</span><span style="color: #000000;">  std::endl;
+</span><span style="color: #008080;">34</span> <span style="color: #000000;">    target </span><span style="color: #000000;">=</span><span style="color: #000000;"> p[target];
+</span><span style="color: #008080;">35</span> <span style="color: #000000;">}</span><span style="color: #0000FF;">while</span><span style="color: #000000;">(target </span><span style="color: #000000;">!=</span><span style="color: #000000;"> s);</span></div></pre><!-- Code inserted with Steve Dunn's Windows Live Writer Code Formatter Plugin.  http://dunnhq.com --></div></p>
+
+<p>So we start with a basic set of nodes, A-&gt;E with some connections between them. This is an example of a directed graph so “flow” can only go one direction.</p>
+<p>The benefit of this is you define the construct of the graph and create the <font face="Courier New">graph_t</font>, object <font face="Courier New">g</font>.</p>
+<p>An alternative way of constructing is to generate the nodes, then add in the weights as in:</p>
+<div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9D7513F9-C04C-4721-824A-2B34F0212519:b8b53645-d467-4170-97d4-ee6c2085d769" class="wlWriterEditableSmartContent"><pre style=" width: 952px; height: 76px;background-color:White;overflow: hidden;"><div><!--
+
+Code highlighting produced by Actipro CodeHighlighter (freeware)
+http://www.CodeHighlighter.com/
+
+--><span style="color: #008080;">1</span> <span style="color: #000000;">graph_t g(num_nodes);
+</span><span style="color: #008080;">2</span> <span style="color: #000000;"></span><span style="color: #0000FF;">for</span><span style="color: #000000;"> (</span><span style="color: #0000FF;">int</span><span style="color: #000000;"> i </span><span style="color: #000000;">=</span><span style="color: #000000;"> </span><span style="color: #800080;">0</span><span style="color: #000000;"> ; i </span><span style="color: #000000;">&lt;</span><span style="color: #000000;"> num_arcs ; </span><span style="color: #000000;">++</span><span style="color: #000000;">i){
+</span><span style="color: #008080;">3</span> <span style="color: #000000;">    boost::add_edge(edge_array[i].first,edge_array[i].second,weights[i],g);
+</span><span style="color: #008080;">4</span> <span style="color: #000000;">}</span></div></pre><!-- Code inserted with Steve Dunn's Windows Live Writer Code Formatter Plugin.  http://dunnhq.com --></div>
+<p>This may seem easier but comes at a performance cost. In contrast even on this simple example there is a 0.001s time increase, scale this to a real solution you may suffer badly. As stated make sure your scenario makes sense.</p>
+<p><br /><a href="http://stuartjames.info/Journal/alternative-boost-graph-construction-based-on-defining-edges-independently.aspx">Stuart James</a>  <a href="http://stuartjames.info/Journal/alternative-boost-graph-construction-based-on-defining-edges-independently.aspx">…</a></p>
+
+                    </section>
+                    <footer>
+                        <ul class="actions">
+                            <li><a href="/2012/12/25/alternative-boost-graph-construction-based-on-defining-edges-independently.html" class="button">Read More</a></li>
+                        </ul>
+                    </footer>
+                </article>
+            
+            </div>
+        </footer>
+
+    </article>
+
+</div>
+
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+
+              
+              <li>
+                <a href="https://github.com/sttu" class="icon fa-github">
+                  <span class="label">GitHub</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://twitter.com/sttujames" class="icon fa-twitter">
+                  <span class="label">Twitter</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://linkedin.com/in/stuartajames" class="icon fa-linkedin">
+                  <span class="label">LinkedIn</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://plus.google.com/stuartjames" class="icon fa-google-plus">
+                  <span class="label">Google+</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://www.facebook.com/stuartaaronjames" class="icon fa-facebook">
+                  <span class="label">Facebook</span>
+                </a>
+              </li>
+              
+
+              
+
+              
+              <li>
+                <a href="mailto:contact@stuart-james.com" class="icon fa-envelope-o">
+                  <span class="label">Email</span>
+                </a>
+              </li>
+              
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Stuart James 2016</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                <li>Demo Images: <a href="https://unsplash.com/">Unsplash</a></li>
+                <li>Jekyll Template: <a href="http://cloudcannon.com">Cloud Cannon</a></li>
+            </ul>
+        </footer>
+
+	</body>
+</html>

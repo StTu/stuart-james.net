@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  	<head>
+  		<title>Stuart James' Journal</title>
+  		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  		<meta name="description" content="" />
+  		<meta name="keywords" content="" />
+  		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+  		<script src="/js/jquery.min.js"></script>
+  		<script src="/js/jquery.poptrox.min.js"></script>
+  		<script src="/js/skel.min.js"></script>
+  		<script src="/js/init.js"></script>
+  		<noscript>
+  			<link rel="stylesheet" href="/css/skel.css" />
+  			<link rel="stylesheet" href="/css/style.css" />
+  			<link rel="stylesheet" href="/css/style-xlarge.css" />
+  		</noscript>
+  		<!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
+  	</head>
+
+	<body id="top">
+
+      <header id="header">
+          <a href="/" class="image avatar"><img src="/images/avatar.jpg" alt="" /></a>
+          <h1><strong>Stuart James'</strong> journal, a simple <br />
+          little place for me to scribble down<br />
+	  my thoughts and help my terrible memory<br /></h1>
+	  <hr />
+	  <h1>A little about me...</h1>
+	  <h1>
+		I'm a Computer Vision and Machine learning<br />
+		researcher at <strong>UCL</strong>. Working in the VECG with<br /> 
+		Tim Weyrich. Previously from <strong>University of Surrey</strong><br />  where I completed a Post-Doc and PhD studies.
+	  </h1>
+    <h4>
+    <a href="http://stuart-james.com" >Read more about my research interests</a> 
+    </h4>
+    <hr />
+      </header>
+
+
+        <div id="main">
+    <article>
+        <header class="major">
+            <h2 class="post-title">gcc compiler dynamic array declaration without warning</h2>
+                <p class="post-meta">Dec 14, 2011</p>
+        </header>
+
+        <section>
+            <p>I demonstrate for one of <a href="http://personal.ee.surrey.ac.uk/Personal/R.Bowden/">Prof Richard Bowden</a>'s modules on C programming for first year Electronic Engineering students. Recently one of the tasks given to students was read in a matrix, multiply and write it out. To start with they did 3x3 then 7x7 then were instructed to make it variable size.</p>
+<p>So when going round to help I showed a few of them how to allocate deallocate dynamic memory then asked the question had they been taught this. Apparently at they hadnt by this point, later finding out it comes up after Christmas.</p>
+<p>My ramblings today are not about the module content or structure but actually the gcc compiler. When learning to program in C++ I learnt on a fairly sensible compiler inside Visual Studio. Then hit the gcc compiler and got annoyed by stupid things, for example</p>
+<p>Visual Studio interprets this fine</p>
+<p>std::vector&lt;std::vector&lt;int&gt;&gt;</p>
+<p>g++</p>
+<p>Error, required:</p>
+<p>std::vector&lt;std::vector&lt;int&gt; &gt;</p>
+<p>To note the space between the last two angle brackets.</p>
+<p>While walking round I saw some students code and got a little scare by it they performed operations such as:</p>
+<p> </p>
+<p>int size = 0;</p>
+<p>scanf("%i",size);</p>
+<p>int myArray[size];</p>
+<p>for (int i = 0 ; i &lt; size ; i++)</p>
+<p>scanf("%f",myArray[i]);</p>
+<p>for (int i = 0 ; i &lt; size ; i++)</p>
+<p>printf("%f",myArray[i]);</p>
+<p> </p>
+<p>To my horror this compiled without warning or error and even worse it worked. I later while chatting to friends found that this was normal for the gcc compiler, and apparently the g++. So therefore we had some guesses about how this would work and the common answer was:</p>
+<blockquote>
+<p>myArray is initialised to length 0, then since taken of the stack when read and written to you corrupted the stack.</p>
+</blockquote>
+<p>The message to take away from this horror story of teaching C, is two things use a compiler that may not follow the letter of the standard but actually is intelligent and knows what you mean; always use -wall when compiling on gcc otherwise you will end up in a pile of mess later on!</p><br /><a href='http://stuartjames.info/Journal/gcc-compiler-dynamic-array-declaration-without-warning-2011-12-14.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/gcc-compiler-dynamic-array-declaration-without-warning-2011-12-14.aspx'>...</a>
+
+        </section>
+        
+        <footer>
+            <div class="row">
+            
+            
+                <article class="6u 12u(small) excerpt">
+                    <header>
+                        <h2><a href="/2011/12/13/office-365-professional-subscription-may-be-more-annoying-than-expected.html">Office 365 Professional Subscription may be more annoying than expected</a></h2>
+                    </header>
+                    <section>
+                        <p><img src="http://stuartjames.info/Data/Sites/5/blogimages/office365/office365.png" alt="Office 365 Header" width="600" height="67" /></p>
+<p><span>We have been trying Office365 with the company I work for, specifically interesting was the opportunity to use there subscription model to handle Office installs at ~£160 for a retail licence per PC, paying for per user becomes very tempting.</span></p>
+<p>Unfortunatly it may not be as simple as planned. I turned on my laptop today to get the wonderfully helpful and annoying error message telling me to reinstall office... having only installed it a month ago and wanting to try giving this service to novice computer users this message would scare them.</p>
+<p><span>My list of problems with Office 365 seem to be growing, Microsoft could of hit something amazing with this concept but am appalled at the quality of the product is very uncharacteristic of Microsoft.</span></p>
+<p><img style="border-style: initial !important; border-color: initial !important; display: block; margin-left: auto; margin-right: auto;" src="http://stuartjames.info/Data/Sites/5/blogimages/office365/office365-subscription.png" alt="Office 365 Professional Subscription Error" width="400" height="324" /></p><br /><a href='http://stuartjames.info/Journal/office-365-professional-subscription-may-be-more-annoying-than-expected-2011-12-14.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/office-365-professional-subscription-may-be-more-annoying-than-expected-2011-12-14.aspx'>...</a>
+
+                    </section>
+                    <footer>
+                        <ul class="actions">
+                            <li><a href="/2011/12/13/office-365-professional-subscription-may-be-more-annoying-than-expected.html" class="button">Read More</a></li>
+                        </ul>
+                    </footer>
+                </article>
+            
+            
+            
+            
+                <article class="6u$ 12u(small) excerpt f-right">
+                    <header>
+                        <h2><a href="/2011/12/23/a-short-excursion-to-paris-(france).html">A short excursion to Paris (France)</a></h2>
+                    </header>
+                    <section>
+                        <p>Went on a short pre-christmas trip to Paris for a few days, thought I would share a few of my experiences. The first thing to note in Paris is the cost, plan for expensive meals if you go you will really struggle to avoid it. A good place togo that you can find easily is a Pauls Patisserie we had a nice lunch sandwich and a crape while there for a resonable price. When it comes to evening meals you need to be more careful about where you go. We tried a few different places but average evening meal cost is ~25euros for the food then add on top for drinks, although wine is fine avoid beer found that to be expensive at ~6euro a glass. Its not all doom and gloom though if you are sub 25 the attractions are generally free*, UK student cards dont work I believe international student card does though but that requires sorting out before the trip.</p>
+<p>Here are a few shots of paris to cheer you up, will add a few more as my camera master sends me her images.</p>
+<p>&lt;image to come&gt;</p>
+<p><br /><a href="http://stuartjames.info/Journal/a-short-excursion-to-paris-france-2011-12-24.aspx">Stuart James</a>  <a href="http://stuartjames.info/Journal/a-short-excursion-to-paris-france-2011-12-24.aspx">…</a></p>
+
+                    </section>
+                    <footer>
+                        <ul class="actions">
+                            <li><a href="/2011/12/23/a-short-excursion-to-paris-(france).html" class="button">Read More</a></li>
+                        </ul>
+                    </footer>
+                </article>
+            
+            </div>
+        </footer>
+
+    </article>
+
+</div>
+
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+
+              
+              <li>
+                <a href="https://github.com/sttu" class="icon fa-github">
+                  <span class="label">GitHub</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://twitter.com/sttujames" class="icon fa-twitter">
+                  <span class="label">Twitter</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://linkedin.com/in/stuartajames" class="icon fa-linkedin">
+                  <span class="label">LinkedIn</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://plus.google.com/stuartjames" class="icon fa-google-plus">
+                  <span class="label">Google+</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://www.facebook.com/stuartaaronjames" class="icon fa-facebook">
+                  <span class="label">Facebook</span>
+                </a>
+              </li>
+              
+
+              
+
+              
+              <li>
+                <a href="mailto:contact@stuart-james.com" class="icon fa-envelope-o">
+                  <span class="label">Email</span>
+                </a>
+              </li>
+              
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Stuart James 2016</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                <li>Demo Images: <a href="https://unsplash.com/">Unsplash</a></li>
+                <li>Jekyll Template: <a href="http://cloudcannon.com">Cloud Cannon</a></li>
+            </ul>
+        </footer>
+
+	</body>
+</html>

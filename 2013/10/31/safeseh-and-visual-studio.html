@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  	<head>
+  		<title>Stuart James' Journal</title>
+  		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  		<meta name="description" content="" />
+  		<meta name="keywords" content="" />
+  		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+  		<script src="/js/jquery.min.js"></script>
+  		<script src="/js/jquery.poptrox.min.js"></script>
+  		<script src="/js/skel.min.js"></script>
+  		<script src="/js/init.js"></script>
+  		<noscript>
+  			<link rel="stylesheet" href="/css/skel.css" />
+  			<link rel="stylesheet" href="/css/style.css" />
+  			<link rel="stylesheet" href="/css/style-xlarge.css" />
+  		</noscript>
+  		<!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
+  	</head>
+
+	<body id="top">
+
+      <header id="header">
+          <a href="/" class="image avatar"><img src="/images/avatar.jpg" alt="" /></a>
+          <h1><strong>Stuart James'</strong> journal, a simple <br />
+          little place for me to scribble down<br />
+	  my thoughts and help my terrible memory<br /></h1>
+	  <hr />
+	  <h1>A little about me...</h1>
+	  <h1>
+		I'm a Computer Vision and Machine learning<br />
+		researcher at <strong>UCL</strong>. Working in the VECG with<br /> 
+		Tim Weyrich. Previously from <strong>University of Surrey</strong><br />  where I completed a Post-Doc and PhD studies.
+	  </h1>
+    <h4>
+    <a href="http://stuart-james.com" >Read more about my research interests</a> 
+    </h4>
+    <hr />
+      </header>
+
+
+        <div id="main">
+    <article>
+        <header class="major">
+            <h2 class="post-title">SAFESEH and Visual Studio</h2>
+                <p class="post-meta">Oct 31, 2013</p>
+        </header>
+
+        <section>
+            <p>Many of us dont hugely enjoy recompiling libaries. I for one who only use 3 large and a handful of small, causing me to cringe at the idea of recompiling to include a new feature or worse a new platform. </p>
+<p>So when I hit:</p>
+<blockquote>
+<p>error LNK2026: module unsafe for SAFESEH image.</p>
+</blockquote>
+<p>So after looking around for a solution I found there is just a simple switch you can turn off to allow an old library to be used</p>
+<p><img title="SAFESEH Visual Studio" alt="SAFESEH Visual Studio" src="http://stuartjames.info/Data/Sites/5/blogimages/safeseh-visual-studio.png" height="389" width="550" /></p>
+<p>Hidden in Linker --&gt; Advanced -&gt; Image Has Safe Exception Handlers you can set this to No and recompile and your code work again.</p><br /><a href='http://stuartjames.info/Journal/safeseh-and-visual-studio-2013-10-31.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/safeseh-and-visual-studio-2013-10-31.aspx'>...</a>
+
+        </section>
+        
+        <footer>
+            <div class="row">
+            
+            
+                <article class="6u 12u(small) excerpt">
+                    <header>
+                        <h2><a href="/2013/10/28/about.me-increasing-popularity.html">About.me increasing popularity</a></h2>
+                    </header>
+                    <section>
+                        <p>As soon as <a href="http://about.me">about.me</a> launched I got a profile on the site, a shameful admission to some but to me is interesting to see how new sites work and how they can be utilised. For a long time though it has had little attraction never getting many views and not having much visability online. It seems that those days are over with increasing popularity over the last year. As any good site does about.me includes statistics.</p>
+<p> </p>
+<p><img title="About Me - Stuart James Statistics" alt="About Me - Stuart James Statistics" src="http://stuartjames.info/Data/Sites/5/blogimages/about-me.png" height="282" width="550" /></p>
+<p> </p>
+<p>I very much doubt over the last year I have suddenly become more applicable to the world wide web -- would imply I was irrelevant before Feb 2013. So personally I attribute this increase, however unstable to an increase in popularity of the site.</p>
+<p>Interesting observation through the power of graphs! To Corrupt my future stats feel free to view my profile</p>
+<p><a title="About Me Stuart James" href="http://about.me/stuartjames" target="_blank"><img title="About Me -- Stuart James" alt="About Me -- Stuart James" src="http://stuartjames.info/Data/Sites/5/blogimages/about-me-stuart-james.png" height="150" width="224" /></a></p>
+<p>Yes a shameless plug.</p>
+<p> </p><br /><a href='http://stuartjames.info/Journal/aboutme-increasing-popularity-2013-10-28.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/aboutme-increasing-popularity-2013-10-28.aspx'>...</a>
+
+                    </section>
+                    <footer>
+                        <ul class="actions">
+                            <li><a href="/2013/10/28/about.me-increasing-popularity.html" class="button">Read More</a></li>
+                        </ul>
+                    </footer>
+                </article>
+            
+            
+            
+            
+                <article class="6u$ 12u(small) excerpt f-right">
+                    <header>
+                        <h2><a href="/2013/11/01/virtualbox-windows-8.1-upgrade-don't-forget-the-settings.html">VirtualBox Windows 8.1 Upgrade -- don't forget the settings</a></h2>
+                    </header>
+                    <section>
+                        <p>I run a few VM's on my workstation to perform different tasks one is a Windows 8 dev box, I finally got around to upgrading it. So checked all updates were done and then went to the store to get an error message I think is somewhat unusual.</p>
+<p><img title="Virtual Box 8.1 Upgrade Error" alt="Virtual Box 8.1 Upgrade Error" src="http://stuartjames.info/Data/Sites/5/blogimages/win8-1-virtualbox.png" height="412" width="550" /></p>
+<blockquote>
+<p>Sorry, you can't install the update because it isn't supported by your computer's CPU.</p>
+</blockquote>
+<p>So quick search online didn't yeild any obvious results and a simple setting came to mind that may fix it. When choosing your VM you select your version of Windows so after switching it to 8.1 it worked magically (well not magically but you get my point).</p>
+<p><img title="Virtual Box - 8.1 Update Error Fix" alt="Virtual Box - 8.1 Update Error Fix" src="http://stuartjames.info/Data/Sites/5/blogimages/win8-1-virtualbox-settings.png" height="305" width="550" /></p>
+<p>Then nipping back into the Windows Store and all works fine. Message of the day -- thinking a little helps!</p>
+<p><img title="Windows 8.1 -- Virtual Box After Fix" alt="Windows 8.1 -- Virtual Box After Fix" src="http://stuartjames.info/Data/Sites/5/blogimages/win8-1-virtualbox_after.png" height="412" width="550" /></p>
+<p> </p>
+<p> </p>
+<p><br /><a href="http://stuartjames.info/Journal/virtualbox-windows-81-upgrade---dont-forget-the-settings-2013-11-01.aspx">Stuart James</a>  <a href="http://stuartjames.info/Journal/virtualbox-windows-81-upgrade---dont-forget-the-settings-2013-11-01.aspx">…</a></p>
+
+                    </section>
+                    <footer>
+                        <ul class="actions">
+                            <li><a href="/2013/11/01/virtualbox-windows-8.1-upgrade-don't-forget-the-settings.html" class="button">Read More</a></li>
+                        </ul>
+                    </footer>
+                </article>
+            
+            </div>
+        </footer>
+
+    </article>
+
+</div>
+
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+
+              
+              <li>
+                <a href="https://github.com/sttu" class="icon fa-github">
+                  <span class="label">GitHub</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://twitter.com/sttujames" class="icon fa-twitter">
+                  <span class="label">Twitter</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://linkedin.com/in/stuartajames" class="icon fa-linkedin">
+                  <span class="label">LinkedIn</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://plus.google.com/stuartjames" class="icon fa-google-plus">
+                  <span class="label">Google+</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://www.facebook.com/stuartaaronjames" class="icon fa-facebook">
+                  <span class="label">Facebook</span>
+                </a>
+              </li>
+              
+
+              
+
+              
+              <li>
+                <a href="mailto:contact@stuart-james.com" class="icon fa-envelope-o">
+                  <span class="label">Email</span>
+                </a>
+              </li>
+              
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Stuart James 2016</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                <li>Demo Images: <a href="https://unsplash.com/">Unsplash</a></li>
+                <li>Jekyll Template: <a href="http://cloudcannon.com">Cloud Cannon</a></li>
+            </ul>
+        </footer>
+
+	</body>
+</html>

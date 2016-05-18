@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+  	<head>
+  		<title>Stuart James' Journal</title>
+  		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  		<meta name="description" content="" />
+  		<meta name="keywords" content="" />
+  		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+  		<script src="/js/jquery.min.js"></script>
+  		<script src="/js/jquery.poptrox.min.js"></script>
+  		<script src="/js/skel.min.js"></script>
+  		<script src="/js/init.js"></script>
+  		<noscript>
+  			<link rel="stylesheet" href="/css/skel.css" />
+  			<link rel="stylesheet" href="/css/style.css" />
+  			<link rel="stylesheet" href="/css/style-xlarge.css" />
+  		</noscript>
+  		<!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
+  	</head>
+
+	<body id="top">
+
+      <header id="header">
+          <a href="/" class="image avatar"><img src="/images/avatar.jpg" alt="" /></a>
+          <h1><strong>Stuart James'</strong> journal, a simple <br />
+          little place for me to scribble down<br />
+	  my thoughts and help my terrible memory<br /></h1>
+	  <hr />
+	  <h1>A little about me...</h1>
+	  <h1>
+		I'm a Computer Vision and Machine learning<br />
+		researcher at <strong>UCL</strong>. Working in the VECG with<br /> 
+		Tim Weyrich. Previously from <strong>University of Surrey</strong><br />  where I completed a Post-Doc and PhD studies.
+	  </h1>
+    <h4>
+    <a href="http://stuart-james.com" >Read more about my research interests</a> 
+    </h4>
+    <hr />
+      </header>
+
+
+        <div id="main">
+    <article>
+        <header class="major">
+            <h2 class="post-title">S3 Push and Pull – Backup a EC2 Instance or just some data</h2>
+                <p class="post-meta">May 11, 2013</p>
+        </header>
+
+        <section>
+            <p>I stumbled across a great tool to just push and pull data from an S3 bucket last week wrapped into one light weight executable. Requires .NET 2.0 or Mono so on Linux becomes a little heavy weight.</p>
+<p> </p>
+<p>So start by pulling down the latest version:</p>
+<pre class="csharpcode"><a href="http://s3.codeplex.com/">http://s3.codeplex.com/</a></pre>
+<style type="text/css"><!--
+.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }
+--></style>
+<p> </p>
+<p>So to get started you need to configure your bucket, this is stored in the registry so you will need to consider the security implications, but it does allow you to set a password. For simplicity I’ll avoid this and assume that you don't mind it being visible to users/hackers!</p>
+<p>Navigate to where you downloaded and  run the command</p>
+<pre class="csharpcode">s3 auth</pre>
+<style type="text/css"><!--
+.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }
+--></style>
+<p> </p>
+<p><a href="http://stuartjames.info/Data/Sites/5/media/wlw/image_19.png"><img style="width: 100%; display: inline;" title="image" alt="image" src="http://stuartjames.info/Data/Sites/5/media/wlw/image_thumb_19.png" /></a></p>
+<p> </p>
+<p>As you can see you get the option to password protect or not is easy and hopefully there isn’t any problems following this through to configure your bucket ID and Key.</p>
+<p> </p>
+<p>Now you are ready to start shifting some data!</p>
+<pre class="csharpcode">s3 get &lt;bucket [/folder]&gt; &lt;path&gt;</pre>
+<style type="text/css"><!--
+.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }
+--></style>
+<p>Some good options are</p>
+<pre class="csharpcode">/backup /sync /nogui</pre>
+<style type="text/css"><!--
+.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }
+--></style>
+<p>Should be fairly clear what these options do.</p>
+<p>If you still are a little stuck try this for a full set of options.</p>
+<pre class="csharpcode">s3 help</pre>
+<style type="text/css"><!--
+.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }
+--></style><br /><a href='http://stuartjames.info/Journal/s3-push-and-pull-–-backup-a-ec2-instance-or-just-some-data-2013-05-11.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/s3-push-and-pull-–-backup-a-ec2-instance-or-just-some-data-2013-05-11.aspx'>...</a>
+
+        </section>
+        
+        <footer>
+            <div class="row">
+            
+            
+                <article class="6u 12u(small) excerpt">
+                    <header>
+                        <h2><a href="/2013/03/29/the-old-windows-8-argument-on-a-non-touch-laptop.html">The old Windows 8 argument on a non-touch laptop</a></h2>
+                    </header>
+                    <section>
+                        <p>We have already heard many arguments about Windows 8 with and without touch, the new “metro” UI and the missing start button. I dont intend to add anything to this I think it really comes down to your personal preference. In my case I found it awkward to use so wanted a solution to make things better.</p>
+<p>My solution is that developed by StarDock this was brought to my attention by <a href="http://winsupersite.com/">Paul Thurrott</a> on <a href="http://twit.tv/ww">Windows Weekly</a>.</p>
+<h4>Start8</h4>
+<p><a href="http://www.stardock.com/products/start8/"><img style="border: 0px currentcolor; margin-right: 0px; margin-left: 0px; display: inline;" title="Start8" alt="Start8" src="http://stuartjames.info/Data/Sites/5/media/wlw/start8.png" height="240" width="199" /></a></p>
+<h4>ModernMix</h4>
+<p><a href="http://stuartjames.info/Data/Sites/5/media/wlw/modernmix.png"><img style="border: 0px currentcolor; margin-right: 0px; margin-left: 0px; display: inline;" title="ModernMix" alt="ModernMix" src="http://stuartjames.info/Data/Sites/5/media/wlw/modernmix_thumb.png" height="480" width="562" /></a></p>
+<p>ModernMix works amazing allowing you to be able to run “Metro” apps in Windows. I have always played games in Windows so the idea of using full screen will take me a long time to grasp, and ModernMix allows me to completely avoid that!</p><br /><a href='http://stuartjames.info/Journal/the-old-windows-8-argument-on-a-non-touch-laptop.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/the-old-windows-8-argument-on-a-non-touch-laptop.aspx'>...</a>
+
+                    </section>
+                    <footer>
+                        <ul class="actions">
+                            <li><a href="/2013/03/29/the-old-windows-8-argument-on-a-non-touch-laptop.html" class="button">Read More</a></li>
+                        </ul>
+                    </footer>
+                </article>
+            
+            
+            
+            
+                <article class="6u$ 12u(small) excerpt f-right">
+                    <header>
+                        <h2><a href="/2013/05/11/windows-8-ad-hoc-where-did-you-go.html">Windows 8, Ad-Hoc where did you go?</a></h2>
+                    </header>
+                    <section>
+                        <p><a href="http://stuartjames.info/Data/Sites/5/media/wlw/image_17.png"><img style="width: 100%; display: inline;" title="image" alt="image" src="http://stuartjames.info/Data/Sites/5/blogimages/head_windows_8_ad-hoc_where_did_you_go.png" height="100" width="600" /></a></p>
+<p>For some reason that I haven’t been able to find in Windows 8 Ad-Hoc networks have been removed. Well not actually removed but the UI is removed, confused? Well there is a simple couple of commands you can use to launch an Ad-Hoc network. It may not be as nice but it is better than  Win7, is not labelled as Ad-Hoc and you can connect Android devices to it!</p>
+<p>You will need a Command Prompt with <strong>Administrative Permissions</strong></p>
+<p> </p>
+<pre class="csharpcode">netsh wlan set hostednetwork mode=allow ssid=&lt;wifi name&gt; key=&lt;password&gt;</pre>
+<style type="text/css"><!--
+.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }
+--></style>
+
+<p>Now enable it:</p>
+<pre class="csharpcode">netsh wlan start hostednetwork</pre>
+<style type="text/css"><!--
+.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }
+--></style>
+
+<p> </p>
+<p>Simple hey? Oh remember you may actually want an internet connection go to Network Connections and edit the properties of your network connection with Internet and change the Internet Connection sharing option to the Network newly created, looks like this the * gives it away.</p>
+<p><a href="http://stuartjames.info/Data/Sites/5/media/wlw/image_18.png"><img style="display: inline;" title="image" alt="image" src="http://stuartjames.info/Data/Sites/5/media/wlw/image_thumb_18.png" height="378" width="300" /></a></p>
+<p> </p>
+<p>Lazy and want to automatically do this create a bat file with your custom details, create a new Task in the Task Scheduler and remember to up the permissions or will fail!</p>
+
+<p>
+<h5>Edit:</h5>
+You may find that the connection turns off therefore a more robust script is to disable first.
+</p>
+<pre class="csharpcode">netsh wlan stop hostednetwork
+netsh wlan set hostednetwork mode=allow ssid=&lt;wireless&gt; key=&lt;password&gt;
+netsh wlan start hostednetwork
+</pre>
+<p><br /><a href="http://stuartjames.info/Journal/windows-8-ad-hoc-where-did-you-go.aspx">Stuart James</a>  <a href="http://stuartjames.info/Journal/windows-8-ad-hoc-where-did-you-go.aspx">…</a></p>
+
+                    </section>
+                    <footer>
+                        <ul class="actions">
+                            <li><a href="/2013/05/11/windows-8-ad-hoc-where-did-you-go.html" class="button">Read More</a></li>
+                        </ul>
+                    </footer>
+                </article>
+            
+            </div>
+        </footer>
+
+    </article>
+
+</div>
+
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+
+              
+              <li>
+                <a href="https://github.com/sttu" class="icon fa-github">
+                  <span class="label">GitHub</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://twitter.com/sttujames" class="icon fa-twitter">
+                  <span class="label">Twitter</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://linkedin.com/in/stuartajames" class="icon fa-linkedin">
+                  <span class="label">LinkedIn</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://plus.google.com/stuartjames" class="icon fa-google-plus">
+                  <span class="label">Google+</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://www.facebook.com/stuartaaronjames" class="icon fa-facebook">
+                  <span class="label">Facebook</span>
+                </a>
+              </li>
+              
+
+              
+
+              
+              <li>
+                <a href="mailto:contact@stuart-james.com" class="icon fa-envelope-o">
+                  <span class="label">Email</span>
+                </a>
+              </li>
+              
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Stuart James 2016</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                <li>Demo Images: <a href="https://unsplash.com/">Unsplash</a></li>
+                <li>Jekyll Template: <a href="http://cloudcannon.com">Cloud Cannon</a></li>
+            </ul>
+        </footer>
+
+	</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  	<head>
+  		<title>Stuart James' Journal</title>
+  		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  		<meta name="description" content="" />
+  		<meta name="keywords" content="" />
+  		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+  		<script src="/js/jquery.min.js"></script>
+  		<script src="/js/jquery.poptrox.min.js"></script>
+  		<script src="/js/skel.min.js"></script>
+  		<script src="/js/init.js"></script>
+  		<noscript>
+  			<link rel="stylesheet" href="/css/skel.css" />
+  			<link rel="stylesheet" href="/css/style.css" />
+  			<link rel="stylesheet" href="/css/style-xlarge.css" />
+  		</noscript>
+  		<!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
+  	</head>
+
+	<body id="top">
+
+      <header id="header">
+          <a href="/" class="image avatar"><img src="/images/avatar.jpg" alt="" /></a>
+          <h1><strong>Stuart James'</strong> journal, a simple <br />
+          little place for me to scribble down<br />
+	  my thoughts and help my terrible memory<br /></h1>
+	  <hr />
+	  <h1>A little about me...</h1>
+	  <h1>
+		I'm a Computer Vision and Machine learning<br />
+		researcher at <strong>UCL</strong>. Working in the VECG with<br /> 
+		Tim Weyrich. Previously from <strong>University of Surrey</strong><br />  where I completed a Post-Doc and PhD studies.
+	  </h1>
+    <h4>
+    <a href="http://stuart-james.com" >Read more about my research interests</a> 
+    </h4>
+    <hr />
+      </header>
+
+
+        <div id="main">
+    <article>
+        <header class="major">
+            <h2 class="post-title">Opening a bottle of Beer with a sheet of Paper, it only takes 3 pieces!</h2>
+                <p class="post-meta">May 12, 2013</p>
+        </header>
+
+        <section>
+            <p><a href="http://stuartjames.info/Data/Sites/5/media/wlw/image_21.png"><img title="image" style="width: 100%; display: inline;" alt="image" src="http://stuartjames.info/Data/Sites/5/media/wlw/image_thumb_21.png"></a></p><p>&nbsp;</p><p>So the title lies when I state it only takes three pieces of paper, if you have the skills (and possible muscle) I lack then you can do it in one! How cool is that!!!</p><iframe width="560" height="315" src="http://www.youtube.com/embed/00DWLkVLbd4" frameborder="0" allowfullscreen></iframe><p>&nbsp;</p><p>Hopefully you will be more successful than me. Also I am not necessarily advocating drinking, so <a href="http://www.drinkaware.co.uk">www.drinkaware.co.uk</a>.</p><br /><a href='http://stuartjames.info/Journal/opening-a-bottle-of-beer-with-a-sheet-of-paper-it-only-takes-3-pieces.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/opening-a-bottle-of-beer-with-a-sheet-of-paper-it-only-takes-3-pieces.aspx'>...</a>
+
+        </section>
+        
+        <footer>
+            <div class="row">
+            
+            
+                <article class="6u 12u(small) excerpt">
+                    <header>
+                        <h2><a href="/2013/05/12/c++-+-visual-studio-2012-(vs2012)-+-win8-converting-projects-up-some-conflicts-i-found.html">C++ + Visual Studio 2012 (VS2012) + Win8 , converting projects up some conflicts I found</a></h2>
+                    </header>
+                    <section>
+                        <p>Having loved the ability to compile VS2010 projects inside the VS2012 shell as a way of delaying the update, I thought it was time to stop delaying ( 1 Year late ).</p><pre class="code"><span style="background: white; color: black;">std::cout &lt;&lt; </span><span style="background: white; color: rgb(163, 21, 21);">"Minimum value for int: " </span><span style="background: white; color: black;">&lt;&lt; std::</span><span style="background: white; color: rgb(43, 145, 175);">numeric_limits</span><span style="background: white; color: black;">&lt;</span><span style="background: white; color: blue;">int</span><span style="background: white; color: black;">&gt;::min() &lt;&lt; std::endl</span><span style="background: white; color: black;">;
+std::cout &lt;&lt; </span><span style="background: white; color: rgb(163, 21, 21);">"Maximum value for int: " </span><span style="background: white; color: black;">&lt;&lt; std::</span><span style="background: white; color: rgb(43, 145, 175);">numeric_limits</span><span style="background: white; color: black;">&lt;</span><span style="background: white; color: blue;">int</span><span style="background: white; color: black;">&gt;::max() &lt;&lt; </span>std::endl<span style="background: white; color: black;">;</span></pre><p>Generates error:</p><pre class="code"><span style="background: white; color: black;">error C2059: syntax error : </span><span style="background: white; color: rgb(163, 21, 21);">'::' </span><span style="background: white; color: black;">[path]\source.cpp</span></pre><p>There is a good chance if you have these lines and are including the windows header you will hit an error. The Windows team put in a solution to the <font face="Courier New">#define min</font> conflict in <font face="Courier New">&lt;minwindef.h&gt;</font>.</p><p>So instead of</p><pre class="code"><span style="background: white; color: blue;">#include </span><span style="background: white; color: rgb(163, 21, 21);">&lt;windows.h&gt;</span></pre><p>You use a #define to avoid this</p><pre class="code"><span style="background: white; color: blue;">#define </span><span style="background: white; color: rgb(111, 0, 138);">NOMINMAX
+</span><span style="background: white; color: blue;">#include </span><span style="background: white; color: rgb(163, 21, 21);">&lt;windows.h&gt;</span></pre><p>Another issue I found was with an annoying char define, again from the Windows team in <font face="Courier New">&lt;rpcndr.h&gt;</font>.</p><pre class="code"><span style="background: white; color: blue;">#define </span><span style="background: white; color: rgb(111, 0, 138);">small </span><span style="background: white; color: blue;">char</span></pre><p>This one doesn’t have the ability to comment out for so if you have a small function with something like:</p><pre class="code"><span style="background: white; color: rgb(43, 145, 175);">AnObj </span><span style="background: white; color: rgb(111, 0, 138);">small </span><span style="background: white; color: black;">= large.resize(val);</span></pre><p>Generates error:</p><pre class="code"><span style="background: white; color: black;">error C2628:</span><span style="background: white; color: rgb(163, 21, 21);">'AnObj' </span><span style="background: white; color: black;">followed by </span><span style="background: white; color: rgb(163, 21, 21);">'char' </span><span style="background: white; color: black;">is illegal (did you forget a </span><span style="background: white; color: rgb(163, 21, 21);">';'</span><span style="background: white; color: black;">?) [path]\source.cpp</span></pre><p>You will have to suffer and change the name, in some ways it teaches you (me) for not being very specific, still annoying though. Hopefully this is all the conversion errors I’ll hit.</p><br /><a href='http://stuartjames.info/Journal/c--visual-studio-2012-vs2012--win8--converting-projects-up-some-conflicts-i-found.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/c--visual-studio-2012-vs2012--win8--converting-projects-up-some-conflicts-i-found.aspx'>...</a>
+
+                    </section>
+                    <footer>
+                        <ul class="actions">
+                            <li><a href="/2013/05/12/c++-+-visual-studio-2012-(vs2012)-+-win8-converting-projects-up-some-conflicts-i-found.html" class="button">Read More</a></li>
+                        </ul>
+                    </footer>
+                </article>
+            
+            
+            
+            
+                <article class="6u$ 12u(small) excerpt f-right">
+                    <header>
+                        <h2><a href="/2013/05/12/rotor-style-skeleton-browser.html">Rotor Style Skeleton Browser</a></h2>
+                    </header>
+                    <section>
+                        <p>A while ago I found a paper from a research project called MediaMill. They presented a technique for viewing different facets of video content in a windmill fashion. Recently I was exploring how we could visualise skeletons and thought would give the technique a try, here is a screenshot of a basic approach:</p>
+<p> </p>
+<p> </p>
+<p><a href="http://stuartjames.info/Data/Sites/5/media/wlw/image_20.png"><img style="display: inline;" title="image" alt="image" src="http://stuartjames.info/Data/Sites/5/media/wlw/image_thumb_20.png" height="480" width="556" /></a></p>
+<p>In this example each joint (of which there are 10) is represented on a “blade”. This very simple example visualise joint variation a better approach would to measure the distance between the body and variations on a specific joint but hey was just a sample.</p>
+<p> </p>
+<h6>References</h6>
+<p>To see more about different video browsers see the MediaMill project</p>
+<pre class="csharpcode"><a href="http://www.science.uva.nl/research/mediamill">http://www.science.uva.nl/research/mediamill</a></pre>
+<style type="text/css"><!--
+.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }
+--></style>
+
+<p>See related Rotor Browser papers at <a href="http://staff.science.uva.nl/~cgmsnoek/pub/snoek-demo-icme2008.pdf">ICME</a> or <a href="http://staff.science.uva.nl/~cgmsnoek/pub/rooij-rotorbrowser-civr2007.pdf">CIVR</a> from 2007.</p>
+<style type="text/css"><!--
+.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }
+--></style>
+<p><br /><a href="http://stuartjames.info/Journal/rotor-style-skeleton-browser.aspx">Stuart James</a>  <a href="http://stuartjames.info/Journal/rotor-style-skeleton-browser.aspx">…</a></p>
+
+                    </section>
+                    <footer>
+                        <ul class="actions">
+                            <li><a href="/2013/05/12/rotor-style-skeleton-browser.html" class="button">Read More</a></li>
+                        </ul>
+                    </footer>
+                </article>
+            
+            </div>
+        </footer>
+
+    </article>
+
+</div>
+
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+
+              
+              <li>
+                <a href="https://github.com/sttu" class="icon fa-github">
+                  <span class="label">GitHub</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://twitter.com/sttujames" class="icon fa-twitter">
+                  <span class="label">Twitter</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://linkedin.com/in/stuartajames" class="icon fa-linkedin">
+                  <span class="label">LinkedIn</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://plus.google.com/stuartjames" class="icon fa-google-plus">
+                  <span class="label">Google+</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://www.facebook.com/stuartaaronjames" class="icon fa-facebook">
+                  <span class="label">Facebook</span>
+                </a>
+              </li>
+              
+
+              
+
+              
+              <li>
+                <a href="mailto:contact@stuart-james.com" class="icon fa-envelope-o">
+                  <span class="label">Email</span>
+                </a>
+              </li>
+              
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Stuart James 2016</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                <li>Demo Images: <a href="https://unsplash.com/">Unsplash</a></li>
+                <li>Jekyll Template: <a href="http://cloudcannon.com">Cloud Cannon</a></li>
+            </ul>
+        </footer>
+
+	</body>
+</html>

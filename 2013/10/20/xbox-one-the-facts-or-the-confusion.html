@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  	<head>
+  		<title>Stuart James' Journal</title>
+  		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  		<meta name="description" content="" />
+  		<meta name="keywords" content="" />
+  		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+  		<script src="/js/jquery.min.js"></script>
+  		<script src="/js/jquery.poptrox.min.js"></script>
+  		<script src="/js/skel.min.js"></script>
+  		<script src="/js/init.js"></script>
+  		<noscript>
+  			<link rel="stylesheet" href="/css/skel.css" />
+  			<link rel="stylesheet" href="/css/style.css" />
+  			<link rel="stylesheet" href="/css/style-xlarge.css" />
+  		</noscript>
+  		<!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
+  	</head>
+
+	<body id="top">
+
+      <header id="header">
+          <a href="/" class="image avatar"><img src="/images/avatar.jpg" alt="" /></a>
+          <h1><strong>Stuart James'</strong> journal, a simple <br />
+          little place for me to scribble down<br />
+	  my thoughts and help my terrible memory<br /></h1>
+	  <hr />
+	  <h1>A little about me...</h1>
+	  <h1>
+		I'm a Computer Vision and Machine learning<br />
+		researcher at <strong>UCL</strong>. Working in the VECG with<br /> 
+		Tim Weyrich. Previously from <strong>University of Surrey</strong><br />  where I completed a Post-Doc and PhD studies.
+	  </h1>
+    <h4>
+    <a href="http://stuart-james.com" >Read more about my research interests</a> 
+    </h4>
+    <hr />
+      </header>
+
+
+        <div id="main">
+    <article>
+        <header class="major">
+            <h2 class="post-title">Xbox One the facts or the confusion?</h2>
+                <p class="post-meta">Oct 20, 2013</p>
+        </header>
+
+        <section>
+            <p>As many who are interested in Xbox do I have "Liked" Xbox on Facebook, this does mean I recieve a lot of spam from them but occasionally it is things of interest like free games. Today I got back to my desk to find the most confusing item I had ever seen released from Xbox:</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" title="Xbox One Did You know -- Xbox One Does not require a Kinect to be plugged in" alt="Xbox One Did You know -- Xbox One Does not require a Kinect to be plugged in" src="http://stuartjames.info/Data/Sites/5/blogimages/did_you_know_kinect_doesnt_need_to_be_plugged_in.jpg" height="321" width="300" /></p>
+<p>Now this may seem fairly obvious but Xbox division of been touting for a long time they aren't making an Xbox One without a kinect. I can refeeence many articles where they have made this ubundently clear. This post throws a spanner in the works because if it is not required why not knock of £100(~$150) for the kinect and allow a cheap entry level system. For me personally I dont care, I want the Kinect functionality even just "Xbox Next Episode"; but this bugged me a little adding to the much confusion that is usually unfounded but in this case justified about Xbox One.</p><br /><a href='http://stuartjames.info/Journal/xbox-one-the-facts-or-the-confusion-2013-10-20.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/xbox-one-the-facts-or-the-confusion-2013-10-20.aspx'>...</a>
+
+        </section>
+        
+        <footer>
+            <div class="row">
+            
+            
+                <article class="6u 12u(small) excerpt">
+                    <header>
+                        <h2><a href="/2013/06/27/visual-studio-2013-breaks-virtualbox-due-to-hyper-v-conflict.html">Visual Studio 2013 breaks VirtualBox due to Hyper-V conflict</a></h2>
+                    </header>
+                    <section>
+                        <p>After installing the preview with all its bells and whistles including Hyper-V for Windows Phone development(I think) I found that I got array of network errors and then the killer VT-x is not available</p><p><a href="http://stuartjames.info/Data/Sites/5/media/wlw/image_23.png"><img width="240" height="161" title="image" style="margin-right: auto; margin-left: auto; float: none; display: block;" alt="image" src="http://stuartjames.info/Data/Sites/5/media/wlw/image_thumb_23.png"></a></p><p>This is due to the Hyper-V install in VS2013, since only one virtual controller can own the VT-x and Hyper-V is nested into Windows Hyper-V takes ownership and breaks VirtualBox.</p><p>So the solution, first you have to disable Hyper-V</p><pre class="csharpcode">bcdedit /set hypervisorlaunchtype off</pre><style type="text/css">.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }
+</style><p>Now if you reboot you should be able to boot up VirtualMachine, now if you are thinking to yourself but what about if I want both, well simple you cant. You either go through this process of turning off and on, or you do what I suggest convert fully to Hyper-V.</p><p>This can be done through <a href="http://technet.microsoft.com/en-us/sysinternals/ee656415">Disk2VHD</a> so boot up your VirtualBox VM convert it to a VHD and send it on over to Hyper-V simple hey? Oh and if you are like me with fairly chunky VM’s then you will want to archive or delete the old one.</p><br /><a href='http://stuartjames.info/Journal/visual-studio-2013-breaks-virtualbox-due-to-hyper-v-conflict.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/visual-studio-2013-breaks-virtualbox-due-to-hyper-v-conflict.aspx'>...</a>
+
+                    </section>
+                    <footer>
+                        <ul class="actions">
+                            <li><a href="/2013/06/27/visual-studio-2013-breaks-virtualbox-due-to-hyper-v-conflict.html" class="button">Read More</a></li>
+                        </ul>
+                    </footer>
+                </article>
+            
+            
+            
+            
+                <article class="6u$ 12u(small) excerpt f-right">
+                    <header>
+                        <h2><a href="/2013/10/21/office-365-p1-plan-allows-additional-sharepoint-storage.html">Office 365 P1 Plan Allows Additional SharePoint Storage!</a></h2>
+                    </header>
+                    <section>
+                        <p>For a long time I have been thinking about migrating from Office 365 SMB to the enterprise plan, the only reason I see to do this is to be able to buy additional storage, but now you seem to be able to on the P1 Plan! I have long since been confused why this feature was not available on SMB plans since these are a group that you want to "lock-in" before the company grows and then has klout to choose where to go.</p>
+<p><img title="Office 365 P1 Additional Storage" alt="Office 365 P1 Additional Storage" src="http://stuartjames.info/Data/Sites/5/blogimages/office_365_p1_additional_storage.png" height="389" width="550" /></p>
+<p> </p>
+<p>A sneaky additiona that I didn't hear any announcements about has added this feature, that hopefully means greater exploring of the Sharepoint Document infrastructure and Skydrive Pro for me!</p>
+<p><br /><a href="http://stuartjames.info/Journal/office-365-p1-plan-allows-additional-sharepoint-storage-2013-10-20.aspx">Stuart James</a>  <a href="http://stuartjames.info/Journal/office-365-p1-plan-allows-additional-sharepoint-storage-2013-10-20.aspx">…</a></p>
+
+                    </section>
+                    <footer>
+                        <ul class="actions">
+                            <li><a href="/2013/10/21/office-365-p1-plan-allows-additional-sharepoint-storage.html" class="button">Read More</a></li>
+                        </ul>
+                    </footer>
+                </article>
+            
+            </div>
+        </footer>
+
+    </article>
+
+</div>
+
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+
+              
+              <li>
+                <a href="https://github.com/sttu" class="icon fa-github">
+                  <span class="label">GitHub</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://twitter.com/sttujames" class="icon fa-twitter">
+                  <span class="label">Twitter</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://linkedin.com/in/stuartajames" class="icon fa-linkedin">
+                  <span class="label">LinkedIn</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://plus.google.com/stuartjames" class="icon fa-google-plus">
+                  <span class="label">Google+</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://www.facebook.com/stuartaaronjames" class="icon fa-facebook">
+                  <span class="label">Facebook</span>
+                </a>
+              </li>
+              
+
+              
+
+              
+              <li>
+                <a href="mailto:contact@stuart-james.com" class="icon fa-envelope-o">
+                  <span class="label">Email</span>
+                </a>
+              </li>
+              
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Stuart James 2016</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                <li>Demo Images: <a href="https://unsplash.com/">Unsplash</a></li>
+                <li>Jekyll Template: <a href="http://cloudcannon.com">Cloud Cannon</a></li>
+            </ul>
+        </footer>
+
+	</body>
+</html>
