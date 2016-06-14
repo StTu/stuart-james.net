@@ -1,167 +1,279 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
-  	<head>
-  		<title>Stuart James' Journal</title>
-  		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  		<meta name="description" content="" />
-  		<meta name="keywords" content="" />
-  		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-  		<script src="/js/jquery.min.js"></script>
-  		<script src="/js/jquery.poptrox.min.js"></script>
-  		<script src="/js/skel.min.js"></script>
-  		<script src="/js/init.js"></script>
-  		<noscript>
-  			<link rel="stylesheet" href="/css/skel.css" />
-  			<link rel="stylesheet" href="/css/style.css" />
-  			<link rel="stylesheet" href="/css/style-xlarge.css" />
-  		</noscript>
-  		<!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
-  	</head>
+  <head>
+  <title>Stuart James' Journal</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--[if lte IE 8]><script src="js/ie/html5shiv.js"></script><![endif]-->
+  <link rel="stylesheet" href="/css/main.css">
+  <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+  <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+</head>
 
-	<body id="top">
+	<body>
 
-      <header id="header">
-          <a href="/" class="image avatar"><img src="/images/avatar.jpg" alt="" /></a>
-          <h1><strong>Stuart James'</strong> journal, a simple <br />
-          little place for me to scribble down<br />
-	  my thoughts and help my terrible memory<br /></h1>
-	  <hr />
-	  <h1>A little about me...</h1>
-	  <h1>
-		I'm a Computer Vision and Machine learning<br />
-		researcher at <strong>UCL</strong>. Working in the VECG with<br /> 
-		Tim Weyrich. Previously from <strong>University of Surrey</strong><br />  where I completed a Post-Doc and PhD studies.
-	  </h1>
-    <h4>
-    <a href="http://stuart-james.com" >Read more about my research interests</a> 
-    </h4>
-    <hr />
-      </header>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
+				<!-- Header -->
+<header id="header">
+  <h1><a href="http://stuart-james.net">Stuart James' Journal</a></h1>
+	<nav class="links">
+    <!--
+    <ul>
+      <li><a href="#">Lorem</a></li>
+			<li><a href="#">Ipsum</a></li>
+			<li><a href="#">Feugiat</a></li>
+			<li><a href="#">Tempus</a></li>
+			<li><a href="#">Adipiscing</a></li>
+		</ul>
+  -->
+	</nav>
+	<nav class="main">
+    <ul>
+                <!--
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="Search" />
+									</form>
+								</li>
+              -->
+		  <li class="menu">
+		  	<a class="fa-bars" href="#menu">Menu</a>
+			</li>
+		</ul>
+	</nav>
+</header>
 
-        <div id="main">
-    <article>
-        <header class="major">
-            <h2 class="post-title">Windows 8.1 for Surface RT fix... almost</h2>
-                <p class="post-meta">Jun 26, 2013</p>
-        </header>
+<!-- Menu -->
+<section id="menu">
+  <!-- Search -->
+  <!--
+  <section>
+	  <form class="search" method="get" action="#">
+	    <input type="text" name="query" placeholder="Search" />
+		</form>
+	</section>
+  -->
+	<!-- Links -->
+	<section>
+	  <ul class="links">
+	    <li>
+		    <a href="/acknowledgement">
+				  <h3>Acknowledgement</h3>
+				  <p>Acknowledgement</p>
+				</a>
+			</li>
+    </ul>
+	</section>
+	<!-- Actions -->
+  <!--
+  <section>
+	  <ul class="actions vertical">
+	    <li><a href="#" class="button big fit">Log In</a></li>
+    </ul>
+  </section>
+  -->
+</section>
 
-        <section>
-            <p><strong>IMPORTANT</strong> read recent posts before doing these steps!</p>
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+            <article class="post">
+              <header>
+                <div class="title">
+                  <h2><a href="/2013/06/26/windows-8.1-for-surface-rt-fix...-almost.html">Windows 8.1 for Surface RT fix... almost</a></h2>
+                <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
+                </div>
+                <div class="meta">
+                  <time class="published" datetime="2013-06-26">June 26, 2013</time>
+                  
+									<h6>Read time less than 1 minute</h6>
+
+        <!--
+        <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
+        -->
+                </div>
+              </header>
+              
+              <p><strong>IMPORTANT</strong> read recent posts before doing these steps!</p>
 
 <p>&nbsp;</p><p>After searching the forums for a bit I found a fix! </p><blockquote><p>1. Place and rename the MSU file in an easily accessible place, e.g. C:\8preview\preview.msu<p>2. open command prompt in administrator mode.<p>3. Type: Expand –F:* c:\8preview\preview.msu C:\8preview\<p>4. Type: DISM.exe /Online /Add-Package /PackagePath:c:\8preview\Windows8-RT-KB2849636-x64.cab</p></blockquote><p align="right">From Johan Rensenbrink on <a href="http://answers.microsoft.com/en-us/windows/forum/windows8_1_pr-windows_install/error-the-update-is-not-applicable-to-your/342136ba-1f64-42c4-a344-d7e7e33ea868">anwers.microsoft.com</a></p><p align="left">So now for the install …</p><p align="left">&nbsp;</p><p align="left"><a href="http://stuartjames.info/Data/Sites/5/media/wlw/win8_1store.png"><img width="640" height="360" title="Win8_1Store" style="display: inline;" alt="Win8_1Store" src="http://stuartjames.info/Data/Sites/5/media/wlw/win8_1store_thumb.png"></a></p><a href="http://stuartjames.info/Data/Sites/5/media/wlw/win8_1app.png"><img width="640" height="360" title="Win8_1App" style="display: inline;" alt="Win8_1App" src="http://stuartjames.info/Data/Sites/5/media/wlw/win8_1app_thumb.png"></a><p>&nbsp;</p><hr><p>&nbsp;</p><p>And the anti-climax:</p><p><a href="http://stuartjames.info/Data/Sites/5/media/wlw/win8_1fail.png"><img width="640" height="360" title="Win8_1Fail" style="display: inline;" alt="Win8_1Fail" src="http://stuartjames.info/Data/Sites/5/media/wlw/win8_1fail_thumb.png"></a></p><p>&nbsp;</p><p>Wow I never thought this would be so hard….</p><br /><a href='http://stuartjames.info/Journal/windows-81-for-surface-rt-fix-almost-2013-06-26.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/windows-81-for-surface-rt-fix-almost-2013-06-26.aspx'>...</a>
 
-        </section>
+							<hr />
+							
+							
+              <footer>
+                <ul class="stats">
+                
+        <!--
+        <li><a href="#">General</a></li>
+        <li><a href="#" class="icon fa-heart">28</a></li>
+        <li><a href="#" class="icon fa-comment">128</a></li>
+        -->
+                </ul>
+              </footer>
+           </article>
+  					<ul class="actions pagination">
+  					  
+  	  				  <li><a href="/2013/06/26/surface-rt-8.1-maybe-i-am-impatient.html" class="button big previous">Previous Post</a></li>
+  						
+							
+  						  <li><a href="/2013/06/26/windows-rt-8.1-uh-oh-...html" class="button big next">Next Post</a></li>
+  						
+  					</ul>
+					</div>
+
+				<!-- Sidebar -->
+					<section id="sidebar">
+
+						<!-- Intro -->
+						<section id="intro">
+  
+	<header>
+    
+    <h2>Stuart James' Journal</h2>
+    
+    <div style='float:left;'><a href="http://stuart-james.net" class="logo"><img src="/images/logo.jpg" alt="" /></a></div>
+    <div style='float:left;'>
+    <p>A simple little place for me to scribble down
+	  my thoughts and help my terrible memory</p>
+    </div>
+    <div style='clear:left;'></div>
+	  <hr />
+	  <p>A little about me...</p>
+		<p>I'm a <strong>Computer Vision</strong> and <strong>Machine learning</strong> researcher at <strong>UCL</strong>. Working in the VECG with
+		Tim Weyrich. Previously from <strong>University of Surrey</strong>  where I completed a Post-Doc and PhD studies.</p>
+
+	</header>
+</section>
+
+
+						<!-- Mini Posts -->
+						<section>
+  <div class="mini-posts">
+    
+      <article class="mini-post">
+  	    <header>
+  		    <h3><a href="/2016/04/14/moving-to-jekyll.html">Moving to Jekyll</a></h3>
+		      <time class="published" datetime="2016-04-14">April 14, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
         
-        <footer>
-            <div class="row">
-            
-            
-                <article class="6u 12u(small) excerpt">
-                    <header>
-                        <h2><a href="/2013/06/26/surface-rt-8.1-maybe-i-am-impatient.html">Surface RT 8.1, maybe I am impatient!</a></h2>
-                    </header>
-                    <section>
-                        <p>After seeing the post come up in my sad to say Facebook feed went on to download the 8.1 update for my Surface RT. Am a little confused by how this error is to be fixed but still am a little disappointed. </p><p><a href="http://stuartjames.info/Data/Sites/5/media/wlw/surfacert_8_1_update_fail.png"><img width="640" height="360" title="SurfaceRT_8_1_Update_Fail" style="display: inline;" alt="SurfaceRT_8_1_Update_Fail" src="http://stuartjames.info/Data/Sites/5/media/wlw/surfacert_8_1_update_fail_thumb.png"></a></p><p>Error “The update is not applicable to your computer”</p><p>Hopefully will fix a bit later, for the moment no 8.1 for me and many others.</p><br /><a href='http://stuartjames.info/Journal/surface-rt-81-maybe-i-am-impatient.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/surface-rt-81-maybe-i-am-impatient.aspx'>...</a>
+          <a href="/2016/04/14/moving-to-jekyll.html" class="image"><img src="/images/blog/jekyll-logo.png" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
+  		    <h3><a href="/tech/2014/10/20/why-i-am-a-resolution-junky.html">Why I am a resolution junky</a></h3>
+		      <time class="published" datetime="2014-10-20">October 20, 2014</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/tech/2014/10/20/why-i-am-a-resolution-junky.html" class="image"><img src="/images/blog/highrescoding.png" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
+  		    <h3><a href="/tech/2014/09/26/new-toys-sept-14-part-1-of-2-benq-bl2710pt-27-wqhd.html">New Toys Sept’14 Part 1 of 2 – BenQ BL2710PT 27” WQHD</a></h3>
+		      <time class="published" datetime="2014-09-26">September 26, 2014</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/tech/2014/09/26/new-toys-sept-14-part-1-of-2-benq-bl2710pt-27-wqhd.html" class="image"><img src="/images/blog/train-rgb2.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
+  		    <h3><a href="/2014/07/07/libsvm-linear-kernel-normalisation.html">libSVM linear kernel normalisation</a></h3>
+		      <time class="published" datetime="2014-07-07">July 07, 2014</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2014/07/07/libsvm-linear-kernel-normalisation.html" class="image"><img src="/images/blog/fnsys-06-00059-g002.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+  </div>
+</section>
 
-                    </section>
-                    <footer>
-                        <ul class="actions">
-                            <li><a href="/2013/06/26/surface-rt-8.1-maybe-i-am-impatient.html" class="button">Read More</a></li>
-                        </ul>
-                    </footer>
-                </article>
-            
-            
-            
-            
-                <article class="6u$ 12u(small) excerpt f-right">
-                    <header>
-                        <h2><a href="/2013/06/26/windows-rt-8.1-uh-oh-...html">Windows RT 8.1 … Uh oh ..</a></h2>
-                    </header>
-                    <section>
-                        <p><a href="http://stuartjames.info/Data/Sites/5/media/wlw/win8_1uhoh.png"><img width="640" height="360" title="Win8_1UhOh" style="display: inline;" alt="Win8_1UhOh" src="http://stuartjames.info/Data/Sites/5/media/wlw/win8_1uhoh_thumb.png" /></a></p>
-<p>&nbsp;</p>
-<p>Maybe doing my previous post was a bad Idea….</p>
-<p><br /><a href="http://stuartjames.info/Journal/windows-rt-81-…-uh-oh-.aspx">Stuart James</a>  <a href="http://stuartjames.info/Journal/windows-rt-81-…-uh-oh-.aspx">…</a></p>
 
-                    </section>
-                    <footer>
-                        <ul class="actions">
-                            <li><a href="/2013/06/26/windows-rt-8.1-uh-oh-...html" class="button">Read More</a></li>
-                        </ul>
-                    </footer>
-                </article>
-            
-            </div>
-        </footer>
-
-    </article>
-
-</div>
+						<!-- Posts List -->
 
 
-        <!-- Footer -->
-        <footer id="footer">
-            <ul class="icons">
+						<!-- Footer -->
+						<section id="footer">
+  <ul class="icons">
+  	<li><a href="https://twitter.com/sttujames" class="fa-twitter"><span class="label">Twitter</span></a></li>
+		<li><a href="https://github.com/sttu" class="fa-github"><span class="label">GitHub</span></a></li>
+		<li><a href="/feed.xml" class="fa-rss"><span class="label">RSS</span></a></li>
+		<li><a href="mailto:contact@stuart-james.com" class="fa-envelope"><span class="label">Email</span></a></li>
+	</ul>
+  <p class="copyright">Copyright &copy; 2015 </p>
+</section>
 
-              
-              <li>
-                <a href="https://github.com/sttu" class="icon fa-github">
-                  <span class="label">GitHub</span>
-                </a>
-              </li>
-              
-
-              
-              <li>
-                <a href="https://twitter.com/sttujames" class="icon fa-twitter">
-                  <span class="label">Twitter</span>
-                </a>
-              </li>
-              
-
-              
-              <li>
-                <a href="https://linkedin.com/in/stuartajames" class="icon fa-linkedin">
-                  <span class="label">LinkedIn</span>
-                </a>
-              </li>
-              
-
-              
-              <li>
-                <a href="https://plus.google.com/stuartjames" class="icon fa-google-plus">
-                  <span class="label">Google+</span>
-                </a>
-              </li>
-              
-
-              
-              <li>
-                <a href="https://www.facebook.com/stuartaaronjames" class="icon fa-facebook">
-                  <span class="label">Facebook</span>
-                </a>
-              </li>
-              
-
-              
-
-              
-              <li>
-                <a href="mailto:contact@stuart-james.com" class="icon fa-envelope-o">
-                  <span class="label">Email</span>
-                </a>
-              </li>
-              
-            </ul>
-            <ul class="copyright">
-                <li>&copy; Stuart James 2016</li>
-                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                <li>Demo Images: <a href="https://unsplash.com/">Unsplash</a></li>
-                <li>Jekyll Template: <a href="http://cloudcannon.com">Cloud Cannon</a></li>
-            </ul>
-        </footer>
+					</section>
+			</div>
+		<!-- Scripts -->
+		<script src="/js/jquery.min.js"></script>
+<script src="/js/skel.min.js"></script>
+<script src="/js/util.js"></script>
+<!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="/js/main.js"></script>
 
 	</body>
 </html>

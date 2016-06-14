@@ -4,71 +4,10 @@
     <title>Stuart James&#39; Journal</title>
     <description>Stuart James&#39; journal, a simple little place for me to scribble down my thoughts and help my terrible memory</description>
     <link>http://stuart-james.net/</link>
-    <atom:link href="http://stuart-james.net/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 18 May 2016 09:41:02 +0100</pubDate>
-    <lastBuildDate>Wed, 18 May 2016 09:41:02 +0100</lastBuildDate>
+    <atom:link href="http://stuart-james.net/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Tue, 14 Jun 2016 14:15:46 +0100</pubDate>
+    <lastBuildDate>Tue, 14 Jun 2016 14:15:46 +0100</lastBuildDate>
     <generator>Jekyll v3.1.3</generator>
-    
-      <item>
-        <title>Making Camera Control Tools</title>
-        <description>&lt;h3&gt;&lt;/h3&gt;
-
-&lt;!--more--&gt;
-</description>
-        <pubDate>Wed, 11 May 2016 00:00:00 +0100</pubDate>
-        <link>http://stuart-james.net/2016/05/11/making-camera-control-tools.html</link>
-        <guid isPermaLink="true">http://stuart-james.net/2016/05/11/making-camera-control-tools.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Moving to Mac</title>
-        <description>&lt;p&gt;
-    I have been a long term Linux user now, since pretty much the beginning of my PhD in 2010. I still am to be honest and don&#39;t see that changing. Something that I did want to change is to have a new workstation to work on and avoid hooking up a laptop all the time. As a stroke of luck a friend of mine was getting rid of his iMac (Mid-2011) model for a good price and went for it. This is a little story about my experience shifting to mac.
-&lt;/p&gt;
-&lt;!--more--&gt;
-&lt;h4&gt;The good&lt;/h4&gt;
-&lt;p&gt;
-    So
-&lt;/p&gt;
-
-&lt;h5&gt;The bad&lt;/h5&gt;
-
-
-&lt;h5&gt;The something else&lt;/h5&gt;
-&lt;p&gt;
-So why did I stop updating, well that answer comes in two parts. Firstly I experienced some problems with the CMS I was using, naughty Mojo Portal! But this just limited my ability to post. The second and main reason is that I lacked time and I&#39;m not saying I have more time now, but I just didn&#39;t want to spend the small amount of time I have allocated to my website on repairing the website.
-&lt;/p&gt;
-
-&lt;p&gt;
-So the the solution Jeykll! A perl based offline static site generator. I must admit the choice of this wasn&#39;t exactly done on an extensive search and making a grounded decision, but instead I used github and it seemed a logical extension. That is not to say I did no search, I glanced, but there didn&#39;t seem a big differentiator other than language. So Perl and Jekyll it is, why not learn a language at the same time after all, so even if this all fails I&#39;ve learned something generaliseable. 
-&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 03 May 2016 00:00:00 +0100</pubDate>
-        <link>http://stuart-james.net/2016/05/03/moving-to-mac.html</link>
-        <guid isPermaLink="true">http://stuart-james.net/2016/05/03/moving-to-mac.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Working with the British Library Dataset</title>
-        <description>Intro Text some images
-
-
-&lt;!--more--&gt;
-Downloads:
-&lt;a href=&quot;https://github.com/BL-Labs/imagedirectory&quot;&gt;Directory of Images (Github)&lt;/a&gt;
-&lt;a href=&quot;&quot;&gt;Flickr Repository&lt;/a&gt;
-</description>
-        <pubDate>Wed, 20 Apr 2016 00:00:00 +0100</pubDate>
-        <link>http://stuart-james.net/2016/04/20/working-with-british-library-dataset.html</link>
-        <guid isPermaLink="true">http://stuart-james.net/2016/04/20/working-with-british-library-dataset.html</guid>
-        
-        
-      </item>
     
       <item>
         <title>Moving to Jekyll</title>
@@ -92,23 +31,19 @@ So the the solution Jeykll! A perl based offline static site generator. I must a
     
       <item>
         <title>Why I am a resolution junky</title>
-        <description>&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://stuartjames.info/Data/Sites/5/blogimages/highrescoding.png&quot; style=&quot;width: 100%; &quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I have been coding for many years now (scarily &amp;gt; 15&amp;nbsp;years), I have always aimed to get higher and higher resolution screens or alternatively multiple screens. Sadly as mentioned in an earlier blog post the computer I am using at the moment is a desktop replacement&amp;nbsp;laptop with a dying screen so I purchased a 27&quot; 2560x1440, not quite my laptops 3200x1800 but still pretty reasonable and great for late night coding! The above is an example of me geeking out, library coding and demo/test rig&amp;nbsp;coding in parallel&lt;/p&gt;
-&lt;br /&gt;&lt;a href=&#39;http://stuartjames.info/Journal/why-i-am-a-resolution-junky-2014-10-20.aspx&#39;&gt;Stuart James&lt;/a&gt;&amp;nbsp;&amp;nbsp;&lt;a href=&#39;http://stuartjames.info/Journal/why-i-am-a-resolution-junky-2014-10-20.aspx&#39;&gt;...&lt;/a&gt;
-</description>
+        <description>&lt;p&gt;I have been coding for many years now (scarily &amp;gt; 15&amp;nbsp;years), I have always aimed to get higher and higher resolution screens or alternatively multiple screens. Sadly as mentioned in an earlier blog post the computer I am using at the moment is a desktop replacement&amp;nbsp;laptop with a dying screen so I purchased a 27&quot; 2560x1440, not quite my laptops 3200x1800 but still pretty reasonable and great for late night coding! The above is an example of me geeking out, library coding and demo/test rig&amp;nbsp;coding in parallel&lt;/p&gt;</description>
         <pubDate>Mon, 20 Oct 2014 00:00:00 +0100</pubDate>
-        <link>http://stuart-james.net/2014/10/20/why-i-am-a-resolution-junky.html</link>
-        <guid isPermaLink="true">http://stuart-james.net/2014/10/20/why-i-am-a-resolution-junky.html</guid>
+        <link>http://stuart-james.net/tech/2014/10/20/why-i-am-a-resolution-junky.html</link>
+        <guid isPermaLink="true">http://stuart-james.net/tech/2014/10/20/why-i-am-a-resolution-junky.html</guid>
         
+        
+        <category>tech</category>
         
       </item>
     
       <item>
         <title>New Toys Sept’14 Part 1 of 2 – BenQ BL2710PT 27” WQHD</title>
-        <description>&lt;img alt=&quot;&quot; src=&quot;http://stuartjames.info/Data/Sites/5/blogimages/train-rgb2.jpg&quot; style=&quot;width: 100%;&quot; /&gt;
-
-&lt;p&gt;After having my beast of a desktop replacement laptop (ASUS n73sv) for a few years now the screen has become a bit temperamental. This and the fact I am using Lenovo Yoga2 Pro ultra book more and more (due to portability/screen res) has resulted in a void in powerful home processing.&lt;/p&gt;
+        <description>&lt;p&gt;After having my beast of a desktop replacement laptop (ASUS n73sv) for a few years now the screen has become a bit temperamental. This and the fact I am using Lenovo Yoga2 Pro ultra book more and more (due to portability/screen res) has resulted in a void in powerful home processing.&lt;/p&gt;
 
 &lt;p&gt;Therefore I felt to solve this problem I would get a beefy screen to allow me to work more comfortably at home and in theory write more of my thesis (instead of this blog… shh). I wanted something above the 1920x1080 resolution, since I know that two screens isn’t an option used in conjunction with the old ASUS. Two competitors came to the fore the BenQ BL2710PT and a Dell, oddly the Dell had very bad reversed when used over HDMI and you have to do a lot of hard work to get over the locked down 1080p. So I opted for the BenQ and am very happy with the results.&lt;/p&gt;
 
@@ -125,103 +60,108 @@ So the the solution Jeykll! A perl based offline static site generator. I must a
 &lt;p&gt;It is hard to have a decisive exciting conclusion from a screen, it does what it is supposed to. Would I opt for two monitors over this definitely, if you don’t have that as an option or you want to watch movies in bed then this is a great screen for you to get that extra screen estate. The only real hurdle to this screen is price, at £400 it is steep especially when you think a 1080 screen will set you back £150, a couple of those comes in a lot cheaper for more screen real-estate.&lt;/p&gt;
 
 &lt;p&gt;I do know there are some entry level UltraHD( 3840x2160 ) screens often these are locked to 30Hz. Ignoring that issue, I simply didn’t need it my GPU was being pushed to max-resolution poor little GeForce 560m so I opted to save the money and probably get a better UHD screen later when I get something to power it.&lt;/p&gt;
-&lt;br /&gt;&lt;a href=&#39;http://stuartjames.info/Journal/new-toys-sept’14-part-1-of-2-–-benq-bl2710pt-27”-wqhd.aspx&#39;&gt;Stuart James&lt;/a&gt;&amp;nbsp;&amp;nbsp;&lt;a href=&#39;http://stuartjames.info/Journal/new-toys-sept’14-part-1-of-2-–-benq-bl2710pt-27”-wqhd.aspx&#39;&gt;...&lt;/a&gt;
 </description>
         <pubDate>Fri, 26 Sep 2014 00:00:00 +0100</pubDate>
-        <link>http://stuart-james.net/2014/09/26/new-toys-sept-14-part-1-of-2-benq-bl2710pt-27-wqhd.html</link>
-        <guid isPermaLink="true">http://stuart-james.net/2014/09/26/new-toys-sept-14-part-1-of-2-benq-bl2710pt-27-wqhd.html</guid>
+        <link>http://stuart-james.net/tech/2014/09/26/new-toys-sept-14-part-1-of-2-benq-bl2710pt-27-wqhd.html</link>
+        <guid isPermaLink="true">http://stuart-james.net/tech/2014/09/26/new-toys-sept-14-part-1-of-2-benq-bl2710pt-27-wqhd.html</guid>
         
+        
+        <category>tech</category>
         
       </item>
     
       <item>
         <title>libSVM linear kernel normalisation</title>
-        <description>&lt;p&gt;I have used a variety of tools for binary, multiclass and even incremental SVM problems, today I found something quite nice in binary case for &lt;a href=&quot;http://www.csie.ntu.edu.tw/~cjlin/libsvm/&quot;&gt;libSVM&lt;/a&gt;, although potentially a source of confusion.&lt;/p&gt;&lt;p&gt;It is common in machine learning to apply a sigmoid function to normalise the boundaries of a problem, this can by empirically defining the upper and lower bound or through experimentation. Within &lt;a href=&quot;http://www.csie.ntu.edu.tw/~cjlin/libsvm/&quot;&gt;libSVM&lt;/a&gt; they do this through experimentation, that is great to save you some time. The only thing to remember is it means through the use of random and cross validation with small sets of data, you are likely to get different results on each run.&lt;/p&gt;&lt;p&gt;So the function to consider is this:&lt;/p&gt;&lt;pre class=&quot;brush: c++&quot;&gt;// Cross-validation decision values for probability estimates
-static void svm_binary_svc_probability(
-	const svm_problem *prob, const svm_parameter *param,
-	double Cp, double Cn, double&amp;amp; probA, double&amp;amp; probB)
-{
-	int i;
-	int nr_fold = 5;
-	int *perm = Malloc(int,prob-&amp;gt;l);
-	double *dec_values = Malloc(double,prob-&amp;gt;l);
+        <description>&lt;p&gt;I have used a variety of tools for binary, multiclass and even incremental SVM problems, today I found something quite nice in binary case for &lt;a href=&quot;http://www.csie.ntu.edu.tw/~cjlin/libsvm/&quot;&gt;libSVM&lt;/a&gt;, although potentially a source of confusion.&lt;/p&gt;&lt;p&gt;It is common in machine learning to apply a sigmoid function to normalise the boundaries of a problem, this can by empirically defining the upper and lower bound or through experimentation. Within &lt;a href=&quot;http://www.csie.ntu.edu.tw/~cjlin/libsvm/&quot;&gt;libSVM&lt;/a&gt; they do this through experimentation, that is great to save you some time. The only thing to remember is it means through the use of random and cross validation with small sets of data, you are likely to get different results on each run.&lt;/p&gt;&lt;p&gt;So the function to consider is this:&lt;/p&gt;
 
-	// random shuffle
-	for(i=0;i&amp;lt;prob-&amp;gt;l;i++) perm[i]=i;
-	for(i=0;i&amp;lt;prob-&amp;gt;l;i++)
-	{
-		int j = i+rand()%(prob-&amp;gt;l-i);
-		swap(perm[i],perm[j]);
-	}
-	for(i=0;i&amp;lt;nr_fold;i++)
-	{
-		int begin = i*prob-&amp;gt;l/nr_fold;
-		int end = (i+1)*prob-&amp;gt;l/nr_fold;
-		int j,k;
-		struct svm_problem subprob;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Cross-validation decision values for probability estimates
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;svm_binary_svc_probability&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;svm_problem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;svm_parameter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;param&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Cp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Cn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;amp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;probA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;amp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;probB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nr_fold&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;perm&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Malloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dec_values&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Malloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
-		subprob.l = prob-&amp;gt;l-(end-begin);
-		subprob.x = Malloc(struct svm_node*,subprob.l);
-		subprob.y = Malloc(double,subprob.l);
+	&lt;span class=&quot;c1&quot;&gt;// random shuffle
+&lt;/span&gt;	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;perm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;perm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;perm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nr_fold&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;begin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nr_fold&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nr_fold&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;svm_problem&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subprob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+		&lt;span class=&quot;n&quot;&gt;subprob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;begin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;subprob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Malloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;svm_node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subprob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;subprob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Malloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subprob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 			
-		k=0;
-		for(j=0;j&amp;lt;begin;j++)
-		{
-			subprob.x[k] = prob-&amp;gt;x[perm[j]];
-			subprob.y[k] = prob-&amp;gt;y[perm[j]];
-			++k;
-		}
-		for(j=end;j&amp;lt;prob-&amp;gt;l;j++)
-		{
-			subprob.x[k] = prob-&amp;gt;x[perm[j]];
-			subprob.y[k] = prob-&amp;gt;y[perm[j]];
-			++k;
-		}
-		int p_count=0,n_count=0;
-		for(j=0;j&amp;lt;k;j++)
-			if(subprob.y[j]&amp;gt;0)
-				p_count++;
-			else
-				n_count++;
+		&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;begin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;subprob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;perm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]];&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;subprob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;perm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]];&lt;/span&gt;
+			&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;subprob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;perm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]];&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;subprob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;perm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]];&lt;/span&gt;
+			&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p_count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n_count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subprob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+				&lt;span class=&quot;n&quot;&gt;p_count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+				&lt;span class=&quot;n&quot;&gt;n_count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-		if(p_count==0 &amp;amp;&amp;amp; n_count==0)
-			for(j=begin;j&amp;lt;end;j++)
-				dec_values[perm[j]] = 0;
-		else if(p_count &amp;gt; 0 &amp;amp;&amp;amp; n_count == 0)
-			for(j=begin;j&amp;lt;end;j++)
-				dec_values[perm[j]] = 1;
-		else if(p_count == 0 &amp;amp;&amp;amp; n_count &amp;gt; 0)
-			for(j=begin;j&amp;lt;end;j++)
-				dec_values[perm[j]] = -1;
-		else
-		{
-			svm_parameter subparam = *param;
-			subparam.probability=0;
-			subparam.C=1.0;
-			subparam.nr_weight=2;
-			subparam.weight_label = Malloc(int,2);
-			subparam.weight = Malloc(double,2);
-			subparam.weight_label[0]=+1;
-			subparam.weight_label[1]=-1;
-			subparam.weight[0]=Cp;
-			subparam.weight[1]=Cn;
-			struct svm_model *submodel = svm_train(&amp;amp;subprob,&amp;amp;subparam);
-			for(j=begin;j&amp;lt;end;j++)
-			{
-				svm_predict_values(submodel,prob-&amp;gt;x[perm[j]],&amp;amp;(dec_values[perm[j]])); 
-				// ensure +1 -1 order; reason not using CV subroutine
-				dec_values[perm[j]] *= submodel-&amp;gt;label[0];
-			}		
-			svm_free_and_destroy_model(&amp;amp;submodel);
-			svm_destroy_param(&amp;amp;subparam);
-		}
-		free(subprob.x);
-		free(subprob.y);
-	}		
-	sigmoid_train(prob-&amp;gt;l,dec_values,prob-&amp;gt;y,probA,probB);
-	free(dec_values);
-	free(perm);
-}&lt;/pre&gt;So if you have few numbers of samples, that is the case in some circumstances then the cross validation is where you hit problems. Of course you can simply re-implement it yourself or you can add a few lines to stop cross validation if the number of samples is too few.&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Not the most elegant of code, but for the moment it will do. I choose to completely seperate the two steps as opposed to multiple if’s&lt;/p&gt;&lt;pre class=&quot;brush: c++; toolbar: false&quot;&gt;static void svm_binary_svc_probability(
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p_count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;amp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;amp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;begin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+				&lt;span class=&quot;n&quot;&gt;dec_values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;perm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p_count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;amp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;amp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;begin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+				&lt;span class=&quot;n&quot;&gt;dec_values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;perm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p_count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;amp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;amp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;begin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+				&lt;span class=&quot;n&quot;&gt;dec_values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;perm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;svm_parameter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subparam&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;param&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;subparam&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;probability&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;subparam&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;C&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;subparam&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nr_weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;subparam&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;weight_label&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Malloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;subparam&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;weight&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Malloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;subparam&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;weight_label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;subparam&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;weight_label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;subparam&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;weight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Cp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;subparam&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;weight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Cn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;svm_model&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;submodel&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;svm_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;amp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subprob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;amp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subparam&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;begin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+			&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+				&lt;span class=&quot;n&quot;&gt;svm_predict_values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;submodel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;perm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]],&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;amp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dec_values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;perm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]));&lt;/span&gt; 
+				&lt;span class=&quot;c1&quot;&gt;// ensure +1 -1 order; reason not using CV subroutine
+&lt;/span&gt;				&lt;span class=&quot;n&quot;&gt;dec_values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;perm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;submodel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+			&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;		
+			&lt;span class=&quot;n&quot;&gt;svm_free_and_destroy_model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;amp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;submodel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;svm_destroy_param&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;amp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subparam&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;free&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subprob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;free&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subprob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;		
+	&lt;span class=&quot;n&quot;&gt;sigmoid_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dec_values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;probA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;probB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;free&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dec_values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;free&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;perm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+So if you have few numbers of samples, that is the case in some circumstances then the cross validation is where you hit problems. Of course you can simply re-implement it yourself or you can add a few lines to stop cross validation if the number of samples is too few.&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Not the most elegant of code, but for the moment it will do. I choose to completely seperate the two steps as opposed to multiple if’s&lt;/p&gt;&lt;pre class=&quot;brush: c++; toolbar: false&quot;&gt;static void svm_binary_svc_probability(
 	const svm_problem *prob, const svm_parameter *param,
 	double Cp, double Cn, double&amp;amp; probA, double&amp;amp; probB)
 {
@@ -374,8 +314,7 @@ static void svm_binary_svc_probability(
 	free(dec_values);
 	free(perm);
 }
-&lt;/pre&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;As with a lot of my code based posts, this is more for my memory than anything, but hopefully may help people unlock the secrets of &lt;a href=&quot;http://www.csie.ntu.edu.tw/~cjlin/libsvm/&quot;&gt;libSVM&lt;/a&gt;.&lt;/p&gt;&lt;br /&gt;&lt;a href=&#39;http://stuartjames.info/Journal/libsvm-linear-kernel-normalisation.aspx&#39;&gt;Stuart James&lt;/a&gt;&amp;nbsp;&amp;nbsp;&lt;a href=&#39;http://stuartjames.info/Journal/libsvm-linear-kernel-normalisation.aspx&#39;&gt;...&lt;/a&gt;
-</description>
+&lt;/pre&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;As with a lot of my code based posts, this is more for my memory than anything, but hopefully may help people unlock the secrets of &lt;a href=&quot;http://www.csie.ntu.edu.tw/~cjlin/libsvm/&quot;&gt;libSVM&lt;/a&gt;.&lt;/p&gt;</description>
         <pubDate>Mon, 07 Jul 2014 00:00:00 +0100</pubDate>
         <link>http://stuart-james.net/2014/07/07/libsvm-linear-kernel-normalisation.html</link>
         <guid isPermaLink="true">http://stuart-james.net/2014/07/07/libsvm-linear-kernel-normalisation.html</guid>
@@ -414,6 +353,87 @@ static void svm_binary_svc_probability(
         <pubDate>Thu, 15 May 2014 00:00:00 +0100</pubDate>
         <link>http://stuart-james.net/2014/05/15/intro-to-climbing-@craggyisland.html</link>
         <guid isPermaLink="true">http://stuart-james.net/2014/05/15/intro-to-climbing-@craggyisland.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>10k Colour Run @Weston-super-Mare</title>
+        <description>&lt;p&gt;Recently I completed a 10k fun run in my home town. The event was in aid of Weston Hospice care, I don’t have any direct relation with it is a good cause to support so raised a little money and went along to get covered in sand. I am not a seasoned runner, but I run in my spare time to keep me a little sane (results not guaranteed). So after 59minutes ish (the event wasn’t timed) of wading through sand/mud I looked like this:&lt;/p&gt;&lt;p&gt;&lt;img style=&quot;max-width: 50%;, height: auto; display: block;&quot; title=&quot;10246545_10152357929296068_5837371472665247184_n&quot; alt=&quot;10246545_10152357929296068_5837371472665247184_n&quot; src=&quot;http://stuartjames.info/Data/Sites/5/media/wlw/10246545_10152357929296068_5837371472665247184_n_thumb.jpg&quot;&gt;&lt;/p&gt;&lt;p&gt;Although not the most flattering of picture was a great fun experience. I hope to drag others along next year!&lt;/p&gt;&lt;br /&gt;&lt;a href=&#39;http://stuartjames.info/Journal/10k-colour-run-weston-super-mare.aspx&#39;&gt;Stuart James&lt;/a&gt;&amp;nbsp;&amp;nbsp;&lt;a href=&#39;http://stuartjames.info/Journal/10k-colour-run-weston-super-mare.aspx&#39;&gt;...&lt;/a&gt;
+</description>
+        <pubDate>Mon, 28 Apr 2014 00:00:00 +0100</pubDate>
+        <link>http://stuart-james.net/2014/04/28/10k-colour-run-@weston-super-mare.html</link>
+        <guid isPermaLink="true">http://stuart-james.net/2014/04/28/10k-colour-run-@weston-super-mare.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Look at that text isn’t it tiny oh its on the Lenovo Yoga 2 Pro!</title>
+        <description>&lt;p&gt;A few weeks back I got my grubby little hands on a Lenovo Yoga 2 Pro i7 8GB 512GB SSD-HD, this was up against the Dell XPS 13 and the Sony Vaio Pro. I have had a play on the Vaio, that is a nice piece of kit, absolutely stunning battery life especially with the additional battery. If you are looking for battery life this is the model but it can get a little pricey. The other alternative the XPS 13 I wasn’t able to get my hands on to see what it was like, but I do know a couple of people who have and that is also good performing, the touch makes little sense to my mind without being able to do the Yoga moves, this comment also applies to the Vaio.&lt;/p&gt;&lt;!--more--&gt;&lt;p&gt;Lets start by a few facts they all have:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;i7 Chips (same in all)&lt;/li&gt;&lt;li&gt;8gb ram option&lt;/li&gt;&lt;li&gt;256 or 512 SSD hard drives&lt;/li&gt;&lt;li&gt;13”-ish screens&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;and now the unique features of the models&lt;/p&gt;&lt;h2&gt;Vaio: &lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://stuartjames.info/Data/Sites/5/media/wlw/sony-pro-13.jpg&quot;&gt;&lt;img style=&quot;max-width: 50%;, height: auto; display: block;&quot; title=&quot;sony-pro-13&quot;  alt=&quot;sony-pro-13&quot; src=&quot;http://stuartjames.info/Data/Sites/5/media/wlw/sony-pro-13_thumb.jpg&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Good -- Uber battery at little size/weight, additional connectivity&lt;/li&gt;&lt;li&gt;Bad – Cost approx. £1550 (US only for identical spec?)&lt;/li&gt;&lt;/ul&gt;&lt;h2&gt;XPS: &lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://stuartjames.info/Data/Sites/5/media/wlw/dell-xps-13.jpg&quot;&gt;&lt;img style=&quot;max-width: 50%;, height: auto; display: block;&quot;  title=&quot;dell-xps-13&quot; alt=&quot;dell-xps-13&quot; src=&quot;http://stuartjames.info/Data/Sites/5/media/wlw/dell-xps-13_thumb.jpg&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Okay -- £1300 for for 256 model (to memory, not available at time of posting),Middle of the board battery&lt;/li&gt;&lt;/ul&gt;&lt;h2&gt;Yoga:&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&lt;a href=&quot;http://stuartjames.info/Data/Sites/5/media/wlw/lenovo-yoga-2.jpg&quot;&gt;&lt;img title=&quot;lenovo-yoga-2&quot; style=&quot;max-width: 50%;, height: auto; display: block;&quot; alt=&quot;lenovo-yoga-2&quot; src=&quot;http://stuartjames.info/Data/Sites/5/media/wlw/lenovo-yoga-2_thumb.jpg&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Good -- Yoga-ness Moves (Tablet/Tent), Ultra high resolution display&lt;/li&gt;&lt;li&gt;Okay – Price for spec £1300, £1100 for 256 model (best deal)&lt;/li&gt;&lt;li&gt;Bad – Smallest battery capacity&lt;/li&gt;&lt;/ul&gt;&lt;h2&gt;Comparison Conclusion&lt;/h2&gt;&lt;p&gt;As you can see there is little to distinguish between these models, price therefore is a big impact as well as desired use case. In my case I wanted something I could use as a tablet for presenting demos since my work is heavily sketch based it is useful to not have to carry around a tablet as well. I also love high definition displays, I am well aware on a 13” device having 3200 by bla bla resolution makes little sense when you have to upscale everything anyway, but it is nice to have and it is noticeable; there is probably a middle ground though, but hey this was the option.&lt;/p&gt;&lt;h2&gt;Use of the Yoga 2 Pro&lt;/h2&gt;&lt;p&gt;So as I said I got this laptop, tablet flexy thing a few weeks ago, and I have loved it ish. The resolution is great if apps supported, but still is nice and so sharp is amazing. The touch pad isn’t great, you can get used to it, but it isn’t something to brag about and friends coming from other laptops will hate it. Back lit keyboard not automatic, this is weird, it shouldn’t be a gripe, but it is, just weird on such an expensive laptop. Battery life I find is fine, can reliable take off charge for the better part of day with conservative use, if you do any heavy processing e.g. Matlab, Data churning code you will be lucky to get 3hrs.&lt;/p&gt;&lt;p&gt;I got the 512GB model due to it being available, but I do think it is well worth it possibly not worth £200 markup on this model but others I am sure are cheaper or alternative install yourself after. It is nice knowing I have the capacity to take a chunk of files with me anywhere I go.&lt;/p&gt;&lt;p&gt;So the main selling point the yoga ness, I find it useful it validates the touch, but isn’t something for every day. I generally find myself slipping it over once a week, so not much. Having said that take it to a conference and it is great for the plane in the tent mode for a video, or for demos on. &lt;/p&gt;&lt;br /&gt;&lt;a href=&#39;http://stuartjames.info/Journal/look-at-that-text-isn’t-it-tiny-oh-its-on-the-lenovo-yoga-2-pro.aspx&#39;&gt;Stuart James&lt;/a&gt;&amp;nbsp;&amp;nbsp;&lt;a href=&#39;http://stuartjames.info/Journal/look-at-that-text-isn’t-it-tiny-oh-its-on-the-lenovo-yoga-2-pro.aspx&#39;&gt;...&lt;/a&gt;
+</description>
+        <pubDate>Sun, 20 Apr 2014 00:00:00 +0100</pubDate>
+        <link>http://stuart-james.net/2014/04/20/look-at-that-text-isn-t-it-tiny-oh-its-on-the-lenovo-yoga-2-pro.html</link>
+        <guid isPermaLink="true">http://stuart-james.net/2014/04/20/look-at-that-text-isn-t-it-tiny-oh-its-on-the-lenovo-yoga-2-pro.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Visualise the output of .dot file using GraphViz / dot (Linux)</title>
+        <description>&lt;p&gt;Something I managed to miss from earlier Graph related posts, was how to visualise the graph using GraphViz&lt;/p&gt;&lt;p&gt;With your output .dot file you can simply call:&lt;/p&gt;&lt;pre class=&quot;csharpcode&quot;&gt;dot -Tps filename.dot -o outfile.ps&lt;/pre&gt;&lt;style type=&quot;text/css&quot;&gt;.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, &quot;Courier New&quot;, courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }
+&lt;/style&gt;&lt;p&gt;Will generate ps file for the jpg version you can simply modify the line to:&lt;/p&gt;&lt;pre class=&quot;csharpcode&quot;&gt;dot -Tjpeg filename.dot -o outfile.jpg&lt;/pre&gt;&lt;style type=&quot;text/css&quot;&gt;.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, &quot;Courier New&quot;, courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }
+&lt;/style&gt;&lt;p&gt;Simple an easy?&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;a href=&quot;http://stuartjames.info/Data/Sites/5/media/wlw/outfile_mg.jpg&quot;&gt;&lt;img width=&quot;217&quot; height=&quot;480&quot; title=&quot;outfile_mg&quot; style=&quot;border: 0px currentcolor; border-image: none; display: inline; background-image: none;&quot; alt=&quot;outfile_mg&quot; src=&quot;http://stuartjames.info/Data/Sites/5/media/wlw/outfile_mg_thumb.jpg&quot; border=&quot;0&quot;&gt;&lt;/a&gt;&lt;br /&gt;&lt;a href=&#39;http://stuartjames.info/Journal/visualise-the-output-of-dot-file-using-graphviz--dot-linux.aspx&#39;&gt;Stuart James&lt;/a&gt;&amp;nbsp;&amp;nbsp;&lt;a href=&#39;http://stuartjames.info/Journal/visualise-the-output-of-dot-file-using-graphviz--dot-linux.aspx&#39;&gt;...&lt;/a&gt;
+</description>
+        <pubDate>Wed, 12 Mar 2014 00:00:00 +0000</pubDate>
+        <link>http://stuart-james.net/2014/03/12/visualise-the-output-of-.dot-file-using-graphviz-dot-(linux).html</link>
+        <guid isPermaLink="true">http://stuart-james.net/2014/03/12/visualise-the-output-of-.dot-file-using-graphviz-dot-(linux).html</guid>
         
         
       </item>
