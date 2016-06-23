@@ -5,9 +5,58 @@
     <description>Stuart James&#39; journal, a simple little place for me to scribble down my thoughts and help my terrible memory</description>
     <link>http://stuart-james.net/</link>
     <atom:link href="http://stuart-james.net/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 14 Jun 2016 15:38:49 +0100</pubDate>
-    <lastBuildDate>Tue, 14 Jun 2016 15:38:49 +0100</lastBuildDate>
-    <generator>Jekyll v3.1.3</generator>
+    <pubDate>Thu, 23 Jun 2016 18:43:57 +0100</pubDate>
+    <lastBuildDate>Thu, 23 Jun 2016 18:43:57 +0100</lastBuildDate>
+    <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Getting back to books</title>
+        <description>&lt;p&gt;
+When I was younger I never got into reading novels sadly. I have tried throughout my adult life to try to get into them, but sadly it is always a challenge to stick with them. Often I find the demands of my work a massive distraction result in me not wanting to sit and read more. I dabbled into Audiobooks that I recommend massively, but loosing my commute broke this. So I&#39;m going to try listen while cycling to work! 
+&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;p&gt;
+Having spent a while now (6months) trying to finish &lt;a href=&quot;https://www.goodreads.com/book/show/22088245-npcs&quot;&gt;NPCs by Drew Hayes&lt;/a&gt; a great fun book. Sadly the inprogress nature of this preculudes me from being able to move onto the second in the book series. Therefore my book to try next is &lt;a href=&quot;https://www.goodreads.com/book/show/15701981-critical-failures&quot;&gt;Critical Failures by Rober Bevan&lt;/a&gt;. The audiobook at 8hrs should be an easy &#39;read&#39; in a week, lets see if I crash!
+&lt;/p&gt;</description>
+        <pubDate>Thu, 23 Jun 2016 00:00:00 +0100</pubDate>
+        <link>http://stuart-james.net/2016/06/23/getting-back-to-books.html</link>
+        <guid isPermaLink="true">http://stuart-james.net/2016/06/23/getting-back-to-books.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>29 going on 30</title>
+        <description>A mini-celebration of reflection as I hit my 29th year floating around the sun. Although I may not of achieved everything I have set out todo in this decade I have a lot of achievements both career / acdemicly and life through running etc.
+
+So happy 29th to me!</description>
+        <pubDate>Tue, 14 Jun 2016 00:00:00 +0100</pubDate>
+        <link>http://stuart-james.net/2016/06/14/twenty-nine-going-on-thirty.html</link>
+        <guid isPermaLink="true">http://stuart-james.net/2016/06/14/twenty-nine-going-on-thirty.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Working with the British Library Dataset</title>
+        <description>&lt;p&gt;Earlier this year &lt;a href=&quot;http://tim.weyri.ch&quot;&gt;Tim Weyrich&lt;/a&gt; directed me onto a dataset published by the British Library and since then my research has focused heavily around this. Within Computer Vision it is unusual to get a large dataset not skewed to achieve a specific research goal. Sometimes datasets can be repurposed, but this is requires extensive effort to get the data in its rawest form.&lt;/p&gt;
+
+&lt;p&gt;The British Library dataset is a quite literally a &quot;dump&quot; of all the unknown to OCR elements from the book scanning performed by Microsoft. Therefore is not just a collection of line art imagery, but also of elaborate charachters or section embroidery.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;I intend to post more on working with this dataset as time goes on, but for now there is a github which contains the directory of images:
+&lt;a href=&quot;https://github.com/BL-Labs/imagedirectory&quot;&gt;Directory of Images (Github)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And what is the main repository on Flickr:&lt;a href=&quot;https://www.flickr.com/photos/britishlibrary/&quot;&gt;Flickr Repository&lt;/a&gt;
+
+</description>
+        <pubDate>Wed, 20 Apr 2016 00:00:00 +0100</pubDate>
+        <link>http://stuart-james.net/2016/04/20/working-with-british-library-dataset.html</link>
+        <guid isPermaLink="true">http://stuart-james.net/2016/04/20/working-with-british-library-dataset.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Moving to Jekyll</title>
@@ -353,87 +402,6 @@ So if you have few numbers of samples, that is the case in some circumstances th
         <pubDate>Thu, 15 May 2014 00:00:00 +0100</pubDate>
         <link>http://stuart-james.net/2014/05/15/intro-to-climbing-@craggyisland.html</link>
         <guid isPermaLink="true">http://stuart-james.net/2014/05/15/intro-to-climbing-@craggyisland.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>10k Colour Run @Weston-super-Mare</title>
-        <description>&lt;p&gt;Recently I completed a 10k fun run in my home town. The event was in aid of Weston Hospice care, I don’t have any direct relation with it is a good cause to support so raised a little money and went along to get covered in sand. I am not a seasoned runner, but I run in my spare time to keep me a little sane (results not guaranteed). So after 59minutes ish (the event wasn’t timed) of wading through sand/mud I looked like this:&lt;/p&gt;&lt;p&gt;&lt;img style=&quot;max-width: 50%;, height: auto; display: block;&quot; title=&quot;10246545_10152357929296068_5837371472665247184_n&quot; alt=&quot;10246545_10152357929296068_5837371472665247184_n&quot; src=&quot;http://stuartjames.info/Data/Sites/5/media/wlw/10246545_10152357929296068_5837371472665247184_n_thumb.jpg&quot;&gt;&lt;/p&gt;&lt;p&gt;Although not the most flattering of picture was a great fun experience. I hope to drag others along next year!&lt;/p&gt;&lt;br /&gt;&lt;a href=&#39;http://stuartjames.info/Journal/10k-colour-run-weston-super-mare.aspx&#39;&gt;Stuart James&lt;/a&gt;&amp;nbsp;&amp;nbsp;&lt;a href=&#39;http://stuartjames.info/Journal/10k-colour-run-weston-super-mare.aspx&#39;&gt;...&lt;/a&gt;
-</description>
-        <pubDate>Mon, 28 Apr 2014 00:00:00 +0100</pubDate>
-        <link>http://stuart-james.net/2014/04/28/10k-colour-run-@weston-super-mare.html</link>
-        <guid isPermaLink="true">http://stuart-james.net/2014/04/28/10k-colour-run-@weston-super-mare.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Look at that text isn’t it tiny oh its on the Lenovo Yoga 2 Pro!</title>
-        <description>&lt;p&gt;A few weeks back I got my grubby little hands on a Lenovo Yoga 2 Pro i7 8GB 512GB SSD-HD, this was up against the Dell XPS 13 and the Sony Vaio Pro. I have had a play on the Vaio, that is a nice piece of kit, absolutely stunning battery life especially with the additional battery. If you are looking for battery life this is the model but it can get a little pricey. The other alternative the XPS 13 I wasn’t able to get my hands on to see what it was like, but I do know a couple of people who have and that is also good performing, the touch makes little sense to my mind without being able to do the Yoga moves, this comment also applies to the Vaio.&lt;/p&gt;&lt;!--more--&gt;&lt;p&gt;Lets start by a few facts they all have:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;i7 Chips (same in all)&lt;/li&gt;&lt;li&gt;8gb ram option&lt;/li&gt;&lt;li&gt;256 or 512 SSD hard drives&lt;/li&gt;&lt;li&gt;13”-ish screens&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;and now the unique features of the models&lt;/p&gt;&lt;h2&gt;Vaio: &lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://stuartjames.info/Data/Sites/5/media/wlw/sony-pro-13.jpg&quot;&gt;&lt;img style=&quot;max-width: 50%;, height: auto; display: block;&quot; title=&quot;sony-pro-13&quot;  alt=&quot;sony-pro-13&quot; src=&quot;http://stuartjames.info/Data/Sites/5/media/wlw/sony-pro-13_thumb.jpg&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Good -- Uber battery at little size/weight, additional connectivity&lt;/li&gt;&lt;li&gt;Bad – Cost approx. £1550 (US only for identical spec?)&lt;/li&gt;&lt;/ul&gt;&lt;h2&gt;XPS: &lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://stuartjames.info/Data/Sites/5/media/wlw/dell-xps-13.jpg&quot;&gt;&lt;img style=&quot;max-width: 50%;, height: auto; display: block;&quot;  title=&quot;dell-xps-13&quot; alt=&quot;dell-xps-13&quot; src=&quot;http://stuartjames.info/Data/Sites/5/media/wlw/dell-xps-13_thumb.jpg&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Okay -- £1300 for for 256 model (to memory, not available at time of posting),Middle of the board battery&lt;/li&gt;&lt;/ul&gt;&lt;h2&gt;Yoga:&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&lt;a href=&quot;http://stuartjames.info/Data/Sites/5/media/wlw/lenovo-yoga-2.jpg&quot;&gt;&lt;img title=&quot;lenovo-yoga-2&quot; style=&quot;max-width: 50%;, height: auto; display: block;&quot; alt=&quot;lenovo-yoga-2&quot; src=&quot;http://stuartjames.info/Data/Sites/5/media/wlw/lenovo-yoga-2_thumb.jpg&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Good -- Yoga-ness Moves (Tablet/Tent), Ultra high resolution display&lt;/li&gt;&lt;li&gt;Okay – Price for spec £1300, £1100 for 256 model (best deal)&lt;/li&gt;&lt;li&gt;Bad – Smallest battery capacity&lt;/li&gt;&lt;/ul&gt;&lt;h2&gt;Comparison Conclusion&lt;/h2&gt;&lt;p&gt;As you can see there is little to distinguish between these models, price therefore is a big impact as well as desired use case. In my case I wanted something I could use as a tablet for presenting demos since my work is heavily sketch based it is useful to not have to carry around a tablet as well. I also love high definition displays, I am well aware on a 13” device having 3200 by bla bla resolution makes little sense when you have to upscale everything anyway, but it is nice to have and it is noticeable; there is probably a middle ground though, but hey this was the option.&lt;/p&gt;&lt;h2&gt;Use of the Yoga 2 Pro&lt;/h2&gt;&lt;p&gt;So as I said I got this laptop, tablet flexy thing a few weeks ago, and I have loved it ish. The resolution is great if apps supported, but still is nice and so sharp is amazing. The touch pad isn’t great, you can get used to it, but it isn’t something to brag about and friends coming from other laptops will hate it. Back lit keyboard not automatic, this is weird, it shouldn’t be a gripe, but it is, just weird on such an expensive laptop. Battery life I find is fine, can reliable take off charge for the better part of day with conservative use, if you do any heavy processing e.g. Matlab, Data churning code you will be lucky to get 3hrs.&lt;/p&gt;&lt;p&gt;I got the 512GB model due to it being available, but I do think it is well worth it possibly not worth £200 markup on this model but others I am sure are cheaper or alternative install yourself after. It is nice knowing I have the capacity to take a chunk of files with me anywhere I go.&lt;/p&gt;&lt;p&gt;So the main selling point the yoga ness, I find it useful it validates the touch, but isn’t something for every day. I generally find myself slipping it over once a week, so not much. Having said that take it to a conference and it is great for the plane in the tent mode for a video, or for demos on. &lt;/p&gt;&lt;br /&gt;&lt;a href=&#39;http://stuartjames.info/Journal/look-at-that-text-isn’t-it-tiny-oh-its-on-the-lenovo-yoga-2-pro.aspx&#39;&gt;Stuart James&lt;/a&gt;&amp;nbsp;&amp;nbsp;&lt;a href=&#39;http://stuartjames.info/Journal/look-at-that-text-isn’t-it-tiny-oh-its-on-the-lenovo-yoga-2-pro.aspx&#39;&gt;...&lt;/a&gt;
-</description>
-        <pubDate>Sun, 20 Apr 2014 00:00:00 +0100</pubDate>
-        <link>http://stuart-james.net/2014/04/20/look-at-that-text-isn-t-it-tiny-oh-its-on-the-lenovo-yoga-2-pro.html</link>
-        <guid isPermaLink="true">http://stuart-james.net/2014/04/20/look-at-that-text-isn-t-it-tiny-oh-its-on-the-lenovo-yoga-2-pro.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Visualise the output of .dot file using GraphViz / dot (Linux)</title>
-        <description>&lt;p&gt;Something I managed to miss from earlier Graph related posts, was how to visualise the graph using GraphViz&lt;/p&gt;&lt;p&gt;With your output .dot file you can simply call:&lt;/p&gt;&lt;pre class=&quot;csharpcode&quot;&gt;dot -Tps filename.dot -o outfile.ps&lt;/pre&gt;&lt;style type=&quot;text/css&quot;&gt;.csharpcode, .csharpcode pre
-{
-	font-size: small;
-	color: black;
-	font-family: consolas, &quot;Courier New&quot;, courier, monospace;
-	background-color: #ffffff;
-	/*white-space: pre;*/
-}
-.csharpcode pre { margin: 0em; }
-.csharpcode .rem { color: #008000; }
-.csharpcode .kwrd { color: #0000ff; }
-.csharpcode .str { color: #006080; }
-.csharpcode .op { color: #0000c0; }
-.csharpcode .preproc { color: #cc6633; }
-.csharpcode .asp { background-color: #ffff00; }
-.csharpcode .html { color: #800000; }
-.csharpcode .attr { color: #ff0000; }
-.csharpcode .alt 
-{
-	background-color: #f4f4f4;
-	width: 100%;
-	margin: 0em;
-}
-.csharpcode .lnum { color: #606060; }
-&lt;/style&gt;&lt;p&gt;Will generate ps file for the jpg version you can simply modify the line to:&lt;/p&gt;&lt;pre class=&quot;csharpcode&quot;&gt;dot -Tjpeg filename.dot -o outfile.jpg&lt;/pre&gt;&lt;style type=&quot;text/css&quot;&gt;.csharpcode, .csharpcode pre
-{
-	font-size: small;
-	color: black;
-	font-family: consolas, &quot;Courier New&quot;, courier, monospace;
-	background-color: #ffffff;
-	/*white-space: pre;*/
-}
-.csharpcode pre { margin: 0em; }
-.csharpcode .rem { color: #008000; }
-.csharpcode .kwrd { color: #0000ff; }
-.csharpcode .str { color: #006080; }
-.csharpcode .op { color: #0000c0; }
-.csharpcode .preproc { color: #cc6633; }
-.csharpcode .asp { background-color: #ffff00; }
-.csharpcode .html { color: #800000; }
-.csharpcode .attr { color: #ff0000; }
-.csharpcode .alt 
-{
-	background-color: #f4f4f4;
-	width: 100%;
-	margin: 0em;
-}
-.csharpcode .lnum { color: #606060; }
-&lt;/style&gt;&lt;p&gt;Simple an easy?&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;a href=&quot;http://stuartjames.info/Data/Sites/5/media/wlw/outfile_mg.jpg&quot;&gt;&lt;img width=&quot;217&quot; height=&quot;480&quot; title=&quot;outfile_mg&quot; style=&quot;border: 0px currentcolor; border-image: none; display: inline; background-image: none;&quot; alt=&quot;outfile_mg&quot; src=&quot;http://stuartjames.info/Data/Sites/5/media/wlw/outfile_mg_thumb.jpg&quot; border=&quot;0&quot;&gt;&lt;/a&gt;&lt;br /&gt;&lt;a href=&#39;http://stuartjames.info/Journal/visualise-the-output-of-dot-file-using-graphviz--dot-linux.aspx&#39;&gt;Stuart James&lt;/a&gt;&amp;nbsp;&amp;nbsp;&lt;a href=&#39;http://stuartjames.info/Journal/visualise-the-output-of-dot-file-using-graphviz--dot-linux.aspx&#39;&gt;...&lt;/a&gt;
-</description>
-        <pubDate>Wed, 12 Mar 2014 00:00:00 +0000</pubDate>
-        <link>http://stuart-james.net/2014/03/12/visualise-the-output-of-.dot-file-using-graphviz-dot-(linux).html</link>
-        <guid isPermaLink="true">http://stuart-james.net/2014/03/12/visualise-the-output-of-.dot-file-using-graphviz-dot-(linux).html</guid>
         
         
       </item>

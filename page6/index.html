@@ -90,6 +90,120 @@
   <article class="post">
     <header>
       <div class="title">
+        <h2><a href="/2013/06/27/visual-studio-2013-breaks-virtualbox-due-to-hyper-v-conflict.html">Visual Studio 2013 breaks VirtualBox due to Hyper-V conflict</a></h2>
+        <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
+      </div>
+      <div class="meta">
+        <time class="published" datetime="2013-06-27">June 27, 2013</time>
+        
+        <!--
+        <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
+        -->
+      </div>
+    </header>
+    
+    <p>After installing the preview with all its bells and whistles including Hyper-V for Windows Phone development(I think) I found that I got array of network errors and then the killer VT-x is not available</p><p><a href="http://stuartjames.info/Data/Sites/5/media/wlw/image_23.png"><img width="240" height="161" title="image" style="margin-right: auto; margin-left: auto; float: none; display: block;" alt="image" src="http://stuartjames.info/Data/Sites/5/media/wlw/image_thumb_23.png"></a></p><p>This is due to the Hyper-V install in VS2013, since only one virtual controller can own the VT-x and Hyper-V is nested into Windows Hyper-V takes ownership and breaks VirtualBox.</p><p>So the solution, first you have to disable Hyper-V</p><pre class="csharpcode">bcdedit /set hypervisorlaunchtype off</pre><style type="text/css">.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }
+</style><p>Now if you reboot you should be able to boot up VirtualMachine, now if you are thinking to yourself but what about if I want both, well simple you cant. You either go through this process of turning off and on, or you do what I suggest convert fully to Hyper-V.</p><p>This can be done through <a href="http://technet.microsoft.com/en-us/sysinternals/ee656415">Disk2VHD</a> so boot up your VirtualBox VM convert it to a VHD and send it on over to Hyper-V simple hey? Oh and if you are like me with fairly chunky VM’s then you will want to archive or delete the old one.</p><br /><a href='http://stuartjames.info/Journal/visual-studio-2013-breaks-virtualbox-due-to-hyper-v-conflict.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/visual-studio-2013-breaks-virtualbox-due-to-hyper-v-conflict.aspx'>...</a>
+
+    <footer>
+       
+      <ul class="stats">
+        
+        <!--
+        <li><a href="#">General</a></li>
+        <li><a href="#" class="icon fa-heart">28</a></li>
+        <li><a href="#" class="icon fa-comment">128</a></li>
+        -->
+      </ul>
+    </footer>
+  </article>
+
+  <article class="post">
+    <header>
+      <div class="title">
+        <h2><a href="/2013/06/27/my-stickmen-look-like-a-5-year-old-(possibly-younger)-drew-them.html">My Stickmen look like a 5 year old (possibly younger) drew them</a></h2>
+        <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
+      </div>
+      <div class="meta">
+        <time class="published" datetime="2013-06-27">June 27, 2013</time>
+        
+        <!--
+        <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
+        -->
+      </div>
+    </header>
+    
+    <p>If you have seen any of my research it heavily involves crazy little stick figures or badly hand drawn stick figures or horses. Sadly after 3 years of PhD my ability to draw via a computer or by hand has not improved as demonstrated by some quality stick figures that when are aged will go into my current project.</p><p>&nbsp;</p><p><a href="http://stuartjames.info/Data/Sites/5/media/wlw/image_22.png"><img width="640" height="66" title="image" style="display: inline;" alt="image" src="http://stuartjames.info/Data/Sites/5/media/wlw/image_thumb_22.png"></a></p><p>&nbsp;</p><p>Often it feels like maybe someone with some natural artistic ability should be working on the topic of Sketch based Retrieval. For now though I will have to do!</p><br /><a href='http://stuartjames.info/Journal/my-stickmen-look-like-a-5-year-old-possibly-younger-drew-them.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/my-stickmen-look-like-a-5-year-old-possibly-younger-drew-them.aspx'>...</a>
+
+    <footer>
+       
+      <ul class="stats">
+        
+        <!--
+        <li><a href="#">General</a></li>
+        <li><a href="#" class="icon fa-heart">28</a></li>
+        <li><a href="#" class="icon fa-comment">128</a></li>
+        -->
+      </ul>
+    </footer>
+  </article>
+
+  <article class="post">
+    <header>
+      <div class="title">
+        <h2><a href="/2013/06/26/windows-rt-8.1-uh-oh-...html">Windows RT 8.1 … Uh oh ..</a></h2>
+        <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
+      </div>
+      <div class="meta">
+        <time class="published" datetime="2013-06-26">June 26, 2013</time>
+        
+        <!--
+        <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
+        -->
+      </div>
+    </header>
+    
+    <p><a href="http://stuartjames.info/Data/Sites/5/media/wlw/win8_1uhoh.png"><img width="640" height="360" title="Win8_1UhOh" style="display: inline;" alt="Win8_1UhOh" src="http://stuartjames.info/Data/Sites/5/media/wlw/win8_1uhoh_thumb.png"></a></p><p>&nbsp;</p><p>Maybe doing my previous post was a bad Idea….</p><br /><a href='http://stuartjames.info/Journal/windows-rt-81-…-uh-oh-.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/windows-rt-81-…-uh-oh-.aspx'>...</a>
+
+    <footer>
+       
+      <ul class="stats">
+        
+        <!--
+        <li><a href="#">General</a></li>
+        <li><a href="#" class="icon fa-heart">28</a></li>
+        <li><a href="#" class="icon fa-comment">128</a></li>
+        -->
+      </ul>
+    </footer>
+  </article>
+
+  <article class="post">
+    <header>
+      <div class="title">
         <h2><a href="/2013/06/26/windows-8.1-for-surface-rt-fix...-almost.html">Windows 8.1 for Surface RT fix... almost</a></h2>
         <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
       </div>
@@ -107,9 +221,7 @@
 <p>&nbsp;</p><p>After searching the forums for a bit I found a fix! </p><blockquote><p>1. Place and rename the MSU file in an easily accessible place, e.g. C:\8preview\preview.msu<p>2. open command prompt in administrator mode.<p>3. Type: Expand –F:* c:\8preview\preview.msu C:\8preview\<p>4. Type: DISM.exe /Online /Add-Package /PackagePath:c:\8preview\Windows8-RT-KB2849636-x64.cab</p></blockquote><p align="right">From Johan Rensenbrink on <a href="http://answers.microsoft.com/en-us/windows/forum/windows8_1_pr-windows_install/error-the-update-is-not-applicable-to-your/342136ba-1f64-42c4-a344-d7e7e33ea868">anwers.microsoft.com</a></p><p align="left">So now for the install …</p><p align="left">&nbsp;</p><p align="left"><a href="http://stuartjames.info/Data/Sites/5/media/wlw/win8_1store.png"><img width="640" height="360" title="Win8_1Store" style="display: inline;" alt="Win8_1Store" src="http://stuartjames.info/Data/Sites/5/media/wlw/win8_1store_thumb.png"></a></p><a href="http://stuartjames.info/Data/Sites/5/media/wlw/win8_1app.png"><img width="640" height="360" title="Win8_1App" style="display: inline;" alt="Win8_1App" src="http://stuartjames.info/Data/Sites/5/media/wlw/win8_1app_thumb.png"></a><p>&nbsp;</p><hr><p>&nbsp;</p><p>And the anti-climax:</p><p><a href="http://stuartjames.info/Data/Sites/5/media/wlw/win8_1fail.png"><img width="640" height="360" title="Win8_1Fail" style="display: inline;" alt="Win8_1Fail" src="http://stuartjames.info/Data/Sites/5/media/wlw/win8_1fail_thumb.png"></a></p><p>&nbsp;</p><p>Wow I never thought this would be so hard….</p><br /><a href='http://stuartjames.info/Journal/windows-81-for-surface-rt-fix-almost-2013-06-26.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/windows-81-for-surface-rt-fix-almost-2013-06-26.aspx'>...</a>
 
     <footer>
-      <ul class="actions">
-        <li><a href="/2013/06/26/windows-8.1-for-surface-rt-fix...-almost.html" class="button big">Continue Reading</a></li>
-      </ul>
+       
       <ul class="stats">
         
         <!--
@@ -139,166 +251,7 @@
     <p>After seeing the post come up in my sad to say Facebook feed went on to download the 8.1 update for my Surface RT. Am a little confused by how this error is to be fixed but still am a little disappointed. </p><p><a href="http://stuartjames.info/Data/Sites/5/media/wlw/surfacert_8_1_update_fail.png"><img width="640" height="360" title="SurfaceRT_8_1_Update_Fail" style="display: inline;" alt="SurfaceRT_8_1_Update_Fail" src="http://stuartjames.info/Data/Sites/5/media/wlw/surfacert_8_1_update_fail_thumb.png"></a></p><p>Error “The update is not applicable to your computer”</p><p>Hopefully will fix a bit later, for the moment no 8.1 for me and many others.</p><br /><a href='http://stuartjames.info/Journal/surface-rt-81-maybe-i-am-impatient.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/surface-rt-81-maybe-i-am-impatient.aspx'>...</a>
 
     <footer>
-      <ul class="actions">
-        <li><a href="/2013/06/26/surface-rt-8.1-maybe-i-am-impatient.html" class="button big">Continue Reading</a></li>
-      </ul>
-      <ul class="stats">
-        
-        <!--
-        <li><a href="#">General</a></li>
-        <li><a href="#" class="icon fa-heart">28</a></li>
-        <li><a href="#" class="icon fa-comment">128</a></li>
-        -->
-      </ul>
-    </footer>
-  </article>
-
-  <article class="post">
-    <header>
-      <div class="title">
-        <h2><a href="/2013/06/26/microsoft-decide-the-uk-doesn-t-exist-in-windows-8.1-update.html">Microsoft decide the UK doesn’t exist in Windows 8.1 Update</a></h2>
-        <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
-      </div>
-      <div class="meta">
-        <time class="published" datetime="2013-06-26">June 26, 2013</time>
-        
-        <!--
-        <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
-        -->
-      </div>
-    </header>
-    
-    <p>As you may of gathered from previous posts, it seems it isn’t possible to install the update on a UK surface. The only way that is rumoured to work is to flash the device and select either German or French in the setup. This is going way beyond my commitment to trying this so for the moment I am done.</p><p>As far as I can see there has been no official announcement from Microsoft about if or when there will be a fix, a rumour said July that is probably not far off. Is disappointing that no one noticed this issue and they didn’t make it clear that they were abandoning poor old UK.</p><p>So for the moment don't try, it will go no where no matter how many tricks you follow.</p><p><a href="http://stuartjames.info/Data/Sites/5/media/wlw/close_surface_rt.jpg"><img width="240" height="180" title="close_surface_rt" style="display: inline;" alt="close_surface_rt" src="http://stuartjames.info/Data/Sites/5/media/wlw/close_surface_rt_thumb.jpg"></a></p><p>&nbsp;</p><p>The book is closed for me on my quest to get 8.1 early.</p><br /><a href='http://stuartjames.info/Journal/microsoft-decide-the-uk-doesn’t-exist-in-windows-81-update.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/microsoft-decide-the-uk-doesn’t-exist-in-windows-81-update.aspx'>...</a>
-
-    <footer>
-      <ul class="actions">
-        <li><a href="/2013/06/26/microsoft-decide-the-uk-doesn-t-exist-in-windows-8.1-update.html" class="button big">Continue Reading</a></li>
-      </ul>
-      <ul class="stats">
-        
-        <!--
-        <li><a href="#">General</a></li>
-        <li><a href="#" class="icon fa-heart">28</a></li>
-        <li><a href="#" class="icon fa-comment">128</a></li>
-        -->
-      </ul>
-    </footer>
-  </article>
-
-  <article class="post">
-    <header>
-      <div class="title">
-        <h2><a href="/2013/05/22/why-@office365-for-smb-is-broken-but-why-have-they-not-fixed-it.html">Why @Office365 for SMB is broken, but why have they not fixed it?</a></h2>
-        <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
-      </div>
-      <div class="meta">
-        <time class="published" datetime="2013-05-22">May 22, 2013</time>
-        
-        <!--
-        <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
-        -->
-      </div>
-    </header>
-    
-    <p>The company’s IT infrastructure I manage has been using Office 365 for over a year now, but have we? Office 365 gives access to a great Outlook Exchange hosted email, as well as optional Office subscriptions. The subscription costs a lot, but enables easy use of Office that is common in most companies. The flexibility on install makes it much easier in a company that has more computers than people.</p><p><strong>What the package should be is:</strong></p><ul><li>Email through Exchange</li><li>Document collaboration through SharePoint</li><li>Office desktop [Opt]</li></ul><p>As you may have noticed there is a SharePoint step that we miss, now I explain why Office 365 is broken. SharePoint I admit I have never fully understood but I know if used properly can have great integration with other Office product. As always there is a but though and this but I feel to be quite a big issue to a small business.</p><p>As companies develop from a single person to multiple people they go through one computer, to several computers, to several computers accessing shared storage. So most small companies quickly achieve a shared folder or pooled space style approach, to migrate this to Office 365 requires a learning step that is quite hard. The most logical way is to move your files to SharePoint so this could include Quotes, Accounts etc and here comes the but, most people would want to keep a fairly substantial back history to avoid having some files here and some files there creating a nightmare document version and backup scenario.</p><p>In Office 365 SMB you get 10gb of storage + 500mb per user, so 10 users a 15gb. If you are a new company that would be enough for a short time and you would quickly burn through and upgrade(will talk about soon). For an established company 10gb is probably not enough to even move one of there operating folders up so where do you go?</p><p>Sadly there is no answer, on SMB plan there is no way to pay for additional storage… I thought this would be fixed in the recent update but they have still left it as is. Oh and it gets better, there is no way to automatically update to an enterprise plan, and that is ignoring the increased cost. To upgrade you have to download your files and re-upload them (don't ask how file version histories work for that).</p><p>&nbsp;</p><p><strong>So what are you really getting?</strong> a service you can partially use and late software updates… It doesn’t sound like a way to keep people happy with your ecosystem. In fact it makes you wonder if it is worth moving over to LibreOffice and saving a very large amount of money.</p><p>&nbsp;</p><p>As I am saying far to often Microsoft great promise, yet just failing to get it just right.</p><br /><a href='http://stuartjames.info/Journal/why-office365-for-smb-is-broken-but-why-have-they-not-fixed-it-2013-05-22.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/why-office365-for-smb-is-broken-but-why-have-they-not-fixed-it-2013-05-22.aspx'>...</a>
-
-    <footer>
-      <ul class="actions">
-        <li><a href="/2013/05/22/why-@office365-for-smb-is-broken-but-why-have-they-not-fixed-it.html" class="button big">Continue Reading</a></li>
-      </ul>
-      <ul class="stats">
-        
-        <!--
-        <li><a href="#">General</a></li>
-        <li><a href="#" class="icon fa-heart">28</a></li>
-        <li><a href="#" class="icon fa-comment">128</a></li>
-        -->
-      </ul>
-    </footer>
-  </article>
-
-  <article class="post">
-    <header>
-      <div class="title">
-        <h2><a href="/2013/05/12/rotor-style-skeleton-browser.html">Rotor Style Skeleton Browser</a></h2>
-        <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
-      </div>
-      <div class="meta">
-        <time class="published" datetime="2013-05-12">May 12, 2013</time>
-        
-        <!--
-        <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
-        -->
-      </div>
-    </header>
-    
-    <p>A while ago I found a paper from a research project called MediaMill. They presented a technique for viewing different facets of video content in a windmill fashion. Recently I was exploring how we could visualise skeletons and thought would give the technique a try, here is a screenshot of a basic approach:</p>
-<p> </p>
-<p> </p>
-<p><a href="http://stuartjames.info/Data/Sites/5/media/wlw/image_20.png"><img style="display: inline;" title="image" alt="image" src="http://stuartjames.info/Data/Sites/5/media/wlw/image_thumb_20.png" height="480" width="556" /></a></p>
-<p>In this example each joint (of which there are 10) is represented on a “blade”. This very simple example visualise joint variation a better approach would to measure the distance between the body and variations on a specific joint but hey was just a sample.</p>
-<p> </p>
-<h6>References</h6>
-<p>To see more about different video browsers see the MediaMill project</p>
-<pre class="csharpcode"><a href="http://www.science.uva.nl/research/mediamill">http://www.science.uva.nl/research/mediamill</a></pre>
-<style type="text/css"><!--
-.csharpcode, .csharpcode pre
-{
-	font-size: small;
-	color: black;
-	font-family: consolas, "Courier New", courier, monospace;
-	background-color: #ffffff;
-	/*white-space: pre;*/
-}
-.csharpcode pre { margin: 0em; }
-.csharpcode .rem { color: #008000; }
-.csharpcode .kwrd { color: #0000ff; }
-.csharpcode .str { color: #006080; }
-.csharpcode .op { color: #0000c0; }
-.csharpcode .preproc { color: #cc6633; }
-.csharpcode .asp { background-color: #ffff00; }
-.csharpcode .html { color: #800000; }
-.csharpcode .attr { color: #ff0000; }
-.csharpcode .alt 
-{
-	background-color: #f4f4f4;
-	width: 100%;
-	margin: 0em;
-}
-.csharpcode .lnum { color: #606060; }
---></style>
-<p>See related Rotor Browser papers at <a href="http://staff.science.uva.nl/~cgmsnoek/pub/snoek-demo-icme2008.pdf">ICME</a> or <a href="http://staff.science.uva.nl/~cgmsnoek/pub/rooij-rotorbrowser-civr2007.pdf">CIVR</a> from 2007.</p>
-<style type="text/css"><!--
-.csharpcode, .csharpcode pre
-{
-	font-size: small;
-	color: black;
-	font-family: consolas, "Courier New", courier, monospace;
-	background-color: #ffffff;
-	/*white-space: pre;*/
-}
-.csharpcode pre { margin: 0em; }
-.csharpcode .rem { color: #008000; }
-.csharpcode .kwrd { color: #0000ff; }
-.csharpcode .str { color: #006080; }
-.csharpcode .op { color: #0000c0; }
-.csharpcode .preproc { color: #cc6633; }
-.csharpcode .asp { background-color: #ffff00; }
-.csharpcode .html { color: #800000; }
-.csharpcode .attr { color: #ff0000; }
-.csharpcode .alt 
-{
-	background-color: #f4f4f4;
-	width: 100%;
-	margin: 0em;
-}
-.csharpcode .lnum { color: #606060; }
---></style><br /><a href='http://stuartjames.info/Journal/rotor-style-skeleton-browser.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/rotor-style-skeleton-browser.aspx'>...</a>
-
-    <footer>
-      <ul class="actions">
-        <li><a href="/2013/05/12/rotor-style-skeleton-browser.html" class="button big">Continue Reading</a></li>
-      </ul>
+       
       <ul class="stats">
         
         <!--
@@ -315,7 +268,7 @@
   					  
   	  				  <li><a href="/page5" class="button big previous">Previous Page</a></li>
   						
-  							<li>6 / 17</li>
+  							<li>6 / 18</li>
 							
   						  <li><a href="/page7" class="button big next">Next Page</a></li>
   						
@@ -353,78 +306,78 @@
     
       <article class="mini-post">
   	    <header>
+  		    <h3><a href="/2016/06/23/getting-back-to-books.html">Getting back to books</a></h3>
+		      <time class="published" datetime="2016-06-23">June 23, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/06/23/getting-back-to-books.html" class="image"><img src="/images/blog/2016-06-23-book.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
+  		    <h3><a href="/2016/06/14/twenty-nine-going-on-thirty.html">29 going on 30</a></h3>
+		      <time class="published" datetime="2016-06-14">June 14, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/06/14/twenty-nine-going-on-thirty.html" class="image"><img src="/images/blog/2016-06-14-birthday.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
+  		    <h3><a href="/2016/04/20/working-with-british-library-dataset.html">Working with the British Library Dataset</a></h3>
+		      <time class="published" datetime="2016-04-20">April 20, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/04/20/working-with-british-library-dataset.html" class="image"><img src="/images/blog/2016-04-20-header.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
   		    <h3><a href="/2016/04/14/moving-to-jekyll.html">Moving to Jekyll</a></h3>
 		      <time class="published" datetime="2016-04-14">April 14, 2016</time>
 						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
 			  </header>
         
           <a href="/2016/04/14/moving-to-jekyll.html" class="image"><img src="/images/blog/jekyll-logo.png" alt="" /></a>
-        
-		  </article>
-									<!-- Mini Post -->
-									  <!--
-										<article class="mini-post">
-											<header>
-												<h3><a href="#">Vitae sed condimentum</a></h3>
-												<time class="published" datetime="2015-10-20">October 20, 2015</time>
-												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
-										</article>
-									-->
-    
-      <article class="mini-post">
-  	    <header>
-  		    <h3><a href="/tech/2014/10/20/why-i-am-a-resolution-junky.html">Why I am a resolution junky</a></h3>
-		      <time class="published" datetime="2014-10-20">October 20, 2014</time>
-						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
-			  </header>
-        
-          <a href="/tech/2014/10/20/why-i-am-a-resolution-junky.html" class="image"><img src="/images/blog/highrescoding.png" alt="" /></a>
-        
-		  </article>
-									<!-- Mini Post -->
-									  <!--
-										<article class="mini-post">
-											<header>
-												<h3><a href="#">Vitae sed condimentum</a></h3>
-												<time class="published" datetime="2015-10-20">October 20, 2015</time>
-												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
-										</article>
-									-->
-    
-      <article class="mini-post">
-  	    <header>
-  		    <h3><a href="/tech/2014/09/26/new-toys-sept-14-part-1-of-2-benq-bl2710pt-27-wqhd.html">New Toys Sept’14 Part 1 of 2 – BenQ BL2710PT 27” WQHD</a></h3>
-		      <time class="published" datetime="2014-09-26">September 26, 2014</time>
-						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
-			  </header>
-        
-          <a href="/tech/2014/09/26/new-toys-sept-14-part-1-of-2-benq-bl2710pt-27-wqhd.html" class="image"><img src="/images/blog/train-rgb2.jpg" alt="" /></a>
-        
-		  </article>
-									<!-- Mini Post -->
-									  <!--
-										<article class="mini-post">
-											<header>
-												<h3><a href="#">Vitae sed condimentum</a></h3>
-												<time class="published" datetime="2015-10-20">October 20, 2015</time>
-												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
-										</article>
-									-->
-    
-      <article class="mini-post">
-  	    <header>
-  		    <h3><a href="/2014/07/07/libsvm-linear-kernel-normalisation.html">libSVM linear kernel normalisation</a></h3>
-		      <time class="published" datetime="2014-07-07">July 07, 2014</time>
-						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
-			  </header>
-        
-          <a href="/2014/07/07/libsvm-linear-kernel-normalisation.html" class="image"><img src="/images/blog/fnsys-06-00059-g002.jpg" alt="" /></a>
         
 		  </article>
 									<!-- Mini Post -->

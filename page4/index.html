@@ -90,6 +90,125 @@
   <article class="post">
     <header>
       <div class="title">
+        <h2><a href="/2014/01/25/running-a-process-in-the-background-from-php.html">Running a process in the background from php</a></h2>
+        <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
+      </div>
+      <div class="meta">
+        <time class="published" datetime="2014-01-25">January 25, 2014</time>
+        
+        <!--
+        <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
+        -->
+      </div>
+    </header>
+    
+    <p>So earlier this week I had a little problem with Apache/PHP killing the task I had running. So after looking around a little online I got some hints and finally came to the conclusion on this line:</p><pre class="brush: c-sharp; showcolumns: true">echo exec(sprintf("rsh [server] 'nohup %s &gt; %s 2&gt;&amp;1 &amp; echo $! &gt; %s'", 
+  "/usr/bin/python2.7 [python script]", 
+  "[log file]", 
+  "[pid id file]"));
+</pre>
+
+<p>Something to remember, of course this is for Linux</p><br /><a href='http://stuartjames.info/Journal/running-a-process-in-the-background-from-php.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/running-a-process-in-the-background-from-php.aspx'>...</a>
+
+    <footer>
+       
+      <ul class="stats">
+        
+        <!--
+        <li><a href="#">General</a></li>
+        <li><a href="#" class="icon fa-heart">28</a></li>
+        <li><a href="#" class="icon fa-comment">128</a></li>
+        -->
+      </ul>
+    </footer>
+  </article>
+
+  <article class="post">
+    <header>
+      <div class="title">
+        <h2><a href="/2014/01/01/read-(aka-listened)-books-of-2013.html">Read (aka Listened) Books of 2013</a></h2>
+        <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
+      </div>
+      <div class="meta">
+        <time class="published" datetime="2014-01-01">January 01, 2014</time>
+        
+        <!--
+        <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
+        -->
+      </div>
+    </header>
+    
+    <p>2013 I really found my stride with audiobooks, having started the year previous I listened got through a collection of books averaging one complete book a month for the year. This may not seem like much, I know a lot of people read a book a week or even a night, but for me this a dramatic jump on probably one every 3-4 years. </p><p>I thought I would try to highlight some of the books I enjoyed reading and would recommend to anyone with similar interests to me that is interested in reading a little more</p><table width="100%" border="0" cellspacing="0" cellpadding="2">
+<tbody>
+<tr>
+<td width="33%" valign="top"><p align="center">1st</p></td>
+<td width="33%" valign="top"><p align="center">2nd</p></td><td width="33%" valign="top"><p align="center">3rd</p></td></tr><tr><td width="33%" valign="top"><p align="center"><img width="150" height="228" src="https://d202m5krfqbpi5.cloudfront.net/books/1383399667l/9969571.jpg"></p></td><td width="33%" valign="top"><p align="center"><img width="150" height="226" src="https://d202m5krfqbpi5.cloudfront.net/books/1340573020l/12953520.jpg"></p></td><td width="83" valign="top"><p align="center"><img width="150" height="225" src="https://d202m5krfqbpi5.cloudfront.net/books/1316132345l/9647532.jpg"></p></td>
+</tr><tr><td width="33%" valign="top"><p align="center">Ready Player One</p></td><td width="33%" valign="top"><p align="center">Year Zero</p></td><td width="83" valign="top"><p align="center">Fuzzy Nation</p></td></tr><tr><td width="33%" valign="top">This is a great read with so much geek nostalgia. Recommendation from friend and I already recommend to my friends (was even given as gift on recommendation). The plot is really gripping but don’t want to give it away so just read!</td><td width="33%" valign="top">This is a really interesting take on copyright infringement and how in a Sci-fi world it can have interesting consequences.</td><td width="83" valign="top">Sentient or not? Gripping read about the fight of a species against the corporate machine. Also I don't want to say more than this but “dog” + “explosives” its worth reading to find out what I mean!</td></tr>
+</tbody>
+</table><p>&nbsp;</p><p>After reviewing and selecting these as my favourite books read over the last year, I realised they are all Sci-Fi so I thought I would list of non-fiction. My first choice of these probably should of come in the top 3 above probably on par with Ready Player One…</p><table width="100%" border="0" cellspacing="0" cellpadding="2">
+<tbody>
+<tr>
+<td width="33%" valign="top"><p align="center">1st</p></td><td width="33%" valign="top"><p align="center">2nd</p></td><td width="33%" valign="top"><p align="center">3rd</p></td></tr><tr><td width="33%" valign="top"><p align="center"><img width="150" height="233" src="https://d202m5krfqbpi5.cloudfront.net/books/1344265017l/10256723.jpg"></p></td><td width="33%" valign="top"><p align="center"><img width="150" height="227" src="https://d202m5krfqbpi5.cloudfront.net/books/1386925434l/21.jpg"></p></td><td width="33" valign="top"><p align="center"><img width="150" height="223" src="https://d202m5krfqbpi5.cloudfront.net/books/1317793965l/11468377.jpg"></p></td></tr><tr><td width="33%" valign="top"><p align="center">Ghost in the Wires</p></td><td width="33%" valign="top"><p align="center">A Short History of Nearly Everything</p></td><td width="33%" valign="top"><p align="center">Thinking, Fast and Slow</p></td>
+</tr>
+<tr>
+<td width="33%" valign="top">Anyone with an interest in Computing, and therefore watched the Hackers movies (mandatory geek watching). Should read this is a really interesting read about Kevin Mitnick (Again Geeks should know who this is). </td>
+<td width="33%" valign="top">This is a slight cheat pick, since I read the end of last year but this is just such a good read, covering science from the microscopic to the universe. Is a great review and very well read by William Roberts.</td>
+<td width="33%" valign="top">Pseudo-Psychology books have become a little hobby off mine, I find it interesting to think about how we think and how in some cases we can manipulate to get better performance. This was a relaxing read with somewhat of a story to string it all together; making it a lot more casual than a lot of Psychology books.</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p><p>Finally, my most over-hyped book, you could argue that I was a fool to read in the first place but I felt was worth exploring and was publicly reviewed quite well.</p><table width="33%" border="0" cellspacing="0" cellpadding="2">
+<tbody>
+
+
+    <footer>
+       
+      <ul class="stats">
+        
+        <!--
+        <li><a href="#">General</a></li>
+        <li><a href="#" class="icon fa-heart">28</a></li>
+        <li><a href="#" class="icon fa-comment">128</a></li>
+        -->
+      </ul>
+    </footer>
+  </article>
+
+  <article class="post">
+    <header>
+      <div class="title">
+        <h2><a href="/2013/12/31/gradient-field-hog-update.html">Gradient Field HOG Update</a></h2>
+        <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
+      </div>
+      <div class="meta">
+        <time class="published" datetime="2013-12-31">December 31, 2013</time>
+        
+        <!--
+        <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
+        -->
+      </div>
+    </header>
+    
+    <p>Every so often we get contacted about algorithms our group (lead by <a title="John Collomosse" href="http://collomosse.com" target="_blank">Dr. John Collomosse</a>) have implemented. Due to a recent request I have updated the files downloadable for the implementation of Gradient Field HOG, little changes to make it easier. Included additionally is the Windows dependent libraries to make it a little to compile and run the code. </p>
+<p>Available from:<a href="http://stuartjames.info/gradient-field-hog.aspx"><img style="margin-right: auto; margin-left: auto; float: none; display: block;" title="image" alt="image" src="http://stuartjames.info/Data/Sites/5/media/wlw/image_27.png" height="239" width="244" /></a></p>
+<p><a href="http://stuartjames.info/gradient-field-hog.aspx">http://stuartjames.info/gradient-field-hog.aspx</a></p><br /><a href='http://stuartjames.info/Journal/gradient-field-hog-update.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/gradient-field-hog-update.aspx'>...</a>
+
+    <footer>
+       
+      <ul class="stats">
+        
+        <!--
+        <li><a href="#">General</a></li>
+        <li><a href="#" class="icon fa-heart">28</a></li>
+        <li><a href="#" class="icon fa-comment">128</a></li>
+        -->
+      </ul>
+    </footer>
+  </article>
+
+  <article class="post">
+    <header>
+      <div class="title">
         <h2><a href="/2013/11/22/my-pre-gaming-xbox-one-experience.html">My PRE-GAMING Xbox One Experience</a></h2>
         <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
       </div>
@@ -111,9 +230,7 @@
 </p><p>Pretty hard to see in the photo but says “Hello from Seattle” nice touch!</p><p><br></p><p>And that is my Xbox pre-gaming experience, will complete an actual review once have got a proper handle on the console.</p><br /><a href='http://stuartjames.info/Journal/my-pre-gaming-xbox-one-experience.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/my-pre-gaming-xbox-one-experience.aspx'>...</a>
 
     <footer>
-      <ul class="actions">
-        <li><a href="/2013/11/22/my-pre-gaming-xbox-one-experience.html" class="button big">Continue Reading</a></li>
-      </ul>
+       
       <ul class="stats">
         
         <!--
@@ -153,137 +270,7 @@
 <p> </p><br /><a href='http://stuartjames.info/Journal/virtualbox-windows-81-upgrade---dont-forget-the-settings-2013-11-01.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/virtualbox-windows-81-upgrade---dont-forget-the-settings-2013-11-01.aspx'>...</a>
 
     <footer>
-      <ul class="actions">
-        <li><a href="/2013/11/01/virtualbox-windows-8.1-upgrade-don't-forget-the-settings.html" class="button big">Continue Reading</a></li>
-      </ul>
-      <ul class="stats">
-        
-        <!--
-        <li><a href="#">General</a></li>
-        <li><a href="#" class="icon fa-heart">28</a></li>
-        <li><a href="#" class="icon fa-comment">128</a></li>
-        -->
-      </ul>
-    </footer>
-  </article>
-
-  <article class="post">
-    <header>
-      <div class="title">
-        <h2><a href="/2013/10/31/safeseh-and-visual-studio.html">SAFESEH and Visual Studio</a></h2>
-        <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
-      </div>
-      <div class="meta">
-        <time class="published" datetime="2013-10-31">October 31, 2013</time>
-        
-        <!--
-        <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
-        -->
-      </div>
-    </header>
-    
-    <p>Many of us dont hugely enjoy recompiling libaries. I for one who only use 3 large and a handful of small, causing me to cringe at the idea of recompiling to include a new feature or worse a new platform. </p>
-<p>So when I hit:</p>
-<blockquote>
-<p>error LNK2026: module unsafe for SAFESEH image.</p>
-</blockquote>
-<p>So after looking around for a solution I found there is just a simple switch you can turn off to allow an old library to be used</p>
-<p><img title="SAFESEH Visual Studio" alt="SAFESEH Visual Studio" src="http://stuartjames.info/Data/Sites/5/blogimages/safeseh-visual-studio.png" height="389" width="550" /></p>
-<p>Hidden in Linker --&gt; Advanced -&gt; Image Has Safe Exception Handlers you can set this to No and recompile and your code work again.</p><br /><a href='http://stuartjames.info/Journal/safeseh-and-visual-studio-2013-10-31.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/safeseh-and-visual-studio-2013-10-31.aspx'>...</a>
-
-    <footer>
-      <ul class="actions">
-        <li><a href="/2013/10/31/safeseh-and-visual-studio.html" class="button big">Continue Reading</a></li>
-      </ul>
-      <ul class="stats">
-        
-        <!--
-        <li><a href="#">General</a></li>
-        <li><a href="#" class="icon fa-heart">28</a></li>
-        <li><a href="#" class="icon fa-comment">128</a></li>
-        -->
-      </ul>
-    </footer>
-  </article>
-
-  <article class="post">
-    <header>
-      <div class="title">
-        <h2><a href="/2013/10/28/about.me-increasing-popularity.html">About.me increasing popularity</a></h2>
-        <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
-      </div>
-      <div class="meta">
-        <time class="published" datetime="2013-10-28">October 28, 2013</time>
-        
-        <!--
-        <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
-        -->
-      </div>
-    </header>
-    
-    <p>As soon as <a href="http://about.me">about.me</a> launched I got a profile on the site, a shameful admission to some but to me is interesting to see how new sites work and how they can be utilised. For a long time though it has had little attraction never getting many views and not having much visability online. It seems that those days are over with increasing popularity over the last year. As any good site does about.me includes statistics.</p>
-<p> </p>
-<p><img title="About Me - Stuart James Statistics" alt="About Me - Stuart James Statistics" src="http://stuartjames.info/Data/Sites/5/blogimages/about-me.png" height="282" width="550" /></p>
-<p> </p>
-<p>I very much doubt over the last year I have suddenly become more applicable to the world wide web -- would imply I was irrelevant before Feb 2013. So personally I attribute this increase, however unstable to an increase in popularity of the site.</p>
-<p>Interesting observation through the power of graphs! To Corrupt my future stats feel free to view my profile</p>
-<p><a title="About Me Stuart James" href="http://about.me/stuartjames" target="_blank"><img title="About Me -- Stuart James" alt="About Me -- Stuart James" src="http://stuartjames.info/Data/Sites/5/blogimages/about-me-stuart-james.png" height="150" width="224" /></a></p>
-<p>Yes a shameless plug.</p>
-<p> </p><br /><a href='http://stuartjames.info/Journal/aboutme-increasing-popularity-2013-10-28.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/aboutme-increasing-popularity-2013-10-28.aspx'>...</a>
-
-    <footer>
-      <ul class="actions">
-        <li><a href="/2013/10/28/about.me-increasing-popularity.html" class="button big">Continue Reading</a></li>
-      </ul>
-      <ul class="stats">
-        
-        <!--
-        <li><a href="#">General</a></li>
-        <li><a href="#" class="icon fa-heart">28</a></li>
-        <li><a href="#" class="icon fa-comment">128</a></li>
-        -->
-      </ul>
-    </footer>
-  </article>
-
-  <article class="post">
-    <header>
-      <div class="title">
-        <h2><a href="/2013/10/25/surface-(1)-rt-8.1-upgrade-tips.html">Surface (1) RT 8.1 Upgrade Tips</a></h2>
-        <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
-      </div>
-      <div class="meta">
-        <time class="published" datetime="2013-10-25">October 25, 2013</time>
-        
-        <!--
-        <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
-        -->
-      </div>
-    </header>
-    
-    <p>This week I finally did the Windows 8.1 update on my Surface RT 1st generation, it went well took a while so be prepared for a couple of ours process to update your tablet but, it doesn't much user engagement to complete this.</p>
-<h4>Pre-Upgrade</h4>
-<ul>
-<li>Clear out well everything -- The only thing I hit before upgrading was space issues I had to clear out quite a lot of my own junk to provide enough space to do the download something I found a little annoying was the lack of definition of how much space</li>
-</ul>
-<h4>Post-Upgrade</h4>
-<ul>
-<li><strong>Clean-Up</strong> -- I recommend after you have done the update make sure you go into clean-up tool in Administrator Tools the reason is simple</li>
-</ul>
-<p style="padding-left: 30px;"><img title="Disk Cleanup Windows 8.1" alt="Disk Cleanup Windows 8.1" src="http://stuartjames.info/Data/Sites/5/blogimages/disk-cleanup-windows-8-1.png" height="214" width="183" /></p>
-<p style="padding-left: 30px;">Thats 5.72 gb of recovered space!</p>
-<ul>
-<li><strong>Unlock Some more Start menu screen estate</strong> -- Charms Bar (Swipe from Right) -&gt; Personalise -&gt; Show More Tiles</li>
-</ul>
-<p style="padding-left: 30px;"><img title="More Tiles 8.1" alt="More Tiles 8.1" src="http://stuartjames.info/Data/Sites/5/blogimages/unlock-moretiles.png" height="309" width="550" /></p>
-<ul>
-<li><strong>Keep 3gb Free</strong> -- Skydrive wont sync if you have less than 3gb on your primary (C:\) drive.</li>
-</ul><br /><a href='http://stuartjames.info/Journal/surface-1-rt-81-upgrade-tips-2013-10-25.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/surface-1-rt-81-upgrade-tips-2013-10-25.aspx'>...</a>
-
-    <footer>
-      <ul class="actions">
-        <li><a href="/2013/10/25/surface-(1)-rt-8.1-upgrade-tips.html" class="button big">Continue Reading</a></li>
-      </ul>
+       
       <ul class="stats">
         
         <!--
@@ -300,7 +287,7 @@
   					  
   	  				  <li><a href="/page3" class="button big previous">Previous Page</a></li>
   						
-  							<li>4 / 17</li>
+  							<li>4 / 18</li>
 							
   						  <li><a href="/page5" class="button big next">Next Page</a></li>
   						
@@ -338,78 +325,78 @@
     
       <article class="mini-post">
   	    <header>
+  		    <h3><a href="/2016/06/23/getting-back-to-books.html">Getting back to books</a></h3>
+		      <time class="published" datetime="2016-06-23">June 23, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/06/23/getting-back-to-books.html" class="image"><img src="/images/blog/2016-06-23-book.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
+  		    <h3><a href="/2016/06/14/twenty-nine-going-on-thirty.html">29 going on 30</a></h3>
+		      <time class="published" datetime="2016-06-14">June 14, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/06/14/twenty-nine-going-on-thirty.html" class="image"><img src="/images/blog/2016-06-14-birthday.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
+  		    <h3><a href="/2016/04/20/working-with-british-library-dataset.html">Working with the British Library Dataset</a></h3>
+		      <time class="published" datetime="2016-04-20">April 20, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/04/20/working-with-british-library-dataset.html" class="image"><img src="/images/blog/2016-04-20-header.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
   		    <h3><a href="/2016/04/14/moving-to-jekyll.html">Moving to Jekyll</a></h3>
 		      <time class="published" datetime="2016-04-14">April 14, 2016</time>
 						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
 			  </header>
         
           <a href="/2016/04/14/moving-to-jekyll.html" class="image"><img src="/images/blog/jekyll-logo.png" alt="" /></a>
-        
-		  </article>
-									<!-- Mini Post -->
-									  <!--
-										<article class="mini-post">
-											<header>
-												<h3><a href="#">Vitae sed condimentum</a></h3>
-												<time class="published" datetime="2015-10-20">October 20, 2015</time>
-												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
-										</article>
-									-->
-    
-      <article class="mini-post">
-  	    <header>
-  		    <h3><a href="/tech/2014/10/20/why-i-am-a-resolution-junky.html">Why I am a resolution junky</a></h3>
-		      <time class="published" datetime="2014-10-20">October 20, 2014</time>
-						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
-			  </header>
-        
-          <a href="/tech/2014/10/20/why-i-am-a-resolution-junky.html" class="image"><img src="/images/blog/highrescoding.png" alt="" /></a>
-        
-		  </article>
-									<!-- Mini Post -->
-									  <!--
-										<article class="mini-post">
-											<header>
-												<h3><a href="#">Vitae sed condimentum</a></h3>
-												<time class="published" datetime="2015-10-20">October 20, 2015</time>
-												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
-										</article>
-									-->
-    
-      <article class="mini-post">
-  	    <header>
-  		    <h3><a href="/tech/2014/09/26/new-toys-sept-14-part-1-of-2-benq-bl2710pt-27-wqhd.html">New Toys Sept’14 Part 1 of 2 – BenQ BL2710PT 27” WQHD</a></h3>
-		      <time class="published" datetime="2014-09-26">September 26, 2014</time>
-						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
-			  </header>
-        
-          <a href="/tech/2014/09/26/new-toys-sept-14-part-1-of-2-benq-bl2710pt-27-wqhd.html" class="image"><img src="/images/blog/train-rgb2.jpg" alt="" /></a>
-        
-		  </article>
-									<!-- Mini Post -->
-									  <!--
-										<article class="mini-post">
-											<header>
-												<h3><a href="#">Vitae sed condimentum</a></h3>
-												<time class="published" datetime="2015-10-20">October 20, 2015</time>
-												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
-										</article>
-									-->
-    
-      <article class="mini-post">
-  	    <header>
-  		    <h3><a href="/2014/07/07/libsvm-linear-kernel-normalisation.html">libSVM linear kernel normalisation</a></h3>
-		      <time class="published" datetime="2014-07-07">July 07, 2014</time>
-						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
-			  </header>
-        
-          <a href="/2014/07/07/libsvm-linear-kernel-normalisation.html" class="image"><img src="/images/blog/fnsys-06-00059-g002.jpg" alt="" /></a>
         
 		  </article>
 									<!-- Mini Post -->
