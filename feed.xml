@@ -5,8 +5,8 @@
     <description>Stuart James&#39; journal, a simple little place for me to scribble down my thoughts and help my terrible memory</description>
     <link>http://stuart-james.net/</link>
     <atom:link href="http://stuart-james.net/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 23 Jun 2016 18:43:57 +0100</pubDate>
-    <lastBuildDate>Thu, 23 Jun 2016 18:43:57 +0100</lastBuildDate>
+    <pubDate>Thu, 23 Jun 2016 18:49:35 +0100</pubDate>
+    <lastBuildDate>Thu, 23 Jun 2016 18:49:35 +0100</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -27,7 +27,7 @@ Having spent a while now (6months) trying to finish &lt;a href=&quot;https://www
     
       <item>
         <title>29 going on 30</title>
-        <description>A mini-celebration of reflection as I hit my 29th year floating around the sun. Although I may not of achieved everything I have set out todo in this decade I have a lot of achievements both career / acdemicly and life through running etc.
+        <description>A mini-celebration of reflection as I hit my 29th year floating around the sun. Although I may not of achieved everything I have set out todo in this decade I have a lot of achievements both career / academically and life through running etc.
 
 So happy 29th to me!</description>
         <pubDate>Tue, 14 Jun 2016 00:00:00 +0100</pubDate>
@@ -66,10 +66,10 @@ So happy 29th to me!</description>
 So why did I stop updating, well that answer comes in two parts. Firstly I experienced some problems with the CMS I was using, naughty Mojo Portal! But this just limited my ability to post. The second and main reason is that I lacked time and I&#39;m not saying I have more time now, but I just didn&#39;t want to spend the small amount of time I have allocated to my website on repairing the website.
 &lt;/p&gt;
 
-&lt;p&gt;
-So the the solution Jeykll! A perl based offline static site generator. I must admit the choice of this wasn&#39;t exactly done on an extensive search and making a grounded decision, but instead I used github and it seemed a logical extension. That is not to say I did no search, I glanced, but there didn&#39;t seem a big differentiator other than language. So Perl and Jekyll it is, why not learn a language at the same time after all, so even if this all fails I&#39;ve learned something generaliseable. 
-&lt;/p&gt;
 
+&lt;p&gt;
+So the the solution Jeykll! A perl based offline static site generator. I must admit the choice of this wasn&#39;t exactly done on an extensive search and making a grounded decision, but instead I used github and it seemed a logical extension. That is not to say I did no search, I glanced, but there didn&#39;t seem a big differentiator other than language. So Perl and Jekyll it is, why not learn a language at the same time after all, so even if this all fails I&#39;ve learned something generalisable. 
+&lt;/p&gt;
 </description>
         <pubDate>Thu, 14 Apr 2016 00:00:00 +0100</pubDate>
         <link>http://stuart-james.net/2016/04/14/moving-to-jekyll.html</link>
