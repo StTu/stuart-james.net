@@ -1,138 +1,207 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
-  	<head>
-  		<title>Stuart James' Journal</title>
-  		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  		<meta name="description" content="" />
-  		<meta name="keywords" content="" />
-  		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-  		<script src="/js/jquery.min.js"></script>
-  		<script src="/js/jquery.poptrox.min.js"></script>
-  		<script src="/js/skel.min.js"></script>
-  		<script src="/js/init.js"></script>
-  		<noscript>
-  			<link rel="stylesheet" href="/css/skel.css" />
-  			<link rel="stylesheet" href="/css/style.css" />
-  			<link rel="stylesheet" href="/css/style-xlarge.css" />
-  		</noscript>
-  		<!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
-  	</head>
+  <head>
+  <title>Stuart James' Journal</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--[if lte IE 8]><script src="js/ie/html5shiv.js"></script><![endif]-->
+  <link rel="stylesheet" href="/css/main.css">
+  <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+  <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+</head>
 
-	<body id="top">
+	<body>
 
-      <header id="header">
-          <a href="/" class="image avatar"><img src="/images/avatar.jpg" alt="" /></a>
-          <h1><strong>Stuart James'</strong> journal, a simple <br />
-          little place for me to scribble down<br />
-	  my thoughts and help my terrible memory<br /></h1>
-	  <hr />
-	  <h1>A little about me...</h1>
-	  <h1>
-		I'm a Computer Vision and Machine learning<br />
-		researcher at <strong>UCL</strong>. Working in the VECG with<br /> 
-		Tim Weyrich. Previously from <strong>University of Surrey</strong><br />  where I completed a Post-Doc and PhD studies.
-	  </h1>
-    <h4>
-    <a href="http://stuart-james.com" >Read more about my research interests</a> 
-    </h4>
-    <hr />
-      </header>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
+				<!-- Header -->
+<header id="header">
+  <h1><a href="http://stuart-james.net">Stuart James' Journal</a></h1>
+	<nav class="links">
+    <!--
+    <ul>
+      <li><a href="#">Lorem</a></li>
+			<li><a href="#">Ipsum</a></li>
+			<li><a href="#">Feugiat</a></li>
+			<li><a href="#">Tempus</a></li>
+			<li><a href="#">Adipiscing</a></li>
+		</ul>
+  -->
+	</nav>
+	<nav class="main">
+    <ul>
+                <!--
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="Search" />
+									</form>
+								</li>
+              -->
+		  <li class="menu">
+		  	<a class="fa-bars" href="#menu">Menu</a>
+			</li>
+		</ul>
+	</nav>
+</header>
 
-        <div id="main">
-    <article>
-        <header class="major">
-            <h2 class="post-title">libSVM linear kernel normalisation</h2>
-                <p class="post-meta">Jul 7, 2014</p>
-        </header>
+<!-- Menu -->
+<section id="menu">
+  <!-- Search -->
+  <!--
+  <section>
+	  <form class="search" method="get" action="#">
+	    <input type="text" name="query" placeholder="Search" />
+		</form>
+	</section>
+  -->
+	<!-- Links -->
+	<section>
+	  <ul class="links">
+	    <li>
+		    <a href="/acknowledgement">
+				  <h3>Acknowledgement</h3>
+				  <p>Acknowledgement</p>
+				</a>
+			</li>
+    </ul>
+	</section>
+	<!-- Actions -->
+  <!--
+  <section>
+	  <ul class="actions vertical">
+	    <li><a href="#" class="button big fit">Log In</a></li>
+    </ul>
+  </section>
+  -->
+</section>
 
-        <section>
-            <p>I have used a variety of tools for binary, multiclass and even incremental SVM problems, today I found something quite nice in binary case for <a href="http://www.csie.ntu.edu.tw/~cjlin/libsvm/">libSVM</a>, although potentially a source of confusion.</p><p>It is common in machine learning to apply a sigmoid function to normalise the boundaries of a problem, this can by empirically defining the upper and lower bound or through experimentation. Within <a href="http://www.csie.ntu.edu.tw/~cjlin/libsvm/">libSVM</a> they do this through experimentation, that is great to save you some time. The only thing to remember is it means through the use of random and cross validation with small sets of data, you are likely to get different results on each run.</p><p>So the function to consider is this:</p><pre class="brush: c++">// Cross-validation decision values for probability estimates
-static void svm_binary_svc_probability(
-	const svm_problem *prob, const svm_parameter *param,
-	double Cp, double Cn, double&amp; probA, double&amp; probB)
-{
-	int i;
-	int nr_fold = 5;
-	int *perm = Malloc(int,prob-&gt;l);
-	double *dec_values = Malloc(double,prob-&gt;l);
+				<!-- Main -->
+					<div id="main">
 
-	// random shuffle
-	for(i=0;i&lt;prob-&gt;l;i++) perm[i]=i;
-	for(i=0;i&lt;prob-&gt;l;i++)
-	{
-		int j = i+rand()%(prob-&gt;l-i);
-		swap(perm[i],perm[j]);
-	}
-	for(i=0;i&lt;nr_fold;i++)
-	{
-		int begin = i*prob-&gt;l/nr_fold;
-		int end = (i+1)*prob-&gt;l/nr_fold;
-		int j,k;
-		struct svm_problem subprob;
+						<!-- Post -->
+            <article class="post">
+              <header>
+                <div class="title">
+                  <h2><a href="/2014/07/07/libsvm-linear-kernel-normalisation.html">libSVM linear kernel normalisation</a></h2>
+                <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
+                </div>
+                <div class="meta">
+                  <time class="published" datetime="2014-07-07">July 07, 2014</time>
+                  
+									<h6>Read time about 8  minutes</h6>
 
-		subprob.l = prob-&gt;l-(end-begin);
-		subprob.x = Malloc(struct svm_node*,subprob.l);
-		subprob.y = Malloc(double,subprob.l);
+        <!--
+        <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
+        -->
+                </div>
+              </header>
+              
+								<div class="image featured wrapper">
+                <a href="/2014/07/07/libsvm-linear-kernel-normalisation.html" class="image featured"><img src="/images/blog/fnsys-06-00059-g002.jpg" alt="" /></a>
+								
+									<div class="image featured cite">
+											Image taken from <a href="http://toublanc.info/support/support-vector-machines-python">Tou Blanc </a>
+									</div>
+								
+								</div>
+              
+              <p>I have used a variety of tools for binary, multiclass and even incremental SVM problems, today I found something quite nice in binary case for <a href="http://www.csie.ntu.edu.tw/~cjlin/libsvm/">libSVM</a>, although potentially a source of confusion.</p><p>It is common in machine learning to apply a sigmoid function to normalise the boundaries of a problem, this can by empirically defining the upper and lower bound or through experimentation. Within <a href="http://www.csie.ntu.edu.tw/~cjlin/libsvm/">libSVM</a> they do this through experimentation, that is great to save you some time. The only thing to remember is it means through the use of random and cross validation with small sets of data, you are likely to get different results on each run.</p><p>So the function to consider is this:</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="c1">// Cross-validation decision values for probability estimates
+</span><span class="k">static</span> <span class="kt">void</span> <span class="n">svm_binary_svc_probability</span><span class="p">(</span>
+	<span class="k">const</span> <span class="n">svm_problem</span> <span class="o">*</span><span class="n">prob</span><span class="p">,</span> <span class="k">const</span> <span class="n">svm_parameter</span> <span class="o">*</span><span class="n">param</span><span class="p">,</span>
+	<span class="kt">double</span> <span class="n">Cp</span><span class="p">,</span> <span class="kt">double</span> <span class="n">Cn</span><span class="p">,</span> <span class="kt">double</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span> <span class="n">probA</span><span class="p">,</span> <span class="kt">double</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span> <span class="n">probB</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">nr_fold</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="o">*</span><span class="n">perm</span> <span class="o">=</span> <span class="n">Malloc</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">l</span><span class="p">);</span>
+	<span class="kt">double</span> <span class="o">*</span><span class="n">dec_values</span> <span class="o">=</span> <span class="n">Malloc</span><span class="p">(</span><span class="kt">double</span><span class="p">,</span><span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">l</span><span class="p">);</span>
+
+	<span class="c1">// random shuffle
+</span>	<span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">l</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">perm</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">i</span><span class="p">;</span>
+	<span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">l</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="n">rand</span><span class="p">()</span><span class="o">%</span><span class="p">(</span><span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">l</span><span class="o">-</span><span class="n">i</span><span class="p">);</span>
+		<span class="n">swap</span><span class="p">(</span><span class="n">perm</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">perm</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span>
+	<span class="p">}</span>
+	<span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">nr_fold</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="kt">int</span> <span class="n">begin</span> <span class="o">=</span> <span class="n">i</span><span class="o">*</span><span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">l</span><span class="o">/</span><span class="n">nr_fold</span><span class="p">;</span>
+		<span class="kt">int</span> <span class="n">end</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">l</span><span class="o">/</span><span class="n">nr_fold</span><span class="p">;</span>
+		<span class="kt">int</span> <span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">;</span>
+		<span class="k">struct</span> <span class="n">svm_problem</span> <span class="n">subprob</span><span class="p">;</span>
+
+		<span class="n">subprob</span><span class="p">.</span><span class="n">l</span> <span class="o">=</span> <span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">l</span><span class="o">-</span><span class="p">(</span><span class="n">end</span><span class="o">-</span><span class="n">begin</span><span class="p">);</span>
+		<span class="n">subprob</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">Malloc</span><span class="p">(</span><span class="k">struct</span> <span class="n">svm_node</span><span class="o">*</span><span class="p">,</span><span class="n">subprob</span><span class="p">.</span><span class="n">l</span><span class="p">);</span>
+		<span class="n">subprob</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">Malloc</span><span class="p">(</span><span class="kt">double</span><span class="p">,</span><span class="n">subprob</span><span class="p">.</span><span class="n">l</span><span class="p">);</span>
 			
-		k=0;
-		for(j=0;j&lt;begin;j++)
-		{
-			subprob.x[k] = prob-&gt;x[perm[j]];
-			subprob.y[k] = prob-&gt;y[perm[j]];
-			++k;
-		}
-		for(j=end;j&lt;prob-&gt;l;j++)
-		{
-			subprob.x[k] = prob-&gt;x[perm[j]];
-			subprob.y[k] = prob-&gt;y[perm[j]];
-			++k;
-		}
-		int p_count=0,n_count=0;
-		for(j=0;j&lt;k;j++)
-			if(subprob.y[j]&gt;0)
-				p_count++;
-			else
-				n_count++;
+		<span class="n">k</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+		<span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">begin</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="n">subprob</span><span class="p">.</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">x</span><span class="p">[</span><span class="n">perm</span><span class="p">[</span><span class="n">j</span><span class="p">]];</span>
+			<span class="n">subprob</span><span class="p">.</span><span class="n">y</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">y</span><span class="p">[</span><span class="n">perm</span><span class="p">[</span><span class="n">j</span><span class="p">]];</span>
+			<span class="o">++</span><span class="n">k</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="n">end</span><span class="p">;</span><span class="n">j</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">l</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="n">subprob</span><span class="p">.</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">x</span><span class="p">[</span><span class="n">perm</span><span class="p">[</span><span class="n">j</span><span class="p">]];</span>
+			<span class="n">subprob</span><span class="p">.</span><span class="n">y</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">y</span><span class="p">[</span><span class="n">perm</span><span class="p">[</span><span class="n">j</span><span class="p">]];</span>
+			<span class="o">++</span><span class="n">k</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="kt">int</span> <span class="n">p_count</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">n_count</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+		<span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">k</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="k">if</span><span class="p">(</span><span class="n">subprob</span><span class="p">.</span><span class="n">y</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="mi">0</span><span class="p">)</span>
+				<span class="n">p_count</span><span class="o">++</span><span class="p">;</span>
+			<span class="k">else</span>
+				<span class="n">n_count</span><span class="o">++</span><span class="p">;</span>
 
-		if(p_count==0 &amp;&amp; n_count==0)
-			for(j=begin;j&lt;end;j++)
-				dec_values[perm[j]] = 0;
-		else if(p_count &gt; 0 &amp;&amp; n_count == 0)
-			for(j=begin;j&lt;end;j++)
-				dec_values[perm[j]] = 1;
-		else if(p_count == 0 &amp;&amp; n_count &gt; 0)
-			for(j=begin;j&lt;end;j++)
-				dec_values[perm[j]] = -1;
-		else
-		{
-			svm_parameter subparam = *param;
-			subparam.probability=0;
-			subparam.C=1.0;
-			subparam.nr_weight=2;
-			subparam.weight_label = Malloc(int,2);
-			subparam.weight = Malloc(double,2);
-			subparam.weight_label[0]=+1;
-			subparam.weight_label[1]=-1;
-			subparam.weight[0]=Cp;
-			subparam.weight[1]=Cn;
-			struct svm_model *submodel = svm_train(&amp;subprob,&amp;subparam);
-			for(j=begin;j&lt;end;j++)
-			{
-				svm_predict_values(submodel,prob-&gt;x[perm[j]],&amp;(dec_values[perm[j]])); 
-				// ensure +1 -1 order; reason not using CV subroutine
-				dec_values[perm[j]] *= submodel-&gt;label[0];
-			}		
-			svm_free_and_destroy_model(&amp;submodel);
-			svm_destroy_param(&amp;subparam);
-		}
-		free(subprob.x);
-		free(subprob.y);
-	}		
-	sigmoid_train(prob-&gt;l,dec_values,prob-&gt;y,probA,probB);
-	free(dec_values);
-	free(perm);
-}</pre>So if you have few numbers of samples, that is the case in some circumstances then the cross validation is where you hit problems. Of course you can simply re-implement it yourself or you can add a few lines to stop cross validation if the number of samples is too few.<p><br></p><p>Not the most elegant of code, but for the moment it will do. I choose to completely seperate the two steps as opposed to multiple if’s</p><pre class="brush: c++; toolbar: false">static void svm_binary_svc_probability(
+		<span class="k">if</span><span class="p">(</span><span class="n">p_count</span><span class="o">==</span><span class="mi">0</span> <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span> <span class="n">n_count</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+			<span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="n">begin</span><span class="p">;</span><span class="n">j</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">end</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+				<span class="n">dec_values</span><span class="p">[</span><span class="n">perm</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+		<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">p_count</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="mi">0</span> <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span> <span class="n">n_count</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+			<span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="n">begin</span><span class="p">;</span><span class="n">j</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">end</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+				<span class="n">dec_values</span><span class="p">[</span><span class="n">perm</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+		<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">p_count</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span> <span class="n">n_count</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="mi">0</span><span class="p">)</span>
+			<span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="n">begin</span><span class="p">;</span><span class="n">j</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">end</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+				<span class="n">dec_values</span><span class="p">[</span><span class="n">perm</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+		<span class="k">else</span>
+		<span class="p">{</span>
+			<span class="n">svm_parameter</span> <span class="n">subparam</span> <span class="o">=</span> <span class="o">*</span><span class="n">param</span><span class="p">;</span>
+			<span class="n">subparam</span><span class="p">.</span><span class="n">probability</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+			<span class="n">subparam</span><span class="p">.</span><span class="n">C</span><span class="o">=</span><span class="mf">1.0</span><span class="p">;</span>
+			<span class="n">subparam</span><span class="p">.</span><span class="n">nr_weight</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
+			<span class="n">subparam</span><span class="p">.</span><span class="n">weight_label</span> <span class="o">=</span> <span class="n">Malloc</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+			<span class="n">subparam</span><span class="p">.</span><span class="n">weight</span> <span class="o">=</span> <span class="n">Malloc</span><span class="p">(</span><span class="kt">double</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+			<span class="n">subparam</span><span class="p">.</span><span class="n">weight_label</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=+</span><span class="mi">1</span><span class="p">;</span>
+			<span class="n">subparam</span><span class="p">.</span><span class="n">weight_label</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span>
+			<span class="n">subparam</span><span class="p">.</span><span class="n">weight</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">Cp</span><span class="p">;</span>
+			<span class="n">subparam</span><span class="p">.</span><span class="n">weight</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">Cn</span><span class="p">;</span>
+			<span class="k">struct</span> <span class="n">svm_model</span> <span class="o">*</span><span class="n">submodel</span> <span class="o">=</span> <span class="n">svm_train</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">subprob</span><span class="p">,</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">subparam</span><span class="p">);</span>
+			<span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="n">begin</span><span class="p">;</span><span class="n">j</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">end</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="p">{</span>
+				<span class="n">svm_predict_values</span><span class="p">(</span><span class="n">submodel</span><span class="p">,</span><span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">x</span><span class="p">[</span><span class="n">perm</span><span class="p">[</span><span class="n">j</span><span class="p">]],</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;(</span><span class="n">dec_values</span><span class="p">[</span><span class="n">perm</span><span class="p">[</span><span class="n">j</span><span class="p">]]));</span> 
+				<span class="c1">// ensure +1 -1 order; reason not using CV subroutine
+</span>				<span class="n">dec_values</span><span class="p">[</span><span class="n">perm</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span> <span class="o">*=</span> <span class="n">submodel</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">label</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+			<span class="p">}</span>		
+			<span class="n">svm_free_and_destroy_model</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">submodel</span><span class="p">);</span>
+			<span class="n">svm_destroy_param</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">subparam</span><span class="p">);</span>
+		<span class="p">}</span>
+		<span class="n">free</span><span class="p">(</span><span class="n">subprob</span><span class="p">.</span><span class="n">x</span><span class="p">);</span>
+		<span class="n">free</span><span class="p">(</span><span class="n">subprob</span><span class="p">.</span><span class="n">y</span><span class="p">);</span>
+	<span class="p">}</span>		
+	<span class="n">sigmoid_train</span><span class="p">(</span><span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">l</span><span class="p">,</span><span class="n">dec_values</span><span class="p">,</span><span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">y</span><span class="p">,</span><span class="n">probA</span><span class="p">,</span><span class="n">probB</span><span class="p">);</span>
+	<span class="n">free</span><span class="p">(</span><span class="n">dec_values</span><span class="p">);</span>
+	<span class="n">free</span><span class="p">(</span><span class="n">perm</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+So if you have few numbers of samples, that is the case in some circumstances then the cross validation is where you hit problems. Of course you can simply re-implement it yourself or you can add a few lines to stop cross validation if the number of samples is too few.<p><br></p><p>Not the most elegant of code, but for the moment it will do. I choose to completely seperate the two steps as opposed to multiple if’s</p><pre class="brush: c++; toolbar: false">static void svm_binary_svc_probability(
 	const svm_problem *prob, const svm_parameter *param,
 	double Cp, double Cn, double&amp; probA, double&amp; probB)
 {
@@ -285,122 +354,184 @@ static void svm_binary_svc_probability(
 	free(dec_values);
 	free(perm);
 }
-</pre><p><br></p><p>As with a lot of my code based posts, this is more for my memory than anything, but hopefully may help people unlock the secrets of <a href="http://www.csie.ntu.edu.tw/~cjlin/libsvm/">libSVM</a>.</p><br /><a href='http://stuartjames.info/Journal/libsvm-linear-kernel-normalisation.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/libsvm-linear-kernel-normalisation.aspx'>...</a>
+</pre><p><br></p><p>As with a lot of my code based posts, this is more for my memory than anything, but hopefully may help people unlock the secrets of <a href="http://www.csie.ntu.edu.tw/~cjlin/libsvm/">libSVM</a>.</p>
+							<hr />
+							
+							
+              <footer>
+                <ul class="stats">
+                
+        <!--
+        <li><a href="#">General</a></li>
+        <li><a href="#" class="icon fa-heart">28</a></li>
+        <li><a href="#" class="icon fa-comment">128</a></li>
+        -->
+                </ul>
+              </footer>
+           </article>
+  					<ul class="actions pagination">
+  					  
+  	  				  <li><a href="/2014/06/24/wolfram-programming-cloud-beta-goes-live.html" class="button big previous">Previous Post</a></li>
+  						
+							
+  						  <li><a href="/tech/2014/09/26/new-toys-sept-14-part-1-of-2-benq-bl2710pt-27-wqhd.html" class="button big next">Next Post</a></li>
+  						
+  					</ul>
+					</div>
 
-        </section>
+				<!-- Sidebar -->
+					<section id="sidebar">
+
+						<!-- Intro -->
+						<section id="intro">
+  
+	<header>
+    
+    <h2>Stuart James' Journal</h2>
+    
+    <div style='float:left;'><a href="http://stuart-james.net" class="logo"><img src="/images/logo.jpg" alt="" /></a></div>
+    <div style='float:left;'>
+    <p>A simple little place for me to scribble down
+	  my thoughts and help my terrible memory</p>
+    </div>
+    <div style='clear:left;'></div>
+	  <hr />
+	  <p>A little about me...</p>
+		<p>I'm a <strong>Computer Vision</strong> and <strong>Machine learning</strong> researcher at <strong>UCL</strong>. Working in the VECG with
+		Tim Weyrich. Previously from <strong>University of Surrey</strong>  where I completed a Post-Doc and PhD studies.</p>
+
+	</header>
+</section>
+
+
+						<!-- Mini Posts -->
+						<section>
+  <div class="mini-posts">
+    
+      <article class="mini-post">
+  	    <header>
+  		    <h3><a href="/2016/06/23/getting-back-to-books.html">Getting back to books</a></h3>
+		      <time class="published" datetime="2016-06-23">June 23, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
         
-        <footer>
-            <div class="row">
-            
-            
-                <article class="6u 12u(small) excerpt">
-                    <header>
-                        <h2><a href="/2014/06/24/wolfram-programming-cloud-beta-goes-live.html">Wolfram Programming Cloud Beta goes live</a></h2>
-                    </header>
-                    <section>
-                        <p>Wolfram Alpha is incredibly useful source of information, when it was announced they would produce a flexible programming cloud it was of great interest to me. With the release I jumped on to see what it was like.</p><p>So I played around with a few examples under their free account to see what was possible, then after 5 minutes I thought I would try to put a mini demo up for this blog post. The functionality is quite powerful exploiting rich social media structures, looks really impressive and something I would be interested in exploiting, but as soon as I tried to do something simple I got this:</p><p><img class="img-responsive" style="max-width: 100%;, height: auto;  display: block;"title="image" alt="image" src="http://stuartjames.info/Data/Sites/5/media/wlw/image4_thumb.png"></p><p>
+          <a href="/2016/06/23/getting-back-to-books.html" class="image"><img src="/images/blog/2016-06-23-book.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
+  		    <h3><a href="/2016/06/14/twenty-nine-going-on-thirty.html">29 going on 30</a></h3>
+		      <time class="published" datetime="2016-06-14">June 14, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/06/14/twenty-nine-going-on-thirty.html" class="image"><img src="/images/blog/2016-06-14-birthday.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
+  		    <h3><a href="/2016/04/20/working-with-british-library-dataset.html">Working with the British Library Dataset</a></h3>
+		      <time class="published" datetime="2016-04-20">April 20, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/04/20/working-with-british-library-dataset.html" class="image"><img src="/images/blog/2016-04-20-header.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
+  		    <h3><a href="/2016/04/14/moving-to-jekyll.html">Moving to Jekyll</a></h3>
+		      <time class="published" datetime="2016-04-14">April 14, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/04/14/moving-to-jekyll.html" class="image"><img src="/images/blog/jekyll-logo.png" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+  </div>
+</section>
 
 
-                    </section>
-                    <footer>
-                        <ul class="actions">
-                            <li><a href="/2014/06/24/wolfram-programming-cloud-beta-goes-live.html" class="button">Read More</a></li>
-                        </ul>
-                    </footer>
-                </article>
-            
-            
-            
-            
-                <article class="6u$ 12u(small) excerpt f-right">
-                    <header>
-                        <h2><a href="/2014/09/26/new-toys-sept-14-part-1-of-2-benq-bl2710pt-27-wqhd.html">New Toys Sept’14 Part 1 of 2 – BenQ BL2710PT 27” WQHD</a></h2>
-                    </header>
-                    <section>
-                        <p><img alt="" src="http://stuartjames.info/Data/Sites/5/blogimages/train-rgb2.jpg" style="width: 100%;" /></p>
-
-<p>After having my beast of a desktop replacement laptop (ASUS n73sv) for a few years now the screen has become a bit temperamental. This and the fact I am using Lenovo Yoga2 Pro ultra book more and more (due to portability/screen res) has resulted in a void in powerful home processing.</p>
-
-<p>Therefore I felt to solve this problem I would get a beefy screen to allow me to work more comfortably at home and in theory write more of my thesis (instead of this blog… shh). I wanted something above the 1920x1080 resolution, since I know that two screens isn’t an option used in conjunction with the old ASUS. Two competitors came to the fore the BenQ BL2710PT and a Dell, oddly the Dell had very bad reversed when used over HDMI and you have to do a lot of hard work to get over the locked down 1080p. So I opted for the BenQ and am very happy with the results.</p>
+						<!-- Posts List -->
 
 
-                    </section>
-                    <footer>
-                        <ul class="actions">
-                            <li><a href="/2014/09/26/new-toys-sept-14-part-1-of-2-benq-bl2710pt-27-wqhd.html" class="button">Read More</a></li>
-                        </ul>
-                    </footer>
-                </article>
-            
-            </div>
-        </footer>
+						<!-- Footer -->
+						<section id="footer">
+  <ul class="icons">
+  	<li><a href="https://twitter.com/sttujames" class="fa-twitter"><span class="label">Twitter</span></a></li>
+		<li><a href="https://github.com/sttu" class="fa-github"><span class="label">GitHub</span></a></li>
+		<li><a href="/feed.xml" class="fa-rss"><span class="label">RSS</span></a></li>
+		<li><a href="mailto:contact@stuart-james.com" class="fa-envelope"><span class="label">Email</span></a></li>
+	</ul>
+  <p class="copyright">Copyright &copy; 2016 </p>
+   <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    </article>
+      ga('create', 'UA-7794553-4', 'auto');
+      ga('send', 'pageview');
 
-</div>
+    </script>
+</section>
 
-
-        <!-- Footer -->
-        <footer id="footer">
-            <ul class="icons">
-
-              
-              <li>
-                <a href="https://github.com/sttu" class="icon fa-github">
-                  <span class="label">GitHub</span>
-                </a>
-              </li>
-              
-
-              
-              <li>
-                <a href="https://twitter.com/sttujames" class="icon fa-twitter">
-                  <span class="label">Twitter</span>
-                </a>
-              </li>
-              
-
-              
-              <li>
-                <a href="https://linkedin.com/in/stuartajames" class="icon fa-linkedin">
-                  <span class="label">LinkedIn</span>
-                </a>
-              </li>
-              
-
-              
-              <li>
-                <a href="https://plus.google.com/stuartjames" class="icon fa-google-plus">
-                  <span class="label">Google+</span>
-                </a>
-              </li>
-              
-
-              
-              <li>
-                <a href="https://www.facebook.com/stuartaaronjames" class="icon fa-facebook">
-                  <span class="label">Facebook</span>
-                </a>
-              </li>
-              
-
-              
-
-              
-              <li>
-                <a href="mailto:contact@stuart-james.com" class="icon fa-envelope-o">
-                  <span class="label">Email</span>
-                </a>
-              </li>
-              
-            </ul>
-            <ul class="copyright">
-                <li>&copy; Stuart James 2016</li>
-                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                <li>Demo Images: <a href="https://unsplash.com/">Unsplash</a></li>
-                <li>Jekyll Template: <a href="http://cloudcannon.com">Cloud Cannon</a></li>
-            </ul>
-        </footer>
+					</section>
+			</div>
+		<!-- Scripts -->
+		<script src="/js/jquery.min.js"></script>
+<script src="/js/skel.min.js"></script>
+<script src="/js/util.js"></script>
+<!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="/js/main.js"></script>
 
 	</body>
 </html>

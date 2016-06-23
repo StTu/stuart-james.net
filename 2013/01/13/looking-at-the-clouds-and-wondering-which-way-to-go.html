@@ -1,221 +1,287 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
-  	<head>
-  		<title>Stuart James' Journal</title>
-  		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  		<meta name="description" content="" />
-  		<meta name="keywords" content="" />
-  		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-  		<script src="/js/jquery.min.js"></script>
-  		<script src="/js/jquery.poptrox.min.js"></script>
-  		<script src="/js/skel.min.js"></script>
-  		<script src="/js/init.js"></script>
-  		<noscript>
-  			<link rel="stylesheet" href="/css/skel.css" />
-  			<link rel="stylesheet" href="/css/style.css" />
-  			<link rel="stylesheet" href="/css/style-xlarge.css" />
-  		</noscript>
-  		<!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
-  	</head>
+  <head>
+  <title>Stuart James' Journal</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--[if lte IE 8]><script src="js/ie/html5shiv.js"></script><![endif]-->
+  <link rel="stylesheet" href="/css/main.css">
+  <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+  <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+</head>
 
-	<body id="top">
+	<body>
 
-      <header id="header">
-          <a href="/" class="image avatar"><img src="/images/avatar.jpg" alt="" /></a>
-          <h1><strong>Stuart James'</strong> journal, a simple <br />
-          little place for me to scribble down<br />
-	  my thoughts and help my terrible memory<br /></h1>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+<header id="header">
+  <h1><a href="http://stuart-james.net">Stuart James' Journal</a></h1>
+	<nav class="links">
+    <!--
+    <ul>
+      <li><a href="#">Lorem</a></li>
+			<li><a href="#">Ipsum</a></li>
+			<li><a href="#">Feugiat</a></li>
+			<li><a href="#">Tempus</a></li>
+			<li><a href="#">Adipiscing</a></li>
+		</ul>
+  -->
+	</nav>
+	<nav class="main">
+    <ul>
+                <!--
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="Search" />
+									</form>
+								</li>
+              -->
+		  <li class="menu">
+		  	<a class="fa-bars" href="#menu">Menu</a>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+<!-- Menu -->
+<section id="menu">
+  <!-- Search -->
+  <!--
+  <section>
+	  <form class="search" method="get" action="#">
+	    <input type="text" name="query" placeholder="Search" />
+		</form>
+	</section>
+  -->
+	<!-- Links -->
+	<section>
+	  <ul class="links">
+	    <li>
+		    <a href="/acknowledgement">
+				  <h3>Acknowledgement</h3>
+				  <p>Acknowledgement</p>
+				</a>
+			</li>
+    </ul>
+	</section>
+	<!-- Actions -->
+  <!--
+  <section>
+	  <ul class="actions vertical">
+	    <li><a href="#" class="button big fit">Log In</a></li>
+    </ul>
+  </section>
+  -->
+</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+            <article class="post">
+              <header>
+                <div class="title">
+                  <h2><a href="/2013/01/13/looking-at-the-clouds-and-wondering-which-way-to-go.html">Looking at the clouds and wondering which way to go</a></h2>
+                <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
+                </div>
+                <div class="meta">
+                  <time class="published" datetime="2013-01-13">January 13, 2013</time>
+                  
+									<h6>Read time about 6  minutes</h6>
+
+        <!--
+        <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
+        -->
+                </div>
+              </header>
+              
+              <h4>This or That?</h4> <p>After many discussions about the contrast of running a VPS on a host provided dedicated server and running an Instance in the cloud this weekend I decided to explore and found that actually there aren't bad options available. Obviously the two big players Amazon and Microsoft have there offerings known as:</p> <p align="center"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/png.png"><img style="display: inline" title="png" alt="png" src="http://stuartjames.info/Data/Sites/5/media/wlw/png_thumb.png" width="162" height="63"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/azure_small.png"><img style="display: inline" title="azure_small" alt="azure_small" src="http://stuartjames.info/Data/Sites/5/media/wlw/azure_small_thumb.png" width="143" height="63"></a></p> <p>There are other offerings from over providers such as Rackspace, but for this article I will be looking at just these two since they are what I would consider top companies for the area of cloud services.</p> <p>So what can you get free to start with:</p> <p>&nbsp;</p> <table style="color: #000000" border="0" cellspacing="2" cellpadding="2" width="100%"> <tbody> <tr> <td valign="top" width="47%"> <p>For the first 1 Year</p> <hr> AWS Free Usage Tier (Per Month):  <h6>Elastic Compute Cloud (EC2)</h6> <ul> <li>750 hours of <a href="https://aws.amazon.com/ec2">Amazon EC2</a> Linux<code>†</code> Micro Instance usage (613 MB of memory and 32-bit and 64-bit platform support) – enough hours to run continuously each month<code>*</code>  <li>750 hours of <a href="https://aws.amazon.com/ec2">Amazon EC2</a> Microsoft Windows Server<code>‡</code> Micro Instance usage (613 MB of memory and 32-bit and 64-bit platform support) – enough hours to run continuously each month<code>*</code>  <li>750 hours of an <a href="https://aws.amazon.com/elasticloadbalancing/">Elastic Load Balancer</a> plus 15 GB data processing*  <li>30 GB of <a href="https://aws.amazon.com/ebs">Amazon Elastic Block Storage</a>, plus 2 million I/Os and 1 GB of snapshot storage<code>*</code></li></ul> <h6>Simple Storage Service (S3)</h6> <ul> <li>5 GB of <a href="https://aws.amazon.com/s3">Amazon S3</a> standard storage, 20,000 Get Requests, and 2,000 Put Requests<code>*</code></li></ul> <h6>DynamoDB</h6> <ul> <li>100 MB of storage, 5 units of write capacity, and 10 units of read capacity for <a href="https://aws.amazon.com/dynamodb/">Amazon DynamoDB</a>.**</li></ul> <h6>Relational Database Service (RDS)</h6> <ul> <li>750 hours of <a href="https://aws.amazon.com/rds">Amazon RDS</a> Single-AZ Micro DB Instances, for running MySQL, Oracle BYOL or SQL Server (running SQL Server Express Edition) – enough hours to run a DB Instance continuously each month<code>*</code>  <li>20 GB of database storage  <li>10 million I/Os  <li>20 GB of backup storage for your automated database backups and any user-initiated DB Snapshots</li></ul> <h6>Simple Workflow (SWF)</h6> <ul> <li>1,000 <a href="https://aws.amazon.com/swf">Amazon SWF</a> workflow executions can be initiated for free. A total of 10,000 activity tasks, signals, timers and markers, and 30,000 workflow-days can also be used for free<code>**</code></li></ul> <h6>Simple Queue Service (SQS) and Simple Notification Service (SNS)</h6> <ul> <li>100,000 Requests of <a href="https://aws.amazon.com/sqs">Amazon Simple Queue Service</a><code>**</code>  <li>100,000 Requests, 100,000 HTTP notifications and 1,000 email notifications for <a href="https://aws.amazon.com/sns">Amazon Simple Notification Service</a><code>**</code></li></ul> <h6>CloudWatch</h6> <ul> <li>10 <a href="https://aws.amazon.com/cloudwatch">Amazon Cloudwatch</a> metrics, 10 alarms, and 1,000,000 API requests<code>**</code></li></ul> <h6>Data Transfer</h6> <ul> <li>15 GB of bandwidth out aggregated across all AWS services<code>*</code></li></ul> <h6>Data Pipeline</h6> <ul> <li>3 low frequency preconditions running on AWS per month*  <li>5 low frequency activities running on AWS per month*</li></ul> <p>In addition to these services, the <a href="https://aws.amazon.com/console">AWS Management Console</a> is available at no charge to help you build and manage your application on AWS.  <p>60-day Free Trial  <p>In addition to the Free Usage Tier we also offer 60-day Free Trial for all AWS customers that are new to Amazon ElastiCache. AWS customers can avail of this Free Trial in addition to the Free Usage Tier offerings.  <p>For more information on the free trial please follow the link below:  <ul> <li>Amazon <a href="https://aws.amazon.com/elasticache/free-trial/">ElastiCache free trial</a></li></ul> <p align="right"><font size="1">Taken from <a title="https://aws.amazon.com/free/" href="https://aws.amazon.com/free/">https://aws.amazon.com/free/</a></font></p></td> <td valign="top" width="47%"> <p>For 90 Days</p> <hr>  <ul> <li><a href="http://www.windowsazure.com/en-us/home/scenarios/virtual-machines/">compute</a> / 750 small compute hours per month  <li><a href="http://www.windowsazure.com/en-us/home/scenarios/web-sites/">web sites</a> / 10 web sites  <li><a href="http://www.windowsazure.com/en-us/develop/mobile/">mobile services</a> / 10 mobile services  <li><a href="http://www.windowsazure.com/en-us/home/features/data-management/">relational database</a> / 1 SQL database  <li><a href="http://www.windowsazure.com/en-us/home/features/business-analytics/">SQL reporting</a> / 100 hours per month  <li><a href="http://www.windowsazure.com/en-us/home/features/data-management/">storage</a> / 35GB with 50,000,000 storage transactions  <li><a href="http://www.windowsazure.com/en-us/pricing/details/#header-11">bandwidth</a> / unlimited inbound &amp; 25GB outbound  <li><a href="http://www.windowsazure.com/en-us/pricing/details/#header-9">media services encoding</a> / 50 GB (input &amp; output combined)  <li><a href="http://www.windowsazure.com/en-us/home/features/caching/">cdn</a> / 20GB outbound with 500,000 transactions  <li><a href="http://www.windowsazure.com/en-us/home/features/caching/">cache</a> / 128MB  <li><a href="http://www.windowsazure.com/en-us/home/features/messaging/">service bus</a> / 1,500 relay hours and 500,000 messages</li></ul><br><br></td></tr></tbody></table> <p>&nbsp;</p> <p>So which did I choose? Well Amazon Web Services (AWS)</p> <p>I am looking to migrate my websites and services therefore VPS style instances are more useful to me than a specialised cloud. I feel which is best is very much dependent on your needs, I was looking for IaaS (Infrastructure as a Service). Having said this a future planned Windows 8 App I will be developing requires a flat table database like NoSQL or in AWS case DynamoDB.</p> <p>&nbsp;</p> <h4>Ok so this, but what exactly?</h4> <p>So had a brief look at what you get free, one micro instance but for my need I wanted a bit more grr, so have stumped up the cash(well have yet to really see how much) and have got two micro instance.</p> <p>Sadly I am a die hard windows fan loving my nice GUI’s rather than terminal, despite having used the powerful Ubuntu CVSSP servers I still for admin like windows. </p> <p>So what can you get? Windows Server, 2008, 2012 with all sorts on top. But what does it mean for CPU usage well 2008 clearly requires less processing power but how much? well about 40%.</p> <p>Windows Server 2012: Runing IIS</p> <p><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/win2012_iis.png"><img style="display: inline" title="Win2012_IIS" alt="Win2012_IIS" src="http://stuartjames.info/Data/Sites/5/media/wlw/win2012_iis_thumb.png" width="300" height="143"></a></p> <p>Windows Server 2008: Running SQL Express 08</p> <p><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/win2008_sqlexpress.png"><img style="display: inline" title="Win2008_SQLExpress" alt="Win2008_SQLExpress" src="http://stuartjames.info/Data/Sites/5/media/wlw/win2008_sqlexpress_thumb.png" width="300" height="144"></a></p> <p>Now although these two graphs are two different servers for different jobs, I would like to state this sort of behaviour for 2012 is indicative of a base line, barely getting close to 40%. So will probably need to rethink using 2012 for my web server.</p> <p>Having said all this though I did some experiments against my old VPS shared server, with 2GB ram running both Web and SQL Express and found the performance to be comparable. I also did some test on another MojoPortal website running on a shared hosting for a business account and was comparable with that too with 100ms difference in favour of the shared hosting but less of a connection scale problem.</p> <h4>So is it worth it?</h4> <p>Well it is hard to tell, I am going to do some tests for a month so I see what the real costs are because you ‘pay on a meter’ it could be more could be less than expected the IOPS factor is very hard to predict and I haven’t found any meaningful references to decide what is a real Windows server IOPS count on EBS storage.</p> <p>My main concern is the cost jump from a micro instance to a small, for a micro instance the cost being $14.28 for a small $84.18 just for an instance running 24hours a day of usage for 1 month.</p> <h4>What could be cool</h4> <p>At the moment I am running two micro instances one SQL one Web, but this is very easy to change up to a few instances running the data folder of MojoPortal against the S3 storage, with an Elastic Load Balancer(ELB) run on top of the Web servers could be a nice way of dynamically handling load with a low cost due to the micro instance. Using this style of solution is hard to judge with little to no real experience but seems logical.</p> <h4>To come</h4> <p>Well I have only been using AWS for a weekend will see what it comes to after a month with a couple of sites on it. Will get back to you soon!</p><br /><a href='http://stuartjames.info/Journal/looking-at-the-clouds-and-wondering-which-way-to-go.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/looking-at-the-clouds-and-wondering-which-way-to-go.aspx'>...</a>
+
+							<hr />
+							
+							
+              <footer>
+                <ul class="stats">
+                
+        <!--
+        <li><a href="#">General</a></li>
+        <li><a href="#" class="icon fa-heart">28</a></li>
+        <li><a href="#" class="icon fa-comment">128</a></li>
+        -->
+                </ul>
+              </footer>
+           </article>
+  					<ul class="actions pagination">
+  					  
+  	  				  <li><a href="/2012/12/25/alternative-boost-graph-construction-based-on-defining-edges-independently.html" class="button big previous">Previous Post</a></li>
+  						
+							
+  						  <li><a href="/2013/01/14/kingdom-of-drakkar-maps.html" class="button big next">Next Post</a></li>
+  						
+  					</ul>
+					</div>
+
+				<!-- Sidebar -->
+					<section id="sidebar">
+
+						<!-- Intro -->
+						<section id="intro">
+  
+	<header>
+    
+    <h2>Stuart James' Journal</h2>
+    
+    <div style='float:left;'><a href="http://stuart-james.net" class="logo"><img src="/images/logo.jpg" alt="" /></a></div>
+    <div style='float:left;'>
+    <p>A simple little place for me to scribble down
+	  my thoughts and help my terrible memory</p>
+    </div>
+    <div style='clear:left;'></div>
 	  <hr />
-	  <h1>A little about me...</h1>
-	  <h1>
-		I'm a Computer Vision and Machine learning<br />
-		researcher at <strong>UCL</strong>. Working in the VECG with<br /> 
-		Tim Weyrich. Previously from <strong>University of Surrey</strong><br />  where I completed a Post-Doc and PhD studies.
-	  </h1>
-    <h4>
-    <a href="http://stuart-james.com" >Read more about my research interests</a> 
-    </h4>
-    <hr />
-      </header>
+	  <p>A little about me...</p>
+		<p>I'm a <strong>Computer Vision</strong> and <strong>Machine learning</strong> researcher at <strong>UCL</strong>. Working in the VECG with
+		Tim Weyrich. Previously from <strong>University of Surrey</strong>  where I completed a Post-Doc and PhD studies.</p>
+
+	</header>
+</section>
 
 
-        <div id="main">
-    <article>
-        <header class="major">
-            <h2 class="post-title">Looking at the clouds and wondering which way to go</h2>
-                <p class="post-meta">Jan 13, 2013</p>
-        </header>
-
-        <section>
-            <h4>This or That?</h4> <p>After many discussions about the contrast of running a VPS on a host provided dedicated server and running an Instance in the cloud this weekend I decided to explore and found that actually there aren't bad options available. Obviously the two big players Amazon and Microsoft have there offerings known as:</p> <p align="center"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/png.png"><img style="display: inline" title="png" alt="png" src="http://stuartjames.info/Data/Sites/5/media/wlw/png_thumb.png" width="162" height="63"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/azure_small.png"><img style="display: inline" title="azure_small" alt="azure_small" src="http://stuartjames.info/Data/Sites/5/media/wlw/azure_small_thumb.png" width="143" height="63"></a></p> <p>There are other offerings from over providers such as Rackspace, but for this article I will be looking at just these two since they are what I would consider top companies for the area of cloud services.</p> <p>So what can you get free to start with:</p> <p>&nbsp;</p> <table style="color: #000000" border="0" cellspacing="2" cellpadding="2" width="100%"> <tbody> <tr> <td valign="top" width="47%"> <p>For the first 1 Year</p> <hr> AWS Free Usage Tier (Per Month):  <h6>Elastic Compute Cloud (EC2)</h6> <ul> <li>750 hours of <a href="https://aws.amazon.com/ec2">Amazon EC2</a> Linux<code>†</code> Micro Instance usage (613 MB of memory and 32-bit and 64-bit platform support) – enough hours to run continuously each month<code>*</code>  <li>750 hours of <a href="https://aws.amazon.com/ec2">Amazon EC2</a> Microsoft Windows Server<code>‡</code> Micro Instance usage (613 MB of memory and 32-bit and 64-bit platform support) – enough hours to run continuously each month<code>*</code>  <li>750 hours of an <a href="https://aws.amazon.com/elasticloadbalancing/">Elastic Load Balancer</a> plus 15 GB data processing*  <li>30 GB of <a href="https://aws.amazon.com/ebs">Amazon Elastic Block Storage</a>, plus 2 million I/Os and 1 GB of snapshot storage<code>*</code></li></ul> <h6>Simple Storage Service (S3)</h6> <ul> <li>5 GB of <a href="https://aws.amazon.com/s3">Amazon S3</a> standard storage, 20,000 Get Requests, and 2,000 Put Requests<code>*</code></li></ul> <h6>DynamoDB</h6> <ul> <li>100 MB of storage, 5 units of write capacity, and 10 units of read capacity for <a href="https://aws.amazon.com/dynamodb/">Amazon DynamoDB</a>.**</li></ul> <h6>Relational Database Service (RDS)</h6> <ul> <li>750 hours of <a href="https://aws.amazon.com/rds">Amazon RDS</a> Single-AZ Micro DB Instances, for running MySQL, Oracle BYOL or SQL Server (running SQL Server Express Edition) – enough hours to run a DB Instance continuously each month<code>*</code>  <li>20 GB of database storage  <li>10 million I/Os  <li>20 GB of backup storage for your automated database backups and any user-initiated DB Snapshots</li></ul> <h6>Simple Workflow (SWF)</h6> <ul> <li>1,000 <a href="https://aws.amazon.com/swf">Amazon SWF</a> workflow executions can be initiated for free. A total of 10,000 activity tasks, signals, timers and markers, and 30,000 workflow-days can also be used for free<code>**</code></li></ul> <h6>Simple Queue Service (SQS) and Simple Notification Service (SNS)</h6> <ul> <li>100,000 Requests of <a href="https://aws.amazon.com/sqs">Amazon Simple Queue Service</a><code>**</code>  <li>100,000 Requests, 100,000 HTTP notifications and 1,000 email notifications for <a href="https://aws.amazon.com/sns">Amazon Simple Notification Service</a><code>**</code></li></ul> <h6>CloudWatch</h6> <ul> <li>10 <a href="https://aws.amazon.com/cloudwatch">Amazon Cloudwatch</a> metrics, 10 alarms, and 1,000,000 API requests<code>**</code></li></ul> <h6>Data Transfer</h6> <ul> <li>15 GB of bandwidth out aggregated across all AWS services<code>*</code></li></ul> <h6>Data Pipeline</h6> <ul> <li>3 low frequency preconditions running on AWS per month*  <li>5 low frequency activities running on AWS per month*</li></ul> <p>In addition to these services, the <a href="https://aws.amazon.com/console">AWS Management Console</a> is available at no charge to help you build and manage your application on AWS.  <p>60-day Free Trial  <p>In addition to the Free Usage Tier we also offer 60-day Free Trial for all AWS customers that are new to Amazon ElastiCache. AWS customers can avail of this Free Trial in addition to the Free Usage Tier offerings.  <p>For more information on the free trial please follow the link below:  <ul> <li>Amazon <a href="https://aws.amazon.com/elasticache/free-trial/">ElastiCache free trial</a></li></ul> <p align="right"><font size="1">Taken from <a title="https://aws.amazon.com/free/" href="https://aws.amazon.com/free/">https://aws.amazon.com/free/</a></font></p></td> <td valign="top" width="47%"> <p>For 90 Days</p> <hr>  <ul> <li><a href="http://www.windowsazure.com/en-us/home/scenarios/virtual-machines/">compute</a> / 750 small compute hours per month  <li><a href="http://www.windowsazure.com/en-us/home/scenarios/web-sites/">web sites</a> / 10 web sites  <li><a href="http://www.windowsazure.com/en-us/develop/mobile/">mobile services</a> / 10 mobile services  <li><a href="http://www.windowsazure.com/en-us/home/features/data-management/">relational database</a> / 1 SQL database  <li><a href="http://www.windowsazure.com/en-us/home/features/business-analytics/">SQL reporting</a> / 100 hours per month  <li><a href="http://www.windowsazure.com/en-us/home/features/data-management/">storage</a> / 35GB with 50,000,000 storage transactions  <li><a href="http://www.windowsazure.com/en-us/pricing/details/#header-11">bandwidth</a> / unlimited inbound &amp; 25GB outbound  <li><a href="http://www.windowsazure.com/en-us/pricing/details/#header-9">media services encoding</a> / 50 GB (input &amp; output combined)  <li><a href="http://www.windowsazure.com/en-us/home/features/caching/">cdn</a> / 20GB outbound with 500,000 transactions  <li><a href="http://www.windowsazure.com/en-us/home/features/caching/">cache</a> / 128MB  <li><a href="http://www.windowsazure.com/en-us/home/features/messaging/">service bus</a> / 1,500 relay hours and 500,000 messages</li></ul><br><br></td></tr></tbody></table> <p>&nbsp;</p> <p>So which did I choose? Well Amazon Web Services (AWS)</p> <p>I am looking to migrate my websites and services therefore VPS style instances are more useful to me than a specialised cloud. I feel which is best is very much dependent on your needs, I was looking for IaaS (Infrastructure as a Service). Having said this a future planned Windows 8 App I will be developing requires a flat table database like NoSQL or in AWS case DynamoDB.</p> <p>&nbsp;</p> <h4>Ok so this, but what exactly?</h4> <p>So had a brief look at what you get free, one micro instance but for my need I wanted a bit more grr, so have stumped up the cash(well have yet to really see how much) and have got two micro instance.</p> <p>Sadly I am a die hard windows fan loving my nice GUI’s rather than terminal, despite having used the powerful Ubuntu CVSSP servers I still for admin like windows. </p> <p>So what can you get? Windows Server, 2008, 2012 with all sorts on top. But what does it mean for CPU usage well 2008 clearly requires less processing power but how much? well about 40%.</p> <p>Windows Server 2012: Runing IIS</p> <p><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/win2012_iis.png"><img style="display: inline" title="Win2012_IIS" alt="Win2012_IIS" src="http://stuartjames.info/Data/Sites/5/media/wlw/win2012_iis_thumb.png" width="300" height="143"></a></p> <p>Windows Server 2008: Running SQL Express 08</p> <p><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/win2008_sqlexpress.png"><img style="display: inline" title="Win2008_SQLExpress" alt="Win2008_SQLExpress" src="http://stuartjames.info/Data/Sites/5/media/wlw/win2008_sqlexpress_thumb.png" width="300" height="144"></a></p> <p>Now although these two graphs are two different servers for different jobs, I would like to state this sort of behaviour for 2012 is indicative of a base line, barely getting close to 40%. So will probably need to rethink using 2012 for my web server.</p> <p>Having said all this though I did some experiments against my old VPS shared server, with 2GB ram running both Web and SQL Express and found the performance to be comparable. I also did some test on another MojoPortal website running on a shared hosting for a business account and was comparable with that too with 100ms difference in favour of the shared hosting but less of a connection scale problem.</p> <h4>So is it worth it?</h4> <p>Well it is hard to tell, I am going to do some tests for a month so I see what the real costs are because you ‘pay on a meter’ it could be more could be less than expected the IOPS factor is very hard to predict and I haven’t found any meaningful references to decide what is a real Windows server IOPS count on EBS storage.</p> <p>My main concern is the cost jump from a micro instance to a small, for a micro instance the cost being $14.28 for a small $84.18 just for an instance running 24hours a day of usage for 1 month.</p> <h4>What could be cool</h4> <p>At the moment I am running two micro instances one SQL one Web, but this is very easy to change up to a few instances running the data folder of MojoPortal against the S3 storage, with an Elastic Load Balancer(ELB) run on top of the Web servers could be a nice way of dynamically handling load with a low cost due to the micro instance. Using this style of solution is hard to judge with little to no real experience but seems logical.</p> <h4>To come</h4> <p>Well I have only been using AWS for a weekend will see what it comes to after a month with a couple of sites on it. Will get back to you soon!</p><br /><a href='http://stuartjames.info/Journal/looking-at-the-clouds-and-wondering-which-way-to-go.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/looking-at-the-clouds-and-wondering-which-way-to-go.aspx'>...</a>
-
-        </section>
+						<!-- Mini Posts -->
+						<section>
+  <div class="mini-posts">
+    
+      <article class="mini-post">
+  	    <header>
+  		    <h3><a href="/2016/06/23/getting-back-to-books.html">Getting back to books</a></h3>
+		      <time class="published" datetime="2016-06-23">June 23, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
         
-        <footer>
-            <div class="row">
-            
-            
-                <article class="6u 12u(small) excerpt">
-                    <header>
-                        <h2><a href="/2012/12/25/alternative-boost-graph-construction-based-on-defining-edges-independently.html">Alternative Boost Graph Construction based on defining edges independently</a></h2>
-                    </header>
-                    <section>
-                        <p>So you may of seen previous posts on Boost Graph construction, here I present an easier way of constructing the graph but at a performance cost. This shouldn’t be used if can be avoided, but it may be useful if you want to adapt your edges on the fly.</p> <p>So we start with the normal code:</p> <p> <div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9D7513F9-C04C-4721-824A-2B34F0212519:8ccca690-b01d-40c9-b33a-1d57caf3c457" class="wlWriterEditableSmartContent"><pre style=" width: 952px; height: 633px;background-color:White;overflow: hidden;"><div><!--
-
-Code highlighting produced by Actipro CodeHighlighter (freeware)
-http://www.CodeHighlighter.com/
-
---><span style="color: #008080;"> 1</span> <span style="color: #000000;">typedef adjacency_list </span><span style="color: #000000;">&lt;</span><span style="color: #000000;"> listS, vecS, directedS,
-</span><span style="color: #008080;"> 2</span> <span style="color: #000000;">    no_property, property </span><span style="color: #000000;">&lt;</span><span style="color: #000000;"> edge_weight_t, </span><span style="color: #0000FF;">float</span><span style="color: #000000;"> </span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> </span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> graph_t;
-</span><span style="color: #008080;"> 3</span> <span style="color: #000000;">typedef graph_traits </span><span style="color: #000000;">&lt;</span><span style="color: #000000;"> graph_t </span><span style="color: #000000;">&gt;</span><span style="color: #000000;">::vertex_descriptor vertex_descriptor;
-</span><span style="color: #008080;"> 4</span> <span style="color: #000000;">typedef graph_traits </span><span style="color: #000000;">&lt;</span><span style="color: #000000;"> graph_t </span><span style="color: #000000;">&gt;</span><span style="color: #000000;">::edge_descriptor edge_descriptor;
-</span><span style="color: #008080;"> 5</span> <span style="color: #000000;">typedef std::pair</span><span style="color: #000000;">&lt;</span><span style="color: #0000FF;">int</span><span style="color: #000000;">, </span><span style="color: #0000FF;">int</span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> Edge;
-</span><span style="color: #008080;"> 6</span> <span style="color: #000000;">
-</span><span style="color: #008080;"> 7</span> <span style="color: #000000;"></span><span style="color: #0000FF;">const</span><span style="color: #000000;"> </span><span style="color: #0000FF;">int</span><span style="color: #000000;"> num_nodes </span><span style="color: #000000;">=</span><span style="color: #000000;"> </span><span style="color: #800080;">5</span><span style="color: #000000;">;
-</span><span style="color: #008080;"> 8</span> <span style="color: #000000;"></span><span style="color: #0000FF;">enum</span><span style="color: #000000;"> nodes { A, B, C, D, E };
-</span><span style="color: #008080;"> 9</span> <span style="color: #000000;"></span><span style="color: #0000FF;">char</span><span style="color: #000000;"> name[] </span><span style="color: #000000;">=</span><span style="color: #000000;"> </span><span style="color: #800000;">&quot;</span><span style="color: #800000;">ABCDE</span><span style="color: #800000;">&quot;</span><span style="color: #000000;">;
-</span><span style="color: #008080;">10</span> <span style="color: #000000;">Edge edge_array[] </span><span style="color: #000000;">=</span><span style="color: #000000;"> { Edge(A, C), Edge(B, B), Edge(B, D), Edge(B, E),
-</span><span style="color: #008080;">11</span> <span style="color: #000000;">    Edge(C, B), Edge(C, D), Edge(D, E), Edge(E, A), Edge(E, B)
-</span><span style="color: #008080;">12</span> <span style="color: #000000;">};
-</span><span style="color: #008080;">13</span> <span style="color: #000000;"></span><span style="color: #0000FF;">float</span><span style="color: #000000;"> weights[] </span><span style="color: #000000;">=</span><span style="color: #000000;"> { </span><span style="color: #800080;">1.5</span><span style="color: #000000;">, </span><span style="color: #800080;">2.10</span><span style="color: #000000;">, </span><span style="color: #800080;">1.4</span><span style="color: #000000;">, </span><span style="color: #800080;">2.2</span><span style="color: #000000;">, </span><span style="color: #800080;">7.6</span><span style="color: #000000;">, </span><span style="color: #800080;">3.222</span><span style="color: #000000;">, </span><span style="color: #800080;">1.125</span><span style="color: #000000;">, </span><span style="color: #800080;">1.324</span><span style="color: #000000;">, </span><span style="color: #800080;">1.983</span><span style="color: #000000;"> };
-</span><span style="color: #008080;">14</span> <span style="color: #000000;"></span><span style="color: #0000FF;">int</span><span style="color: #000000;"> num_arcs </span><span style="color: #000000;">=</span><span style="color: #000000;"> </span><span style="color: #0000FF;">sizeof</span><span style="color: #000000;">(edge_array) </span><span style="color: #000000;">/</span><span style="color: #000000;"> </span><span style="color: #0000FF;">sizeof</span><span style="color: #000000;">(Edge);
-</span><span style="color: #008080;">15</span> <span style="color: #000000;">
-</span><span style="color: #008080;">16</span> <span style="color: #000000;">graph_t g(edge_array, edge_array </span><span style="color: #000000;">+</span><span style="color: #000000;"> num_arcs, weights, num_nodes);
-</span><span style="color: #008080;">17</span> <span style="color: #000000;">property_map</span><span style="color: #000000;">&lt;</span><span style="color: #000000;">graph_t, edge_weight_t</span><span style="color: #000000;">&gt;</span><span style="color: #000000;">::type weightmap </span><span style="color: #000000;">=</span><span style="color: #000000;"> </span><span style="color: #0000FF;">get</span><span style="color: #000000;">(edge_weight, g);
-</span><span style="color: #008080;">18</span> <span style="color: #000000;">
-</span><span style="color: #008080;">19</span> <span style="color: #000000;">std::vector</span><span style="color: #000000;">&lt;</span><span style="color: #000000;">vertex_descriptor</span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> p(num_vertices(g));
-</span><span style="color: #008080;">20</span> <span style="color: #000000;">std::vector</span><span style="color: #000000;">&lt;</span><span style="color: #0000FF;">float</span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> d(num_vertices(g));
-</span><span style="color: #008080;">21</span> <span style="color: #000000;">vertex_descriptor s </span><span style="color: #000000;">=</span><span style="color: #000000;"> vertex(A, g);
-</span><span style="color: #008080;">22</span> <span style="color: #000000;">
-</span><span style="color: #008080;">23</span> <span style="color: #000000;">
-</span><span style="color: #008080;">24</span> <span style="color: #000000;">dijkstra_shortest_paths_no_color_map(g, s, predecessor_map(</span><span style="color: #000000;">&amp;</span><span style="color: #000000;">p[</span><span style="color: #800080;">0</span><span style="color: #000000;">]).distance_map(</span><span style="color: #000000;">&amp;</span><span style="color: #000000;">d[</span><span style="color: #800080;">0</span><span style="color: #000000;">]));
-</span><span style="color: #008080;">25</span> <span style="color: #000000;">
-</span><span style="color: #008080;">26</span> <span style="color: #000000;">std::vector</span><span style="color: #000000;">&lt;</span><span style="color: #0000FF;">float</span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> distances;
-</span><span style="color: #008080;">27</span> <span style="color: #000000;">std::vector</span><span style="color: #000000;">&lt;</span><span style="color: #0000FF;">float</span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> node_index_ids;
-</span><span style="color: #008080;">28</span> <span style="color: #000000;">
-</span><span style="color: #008080;">29</span> <span style="color: #000000;"></span><span style="color: #0000FF;">int</span><span style="color: #000000;"> target </span><span style="color: #000000;">=</span><span style="color: #000000;"> vertex(D, g);
-</span><span style="color: #008080;">30</span> <span style="color: #000000;"></span><span style="color: #0000FF;">do</span><span style="color: #000000;">{
-</span><span style="color: #008080;">31</span> <span style="color: #000000;">    node_index_ids.push_back(target);
-</span><span style="color: #008080;">32</span> <span style="color: #000000;">    distances.push_back(d[target]);
-</span><span style="color: #008080;">33</span> <span style="color: #000000;">    std::cout </span><span style="color: #000000;">&lt;&lt;</span><span style="color: #000000;"> </span><span style="color: #800000;">&quot;</span><span style="color: #800000;">Target </span><span style="color: #800000;">&quot;</span><span style="color: #000000;"> </span><span style="color: #000000;">&lt;&lt;</span><span style="color: #000000;"> target </span><span style="color: #000000;">&lt;&lt;</span><span style="color: #000000;"> </span><span style="color: #800000;">&quot;</span><span style="color: #800000;"> dist </span><span style="color: #800000;">&quot;</span><span style="color: #000000;"> </span><span style="color: #000000;">&lt;&lt;</span><span style="color: #000000;"> d[target] </span><span style="color: #000000;">&lt;&lt;</span><span style="color: #000000;"> </span><span style="color: #800000;">&quot;</span><span style="color: #800000;"> Source </span><span style="color: #800000;">&quot;</span><span style="color: #000000;"> </span><span style="color: #000000;">&lt;&lt;</span><span style="color: #000000;"> s </span><span style="color: #000000;">&lt;&lt;</span><span style="color: #000000;">  std::endl;
-</span><span style="color: #008080;">34</span> <span style="color: #000000;">    target </span><span style="color: #000000;">=</span><span style="color: #000000;"> p[target];
-</span><span style="color: #008080;">35</span> <span style="color: #000000;">}</span><span style="color: #0000FF;">while</span><span style="color: #000000;">(target </span><span style="color: #000000;">!=</span><span style="color: #000000;"> s);</span></div></pre><!-- Code inserted with Steve Dunn's Windows Live Writer Code Formatter Plugin.  http://dunnhq.com --></div></p>
-
-
-<p>So we start with a basic set of nodes, A-&gt;E with some connections between them. This is an example of a directed graph so “flow” can only go one direction.</p>
-<p>The benefit of this is you define the construct of the graph and create the <font face="Courier New">graph_t</font>, object <font face="Courier New">g</font>.</p>
-<p>An alternative way of constructing is to generate the nodes, then add in the weights as in:</p>
-<div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9D7513F9-C04C-4721-824A-2B34F0212519:b8b53645-d467-4170-97d4-ee6c2085d769" class="wlWriterEditableSmartContent"><pre style=" width: 952px; height: 76px;background-color:White;overflow: hidden;"><div><!--
-
-Code highlighting produced by Actipro CodeHighlighter (freeware)
-http://www.CodeHighlighter.com/
-
---><span style="color: #008080;">1</span> <span style="color: #000000;">graph_t g(num_nodes);
-</span><span style="color: #008080;">2</span> <span style="color: #000000;"></span><span style="color: #0000FF;">for</span><span style="color: #000000;"> (</span><span style="color: #0000FF;">int</span><span style="color: #000000;"> i </span><span style="color: #000000;">=</span><span style="color: #000000;"> </span><span style="color: #800080;">0</span><span style="color: #000000;"> ; i </span><span style="color: #000000;">&lt;</span><span style="color: #000000;"> num_arcs ; </span><span style="color: #000000;">++</span><span style="color: #000000;">i){
-</span><span style="color: #008080;">3</span> <span style="color: #000000;">    boost::add_edge(edge_array[i].first,edge_array[i].second,weights[i],g);
-</span><span style="color: #008080;">4</span> <span style="color: #000000;">}</span></div></pre><!-- Code inserted with Steve Dunn's Windows Live Writer Code Formatter Plugin.  http://dunnhq.com --></div>
-<p>This may seem easier but comes at a performance cost. In contrast even on this simple example there is a 0.001s time increase, scale this to a real solution you may suffer badly. As stated make sure your scenario makes sense.</p><br /><a href='http://stuartjames.info/Journal/alternative-boost-graph-construction-based-on-defining-edges-independently.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/alternative-boost-graph-construction-based-on-defining-edges-independently.aspx'>...</a>
-
-                    </section>
-                    <footer>
-                        <ul class="actions">
-                            <li><a href="/2012/12/25/alternative-boost-graph-construction-based-on-defining-edges-independently.html" class="button">Read More</a></li>
-                        </ul>
-                    </footer>
-                </article>
-            
-            
-            
-            
-                <article class="6u$ 12u(small) excerpt f-right">
-                    <header>
-                        <h2><a href="/2013/01/14/kingdom-of-drakkar-maps.html">Kingdom of Drakkar Maps!</a></h2>
-                    </header>
-                    <section>
-                        <p>Everyone has games they played from their childhood, well that iconic game for me was Drakkar. Mario, Sonic get honourable mentions but Drakkar from 12 to my early 20’s. At Christmas I decided to bring to my walls a little nostalgia, and purchased the Drakkar map set available from the <a href="https://www.drakkarzone.com/store/store.php">store</a>.</p>
-<p align="center"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/20130114_094129.jpg"><img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: block; float: none; margin-left: auto; border-top: 0px; margin-right: auto; border-right: 0px; padding-top: 0px" title="20130114_094129" border="0" alt="20130114_094129" src="http://stuartjames.info/Data/Sites/5/media/wlw/20130114_094129_thumb.jpg" width="644" height="484" /></a></p>
-<p>Today they arrived and couldn’t be happier! They are much larger than the image gives them credit, I and am greatly excited to get framed and up onto my walls.</p>
-<p>If your interested in giving my childhood game a try:</p>
-<p align="center"><a title="http://www.kingdomofdrakkar.com/" href="http://www.kingdomofdrakkar.com/">http://www.kingdomofdrakkar.com/</a></p>
-<p><br /><a href="http://stuartjames.info/Journal/kingdom-of-drakkar-maps.aspx">Stuart James</a>  <a href="http://stuartjames.info/Journal/kingdom-of-drakkar-maps.aspx">…</a></p>
-
-                    </section>
-                    <footer>
-                        <ul class="actions">
-                            <li><a href="/2013/01/14/kingdom-of-drakkar-maps.html" class="button">Read More</a></li>
-                        </ul>
-                    </footer>
-                </article>
-            
-            </div>
-        </footer>
-
-    </article>
-
-</div>
+          <a href="/2016/06/23/getting-back-to-books.html" class="image"><img src="/images/blog/2016-06-23-book.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
+  		    <h3><a href="/2016/06/14/twenty-nine-going-on-thirty.html">29 going on 30</a></h3>
+		      <time class="published" datetime="2016-06-14">June 14, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/06/14/twenty-nine-going-on-thirty.html" class="image"><img src="/images/blog/2016-06-14-birthday.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
+  		    <h3><a href="/2016/04/20/working-with-british-library-dataset.html">Working with the British Library Dataset</a></h3>
+		      <time class="published" datetime="2016-04-20">April 20, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/04/20/working-with-british-library-dataset.html" class="image"><img src="/images/blog/2016-04-20-header.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
+  		    <h3><a href="/2016/04/14/moving-to-jekyll.html">Moving to Jekyll</a></h3>
+		      <time class="published" datetime="2016-04-14">April 14, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/04/14/moving-to-jekyll.html" class="image"><img src="/images/blog/jekyll-logo.png" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+  </div>
+</section>
 
 
-        <!-- Footer -->
-        <footer id="footer">
-            <ul class="icons">
+						<!-- Posts List -->
 
-              
-              <li>
-                <a href="https://github.com/sttu" class="icon fa-github">
-                  <span class="label">GitHub</span>
-                </a>
-              </li>
-              
 
-              
-              <li>
-                <a href="https://twitter.com/sttujames" class="icon fa-twitter">
-                  <span class="label">Twitter</span>
-                </a>
-              </li>
-              
+						<!-- Footer -->
+						<section id="footer">
+  <ul class="icons">
+  	<li><a href="https://twitter.com/sttujames" class="fa-twitter"><span class="label">Twitter</span></a></li>
+		<li><a href="https://github.com/sttu" class="fa-github"><span class="label">GitHub</span></a></li>
+		<li><a href="/feed.xml" class="fa-rss"><span class="label">RSS</span></a></li>
+		<li><a href="mailto:contact@stuart-james.com" class="fa-envelope"><span class="label">Email</span></a></li>
+	</ul>
+  <p class="copyright">Copyright &copy; 2016 </p>
+   <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-              
-              <li>
-                <a href="https://linkedin.com/in/stuartajames" class="icon fa-linkedin">
-                  <span class="label">LinkedIn</span>
-                </a>
-              </li>
-              
+      ga('create', 'UA-7794553-4', 'auto');
+      ga('send', 'pageview');
 
-              
-              <li>
-                <a href="https://plus.google.com/stuartjames" class="icon fa-google-plus">
-                  <span class="label">Google+</span>
-                </a>
-              </li>
-              
+    </script>
+</section>
 
-              
-              <li>
-                <a href="https://www.facebook.com/stuartaaronjames" class="icon fa-facebook">
-                  <span class="label">Facebook</span>
-                </a>
-              </li>
-              
-
-              
-
-              
-              <li>
-                <a href="mailto:contact@stuart-james.com" class="icon fa-envelope-o">
-                  <span class="label">Email</span>
-                </a>
-              </li>
-              
-            </ul>
-            <ul class="copyright">
-                <li>&copy; Stuart James 2016</li>
-                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                <li>Demo Images: <a href="https://unsplash.com/">Unsplash</a></li>
-                <li>Jekyll Template: <a href="http://cloudcannon.com">Cloud Cannon</a></li>
-            </ul>
-        </footer>
+					</section>
+			</div>
+		<!-- Scripts -->
+		<script src="/js/jquery.min.js"></script>
+<script src="/js/skel.min.js"></script>
+<script src="/js/util.js"></script>
+<!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="/js/main.js"></script>
 
 	</body>
 </html>
