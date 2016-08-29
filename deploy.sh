@@ -1,5 +1,5 @@
 jekyll build --destination  /vol/websites/stuart-james.net
-mogrify -resize 200x -format png */*.png
+
 cpwd=pwd
 cd /vol/websites/stuart-james.net
 cd images/blog
