@@ -111,6 +111,7 @@
                 </div>
               </header>
               
+              
               <p>Having loved the ability to compile VS2010 projects inside the VS2012 shell as a way of delaying the update, I thought it was time to stop delaying ( 1 Year late ).</p><pre class="code"><span style="background: white; color: black;">std::cout &lt;&lt; </span><span style="background: white; color: rgb(163, 21, 21);">"Minimum value for int: " </span><span style="background: white; color: black;">&lt;&lt; std::</span><span style="background: white; color: rgb(43, 145, 175);">numeric_limits</span><span style="background: white; color: black;">&lt;</span><span style="background: white; color: blue;">int</span><span style="background: white; color: black;">&gt;::min() &lt;&lt; std::endl</span><span style="background: white; color: black;">;
 std::cout &lt;&lt; </span><span style="background: white; color: rgb(163, 21, 21);">"Maximum value for int: " </span><span style="background: white; color: black;">&lt;&lt; std::</span><span style="background: white; color: rgb(43, 145, 175);">numeric_limits</span><span style="background: white; color: black;">&lt;</span><span style="background: white; color: blue;">int</span><span style="background: white; color: black;">&gt;::max() &lt;&lt; </span>std::endl<span style="background: white; color: black;">;</span></pre><p>Generates error:</p><pre class="code"><span style="background: white; color: black;">error C2059: syntax error : </span><span style="background: white; color: rgb(163, 21, 21);">'::' </span><span style="background: white; color: black;">[path]\source.cpp</span></pre><p>There is a good chance if you have these lines and are including the windows header you will hit an error. The Windows team put in a solution to the <font face="Courier New">#define min</font> conflict in <font face="Courier New">&lt;minwindef.h&gt;</font>.</p><p>So instead of</p><pre class="code"><span style="background: white; color: blue;">#include </span><span style="background: white; color: rgb(163, 21, 21);">&lt;windows.h&gt;</span></pre><p>You use a #define to avoid this</p><pre class="code"><span style="background: white; color: blue;">#define </span><span style="background: white; color: rgb(111, 0, 138);">NOMINMAX
 </span><span style="background: white; color: blue;">#include </span><span style="background: white; color: rgb(163, 21, 21);">&lt;windows.h&gt;</span></pre><p>Another issue I found was with an annoying char define, again from the Windows team in <font face="Courier New">&lt;rpcndr.h&gt;</font>.</p><pre class="code"><span style="background: white; color: blue;">#define </span><span style="background: white; color: rgb(111, 0, 138);">small </span><span style="background: white; color: blue;">char</span></pre><p>This one doesn’t have the ability to comment out for so if you have a small function with something like:</p><pre class="code"><span style="background: white; color: rgb(43, 145, 175);">AnObj </span><span style="background: white; color: rgb(111, 0, 138);">small </span><span style="background: white; color: black;">= large.resize(val);</span></pre><p>Generates error:</p><pre class="code"><span style="background: white; color: black;">error C2628:</span><span style="background: white; color: rgb(163, 21, 21);">'AnObj' </span><span style="background: white; color: black;">followed by </span><span style="background: white; color: rgb(163, 21, 21);">'char' </span><span style="background: white; color: black;">is illegal (did you forget a </span><span style="background: white; color: rgb(163, 21, 21);">';'</span><span style="background: white; color: black;">?) [path]\source.cpp</span></pre><p>You will have to suffer and change the name, in some ways it teaches you (me) for not being very specific, still annoying though. Hopefully this is all the conversion errors I’ll hit.</p><br /><a href='http://stuartjames.info/Journal/c--visual-studio-2012-vs2012--win8--converting-projects-up-some-conflicts-i-found.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/c--visual-studio-2012-vs2012--win8--converting-projects-up-some-conflicts-i-found.aspx'>...</a>
@@ -170,78 +171,78 @@ std::cout &lt;&lt; </span><span style="background: white; color: rgb(163, 21, 21
     
       <article class="mini-post">
   	    <header>
+  		    <h3><a href="/2016/08/26/british-library-dataset-style-transfer.html">Transferring old book image style to real world photos</a></h3>
+		      <time class="published" datetime="2016-08-26">August 26, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/08/26/british-library-dataset-style-transfer.html" class="image"><img src="/images/blog/2016-08-26-style.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
+  		    <h3><a href="/2016/08/21/cheddar-gorge-relish-run.html">Cheddar Gorge Relish Run</a></h3>
+		      <time class="published" datetime="2016-08-21">August 21, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/08/21/cheddar-gorge-relish-run.html" class="image"><img src="/images/blog/2016-08-21-cheddar-route.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
+  		    <h3><a href="/2016/07/31/San-Francisco-Second-Half.html">San Francisco Second Half Marathon</a></h3>
+		      <time class="published" datetime="2016-07-31">July 31, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/07/31/San-Francisco-Second-Half.html" class="image"><img src="/images/blog/2016-07-31-san-fran-run.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
   		    <h3><a href="/2016/06/23/getting-back-to-books.html">Getting back to books</a></h3>
 		      <time class="published" datetime="2016-06-23">June 23, 2016</time>
 						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
 			  </header>
         
           <a href="/2016/06/23/getting-back-to-books.html" class="image"><img src="/images/blog/2016-06-23-book.jpg" alt="" /></a>
-        
-		  </article>
-									<!-- Mini Post -->
-									  <!--
-										<article class="mini-post">
-											<header>
-												<h3><a href="#">Vitae sed condimentum</a></h3>
-												<time class="published" datetime="2015-10-20">October 20, 2015</time>
-												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
-										</article>
-									-->
-    
-      <article class="mini-post">
-  	    <header>
-  		    <h3><a href="/2016/06/14/twenty-nine-going-on-thirty.html">29 going on 30</a></h3>
-		      <time class="published" datetime="2016-06-14">June 14, 2016</time>
-						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
-			  </header>
-        
-          <a href="/2016/06/14/twenty-nine-going-on-thirty.html" class="image"><img src="/images/blog/2016-06-14-birthday.jpg" alt="" /></a>
-        
-		  </article>
-									<!-- Mini Post -->
-									  <!--
-										<article class="mini-post">
-											<header>
-												<h3><a href="#">Vitae sed condimentum</a></h3>
-												<time class="published" datetime="2015-10-20">October 20, 2015</time>
-												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
-										</article>
-									-->
-    
-      <article class="mini-post">
-  	    <header>
-  		    <h3><a href="/2016/04/20/working-with-british-library-dataset.html">Working with the British Library Dataset</a></h3>
-		      <time class="published" datetime="2016-04-20">April 20, 2016</time>
-						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
-			  </header>
-        
-          <a href="/2016/04/20/working-with-british-library-dataset.html" class="image"><img src="/images/blog/2016-04-20-header.jpg" alt="" /></a>
-        
-		  </article>
-									<!-- Mini Post -->
-									  <!--
-										<article class="mini-post">
-											<header>
-												<h3><a href="#">Vitae sed condimentum</a></h3>
-												<time class="published" datetime="2015-10-20">October 20, 2015</time>
-												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
-										</article>
-									-->
-    
-      <article class="mini-post">
-  	    <header>
-  		    <h3><a href="/2016/04/14/moving-to-jekyll.html">Moving to Jekyll</a></h3>
-		      <time class="published" datetime="2016-04-14">April 14, 2016</time>
-						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
-			  </header>
-        
-          <a href="/2016/04/14/moving-to-jekyll.html" class="image"><img src="/images/blog/jekyll-logo.png" alt="" /></a>
         
 		  </article>
 									<!-- Mini Post -->

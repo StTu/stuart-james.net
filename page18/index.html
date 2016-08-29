@@ -98,6 +98,123 @@
   <article class="post">
     <header>
       <div class="title">
+        <h2><a href="/2012/01/19/some-adventures-of-cow-and-pig.html">Some adventures of Cow and Pig</a></h2>
+        <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
+      </div>
+      <div class="meta">
+        <time class="published" datetime="2012-01-19">January 19, 2012</time>
+        
+        <!--
+        <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
+        -->
+      </div>
+    </header>
+    
+    <p><img style="border-image: initial; display: block; margin-left: auto; margin-right: auto; border-width: 5px; border-color: black; border-style: solid;" src="http://www.stuart-james.net/thumbnailservice.ashx?albummode=Preview&amp;albumpath=%7e%2fData%2fSites%2f5%2fFolderGalleries%2fCow+and+Pig%2fDSC_0616.JPG" alt="Cow Pig admiring Hobgoblin" width="400" height="266" /></p>
+<p> </p>
+<p><img style="border-image: initial; display: block; margin-left: auto; margin-right: auto; border-width: 5px; border-color: black; border-style: solid;" src="http://www.stuart-james.net/thumbnailservice.ashx?albummode=Preview&amp;albumpath=%7e%2fData%2fSites%2f5%2fFolderGalleries%2fCow+and+Pig%2fDSC_0628.JPG" alt="Cow Keeps going on the Hobgoblin while Pig is passed out" width="400" height="266" /></p><br /><a href='http://stuartjames.info/Journal/some-adventures-of-cow-and-pig-2012-01-19.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/some-adventures-of-cow-and-pig-2012-01-19.aspx'>...</a>
+
+    <footer>
+       
+      <ul class="stats">
+        
+        <!--
+        <li><a href="#">General</a></li>
+        <li><a href="#" class="icon fa-heart">28</a></li>
+        <li><a href="#" class="icon fa-comment">128</a></li>
+        -->
+      </ul>
+    </footer>
+  </article>
+
+  <article class="post">
+    <header>
+      <div class="title">
+        <h2><a href="/2011/12/23/a-short-excursion-to-paris-(france).html">A short excursion to Paris (France)</a></h2>
+        <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
+      </div>
+      <div class="meta">
+        <time class="published" datetime="2011-12-23">December 23, 2011</time>
+        
+        <!--
+        <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
+        -->
+      </div>
+    </header>
+    
+    <p>Went on a short pre-christmas trip to Paris for a few days, thought I would share a few of my experiences. The first thing to note in Paris is the cost, plan for expensive meals if you go you will really struggle to avoid it. A good place togo that you can find easily is a Pauls Patisserie we had a nice lunch sandwich and a crape while there for a resonable price. When it comes to evening meals you need to be more careful about where you go. We tried a few different places but average evening meal cost is ~25euros for the food then add on top for drinks, although wine is fine avoid beer found that to be expensive at ~6euro a glass. Its not all doom and gloom though if you are sub 25 the attractions are generally free*, UK student cards dont work I believe international student card does though but that requires sorting out before the trip.</p>
+<p>Here are a few shots of paris to cheer you up, will add a few more as my camera master sends me her images.</p>
+<p>&lt;image to come&gt;</p><br /><a href='http://stuartjames.info/Journal/a-short-excursion-to-paris-france-2011-12-24.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/a-short-excursion-to-paris-france-2011-12-24.aspx'>...</a>
+
+    <footer>
+       
+      <ul class="stats">
+        
+        <!--
+        <li><a href="#">General</a></li>
+        <li><a href="#" class="icon fa-heart">28</a></li>
+        <li><a href="#" class="icon fa-comment">128</a></li>
+        -->
+      </ul>
+    </footer>
+  </article>
+
+  <article class="post">
+    <header>
+      <div class="title">
+        <h2><a href="/2011/12/14/gcc-compiler-dynamic-array-declaration-without-warning.html">gcc compiler dynamic array declaration without warning</a></h2>
+        <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
+      </div>
+      <div class="meta">
+        <time class="published" datetime="2011-12-14">December 14, 2011</time>
+        
+        <!--
+        <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
+        -->
+      </div>
+    </header>
+    
+    <p>I demonstrate for one of <a href="http://personal.ee.surrey.ac.uk/Personal/R.Bowden/">Prof Richard Bowden</a>'s modules on C programming for first year Electronic Engineering students. Recently one of the tasks given to students was read in a matrix, multiply and write it out. To start with they did 3x3 then 7x7 then were instructed to make it variable size.</p>
+<p>So when going round to help I showed a few of them how to allocate deallocate dynamic memory then asked the question had they been taught this. Apparently at they hadnt by this point, later finding out it comes up after Christmas.</p>
+<p>My ramblings today are not about the module content or structure but actually the gcc compiler. When learning to program in C++ I learnt on a fairly sensible compiler inside Visual Studio. Then hit the gcc compiler and got annoyed by stupid things, for example</p>
+<p>Visual Studio interprets this fine</p>
+<p>std::vector&lt;std::vector&lt;int&gt;&gt;</p>
+<p>g++</p>
+<p>Error, required:</p>
+<p>std::vector&lt;std::vector&lt;int&gt; &gt;</p>
+<p>To note the space between the last two angle brackets.</p>
+<p>While walking round I saw some students code and got a little scare by it they performed operations such as:</p>
+<p> </p>
+<p>int size = 0;</p>
+<p>scanf("%i",size);</p>
+<p>int myArray[size];</p>
+<p>for (int i = 0 ; i &lt; size ; i++)</p>
+<p>scanf("%f",myArray[i]);</p>
+<p>for (int i = 0 ; i &lt; size ; i++)</p>
+<p>printf("%f",myArray[i]);</p>
+<p> </p>
+<p>To my horror this compiled without warning or error and even worse it worked. I later while chatting to friends found that this was normal for the gcc compiler, and apparently the g++. So therefore we had some guesses about how this would work and the common answer was:</p>
+<blockquote>
+<p>myArray is initialised to length 0, then since taken of the stack when read and written to you corrupted the stack.</p>
+</blockquote>
+<p>The message to take away from this horror story of teaching C, is two things use a compiler that may not follow the letter of the standard but actually is intelligent and knows what you mean; always use -wall when compiling on gcc otherwise you will end up in a pile of mess later on!</p><br /><a href='http://stuartjames.info/Journal/gcc-compiler-dynamic-array-declaration-without-warning-2011-12-14.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/gcc-compiler-dynamic-array-declaration-without-warning-2011-12-14.aspx'>...</a>
+
+    <footer>
+       
+      <ul class="stats">
+        
+        <!--
+        <li><a href="#">General</a></li>
+        <li><a href="#" class="icon fa-heart">28</a></li>
+        <li><a href="#" class="icon fa-comment">128</a></li>
+        -->
+      </ul>
+    </footer>
+  </article>
+
+  <article class="post">
+    <header>
+      <div class="title">
         <h2><a href="/2011/12/13/office-365-professional-subscription-may-be-more-annoying-than-expected.html">Office 365 Professional Subscription may be more annoying than expected</a></h2>
         <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
       </div>
@@ -212,78 +329,78 @@
     
       <article class="mini-post">
   	    <header>
+  		    <h3><a href="/2016/08/26/british-library-dataset-style-transfer.html">Transferring old book image style to real world photos</a></h3>
+		      <time class="published" datetime="2016-08-26">August 26, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/08/26/british-library-dataset-style-transfer.html" class="image"><img src="/images/blog/2016-08-26-style.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
+  		    <h3><a href="/2016/08/21/cheddar-gorge-relish-run.html">Cheddar Gorge Relish Run</a></h3>
+		      <time class="published" datetime="2016-08-21">August 21, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/08/21/cheddar-gorge-relish-run.html" class="image"><img src="/images/blog/2016-08-21-cheddar-route.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
+  		    <h3><a href="/2016/07/31/San-Francisco-Second-Half.html">San Francisco Second Half Marathon</a></h3>
+		      <time class="published" datetime="2016-07-31">July 31, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/07/31/San-Francisco-Second-Half.html" class="image"><img src="/images/blog/2016-07-31-san-fran-run.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
   		    <h3><a href="/2016/06/23/getting-back-to-books.html">Getting back to books</a></h3>
 		      <time class="published" datetime="2016-06-23">June 23, 2016</time>
 						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
 			  </header>
         
           <a href="/2016/06/23/getting-back-to-books.html" class="image"><img src="/images/blog/2016-06-23-book.jpg" alt="" /></a>
-        
-		  </article>
-									<!-- Mini Post -->
-									  <!--
-										<article class="mini-post">
-											<header>
-												<h3><a href="#">Vitae sed condimentum</a></h3>
-												<time class="published" datetime="2015-10-20">October 20, 2015</time>
-												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
-										</article>
-									-->
-    
-      <article class="mini-post">
-  	    <header>
-  		    <h3><a href="/2016/06/14/twenty-nine-going-on-thirty.html">29 going on 30</a></h3>
-		      <time class="published" datetime="2016-06-14">June 14, 2016</time>
-						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
-			  </header>
-        
-          <a href="/2016/06/14/twenty-nine-going-on-thirty.html" class="image"><img src="/images/blog/2016-06-14-birthday.jpg" alt="" /></a>
-        
-		  </article>
-									<!-- Mini Post -->
-									  <!--
-										<article class="mini-post">
-											<header>
-												<h3><a href="#">Vitae sed condimentum</a></h3>
-												<time class="published" datetime="2015-10-20">October 20, 2015</time>
-												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
-										</article>
-									-->
-    
-      <article class="mini-post">
-  	    <header>
-  		    <h3><a href="/2016/04/20/working-with-british-library-dataset.html">Working with the British Library Dataset</a></h3>
-		      <time class="published" datetime="2016-04-20">April 20, 2016</time>
-						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
-			  </header>
-        
-          <a href="/2016/04/20/working-with-british-library-dataset.html" class="image"><img src="/images/blog/2016-04-20-header.jpg" alt="" /></a>
-        
-		  </article>
-									<!-- Mini Post -->
-									  <!--
-										<article class="mini-post">
-											<header>
-												<h3><a href="#">Vitae sed condimentum</a></h3>
-												<time class="published" datetime="2015-10-20">October 20, 2015</time>
-												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
-										</article>
-									-->
-    
-      <article class="mini-post">
-  	    <header>
-  		    <h3><a href="/2016/04/14/moving-to-jekyll.html">Moving to Jekyll</a></h3>
-		      <time class="published" datetime="2016-04-14">April 14, 2016</time>
-						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
-			  </header>
-        
-          <a href="/2016/04/14/moving-to-jekyll.html" class="image"><img src="/images/blog/jekyll-logo.png" alt="" /></a>
         
 		  </article>
 									<!-- Mini Post -->

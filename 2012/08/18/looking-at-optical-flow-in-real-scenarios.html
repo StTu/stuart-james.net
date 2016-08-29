@@ -111,6 +111,7 @@
                 </div>
               </header>
               
+              
               <p>In many scenarios knowing how an object moves between frames is important, for example if you are trying to separate moving objects from the background or to calculate the speed of a tennis ball. Generally within Computer Vision people default to the Lucas Kanade[1] Tracker or the Pyramid expansion, although this tracker is commonly used it is not generally considered to work particularly well in real world scenarios. To help understand a little better I have compared 3 different techniques over a selection of different video types varying in object and quality.</p> <p>We compare:</p> <ul> <li>Lucas-Kanade  <li>Brox[2]  <li>Sun[3]</li></ul> <p>To note in these experiments we use default settings provided by the implementations, with tweaking you will get better results. Also I am sure there are faster implementations than the matlab ones used. I also realise they are very hard test cases with low quality, lots of noise motion blur.</p> <h3>Vector Comparison</h3> <table style="color: #000000" border="0" cellspacing="0" cellpadding="0"> <tbody> <tr> <td valign="top">Frame 1</td> <td valign="top">Frame 2</td> <td valign="top">LucasKanade</td> <td valign="top">Brox</td> <td valign="top">Sun</td></tr> <tr> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/horse-a.png"><img style="display: inline" title="horse-a" alt="horse-a" src="http://stuartjames.info/Data/Sites/5/media/wlw/horse-a_thumb.png" width="150" height="84"></a></td> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/horse-b.png"><img style="display: inline" title="horse-b" alt="horse-b" src="http://stuartjames.info/Data/Sites/5/media/wlw/horse-b_thumb.png" width="150" height="84"></a></td> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/pyrlk_flow.jpg"><img style="display: inline" title="pyrlk_flow" alt="pyrlk_flow" src="http://stuartjames.info/Data/Sites/5/media/wlw/pyrlk_flow_thumb.jpg" width="150" height="84"></a></td> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/horse_brox_flow.jpg"><img style="display: inline" title="horse_brox_flow" alt="horse_brox_flow" src="http://stuartjames.info/Data/Sites/5/media/wlw/horse_brox_flow_thumb.jpg" width="150" height="84"></a></td> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/horse_sun_flow.jpg"><img style="display: inline" title="horse_sun_flow" alt="horse_sun_flow" src="http://stuartjames.info/Data/Sites/5/media/wlw/horse_sun_flow_thumb.jpg" width="150" height="84"></a></td></tr> <tr> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/dance-a.jpg"><img style="display: inline" title="dance-a" alt="dance-a" src="http://stuartjames.info/Data/Sites/5/media/wlw/dance-a_thumb.jpg" width="150" height="150"></a></td> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/dance-b.jpg"><img style="display: inline" title="dance-b" alt="dance-b" src="http://stuartjames.info/Data/Sites/5/media/wlw/dance-b_thumb.jpg" width="150" height="150"></a></td> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/dance_pyrlk_flow.jpg"><img style="display: inline" title="dance_pyrlk_flow" alt="dance_pyrlk_flow" src="http://stuartjames.info/Data/Sites/5/media/wlw/dance_pyrlk_flow_thumb.jpg" width="150" height="150"></a></td> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/dance_brox_flow.jpg"><img style="display: inline" title="dance_brox_flow" alt="dance_brox_flow" src="http://stuartjames.info/Data/Sites/5/media/wlw/dance_brox_flow_thumb.jpg" width="150" height="150"></a></td> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/dance_sun_flow.jpg"><img style="display: inline" title="dance_sun_flow" alt="dance_sun_flow" src="http://stuartjames.info/Data/Sites/5/media/wlw/dance_sun_flow_thumb.jpg" width="150" height="150"></a></td></tr> <tr> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/snow3-a.png"><img style="display: inline" title="snow3-a" alt="snow3-a" src="http://stuartjames.info/Data/Sites/5/media/wlw/snow3-a_thumb.png" width="150" height="120"></a></td> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/snow3-b.png"><img style="display: inline" title="snow3-b" alt="snow3-b" src="http://stuartjames.info/Data/Sites/5/media/wlw/snow3-b_thumb.png" width="150" height="120"></a></td> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/snowboard_pyrlk_flow.jpg"><img style="display: inline" title="snowboard_pyrlk_flow" alt="snowboard_pyrlk_flow" src="http://stuartjames.info/Data/Sites/5/media/wlw/snowboard_pyrlk_flow_thumb.jpg" width="150" height="119"></a></td> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/snowboard_brox_flow.jpg"><img style="display: inline" title="snowboard_brox_flow" alt="snowboard_brox_flow" src="http://stuartjames.info/Data/Sites/5/media/wlw/snowboard_brox_flow_thumb.jpg" width="150" height="120"></a></td> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/snowboard_sun_flow.jpg"><img style="display: inline" title="snowboard_sun_flow" alt="snowboard_sun_flow" src="http://stuartjames.info/Data/Sites/5/media/wlw/snowboard_sun_flow_thumb.jpg" width="150" height="120"></a></td></tr></tbody></table> <p>&nbsp;</p> <h3>Performance</h3> <table style="color: #000000" border="0" cellspacing="0" cellpadding="0" width="685"> <tbody> <tr> <td valign="top" width="192">&nbsp;</td> <td valign="top" width="181">Lucas-Kanade</td> <td valign="top" width="105">Brox</td> <td valign="top" width="236">Sun</td></tr> <tr> <td valign="top" width="192">Horse (1280x720)</td> <td valign="top" width="181">105s</td> <td valign="top" width="105">64s</td> <td valign="top" width="236">619s</td></tr> <tr> <td valign="top" width="192">Dance(400x400)</td> <td valign="top" width="181">26s</td> <td valign="top" width="105">15s</td> <td valign="top" width="236">134s</td></tr> <tr> <td valign="top" width="192">Snowboarder(720x576)</td> <td valign="top" width="181">30s</td> <td valign="top" width="105">28s</td> <td valign="top" width="236">294s</td></tr></tbody></table> <p>&nbsp;</p> <h3>Conclusion</h3> <p>Well as you can see they are inconclusive results, Sun’s approach I would say works better at too higher computational cost LK works well on the dance footage or at least in that specific example, less noisy frames of the dance footage I have found LK performed poorly on. Brox, seems generally not to cope very well in these cases. To conclude, optical flow is still a very very incomplete field, you have to test on your problem to find the best solution.</p> <h3>References</h3> <p>[1] Lucas, B., &amp; Kanade, T. (1981). An iterative image registration technique with an application to stereo vision. <i>Proceedings of the 7th international joint …</i> (Vol. 130, pp. 121–129). Retrieved from <a href="http://www.ri.cmu.edu/pub_files/pub3/lucas_bruce_d_1981_1/lucas_bruce_d_1981_1.ps.gz">http://www.ri.cmu.edu/pub_files/pub3/lucas_bruce_d_1981_1/lucas_bruce_d_1981_1.ps.gz</a></p> <p>[2] Brox, T., Bruhn, A., Papenberg, N., &amp; Weickert, J. (2004). High accuracy optical flow estimation based on a theory for warping. <i>Computer Vision-ECCV 2004</i>, <i>4</i>(May), 25–36. Retrieved from <a href="http://www.springerlink.com/index/87a4ckjqm92lp3j9.pdf">http://www.springerlink.com/index/87a4ckjqm92lp3j9.pdf</a></p> <p>[3] Sun, D., Roth, S., &amp; Black, M. J. (2010). Secrets of optical flow estimation and their principles. <i>2010 IEEE Computer Society Conference on Computer Vision and Pattern Recognition</i>, 2432–2439. doi:10.1109/CVPR.2010.5539939</p> <h3>Disclaimer</h3> <p>This evaluation was done by taking openly available code for full references see the download file, that contains readme references in the relevant subfolders. If you have developed your own implementation of one of these methods or an alternative approach it would be great to expand with your results.</p><br /><a href='http://stuartjames.info/Journal/looking-at-optical-flow-in-real-scenarios.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/looking-at-optical-flow-in-real-scenarios.aspx'>...</a>
 
 							<hr />
@@ -168,78 +169,78 @@
     
       <article class="mini-post">
   	    <header>
+  		    <h3><a href="/2016/08/26/british-library-dataset-style-transfer.html">Transferring old book image style to real world photos</a></h3>
+		      <time class="published" datetime="2016-08-26">August 26, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/08/26/british-library-dataset-style-transfer.html" class="image"><img src="/images/blog/2016-08-26-style.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
+  		    <h3><a href="/2016/08/21/cheddar-gorge-relish-run.html">Cheddar Gorge Relish Run</a></h3>
+		      <time class="published" datetime="2016-08-21">August 21, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/08/21/cheddar-gorge-relish-run.html" class="image"><img src="/images/blog/2016-08-21-cheddar-route.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
+  		    <h3><a href="/2016/07/31/San-Francisco-Second-Half.html">San Francisco Second Half Marathon</a></h3>
+		      <time class="published" datetime="2016-07-31">July 31, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/07/31/San-Francisco-Second-Half.html" class="image"><img src="/images/blog/2016-07-31-san-fran-run.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
   		    <h3><a href="/2016/06/23/getting-back-to-books.html">Getting back to books</a></h3>
 		      <time class="published" datetime="2016-06-23">June 23, 2016</time>
 						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
 			  </header>
         
           <a href="/2016/06/23/getting-back-to-books.html" class="image"><img src="/images/blog/2016-06-23-book.jpg" alt="" /></a>
-        
-		  </article>
-									<!-- Mini Post -->
-									  <!--
-										<article class="mini-post">
-											<header>
-												<h3><a href="#">Vitae sed condimentum</a></h3>
-												<time class="published" datetime="2015-10-20">October 20, 2015</time>
-												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
-										</article>
-									-->
-    
-      <article class="mini-post">
-  	    <header>
-  		    <h3><a href="/2016/06/14/twenty-nine-going-on-thirty.html">29 going on 30</a></h3>
-		      <time class="published" datetime="2016-06-14">June 14, 2016</time>
-						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
-			  </header>
-        
-          <a href="/2016/06/14/twenty-nine-going-on-thirty.html" class="image"><img src="/images/blog/2016-06-14-birthday.jpg" alt="" /></a>
-        
-		  </article>
-									<!-- Mini Post -->
-									  <!--
-										<article class="mini-post">
-											<header>
-												<h3><a href="#">Vitae sed condimentum</a></h3>
-												<time class="published" datetime="2015-10-20">October 20, 2015</time>
-												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
-										</article>
-									-->
-    
-      <article class="mini-post">
-  	    <header>
-  		    <h3><a href="/2016/04/20/working-with-british-library-dataset.html">Working with the British Library Dataset</a></h3>
-		      <time class="published" datetime="2016-04-20">April 20, 2016</time>
-						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
-			  </header>
-        
-          <a href="/2016/04/20/working-with-british-library-dataset.html" class="image"><img src="/images/blog/2016-04-20-header.jpg" alt="" /></a>
-        
-		  </article>
-									<!-- Mini Post -->
-									  <!--
-										<article class="mini-post">
-											<header>
-												<h3><a href="#">Vitae sed condimentum</a></h3>
-												<time class="published" datetime="2015-10-20">October 20, 2015</time>
-												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
-										</article>
-									-->
-    
-      <article class="mini-post">
-  	    <header>
-  		    <h3><a href="/2016/04/14/moving-to-jekyll.html">Moving to Jekyll</a></h3>
-		      <time class="published" datetime="2016-04-14">April 14, 2016</time>
-						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
-			  </header>
-        
-          <a href="/2016/04/14/moving-to-jekyll.html" class="image"><img src="/images/blog/jekyll-logo.png" alt="" /></a>
         
 		  </article>
 									<!-- Mini Post -->

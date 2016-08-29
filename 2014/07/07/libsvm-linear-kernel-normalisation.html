@@ -103,7 +103,7 @@
                 <div class="meta">
                   <time class="published" datetime="2014-07-07">July 07, 2014</time>
                   
-									<h6>Read time about 8  minutes</h6>
+									<h6>Read time about 4  minutes</h6>
 
         <!--
         <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
@@ -111,8 +111,13 @@
                 </div>
               </header>
               
+              
 								<div class="image featured wrapper">
-                <a href="/2014/07/07/libsvm-linear-kernel-normalisation.html" class="image featured"><img src="/images/blog/fnsys-06-00059-g002.jpg" alt="" /></a>
+                                     <img src="/images/blog/fnsys-06-00059-g002.jpg" alt="" />
+                                    <!-- <img src="/images/blog/fnsys-06-00059-g002-844x293.jpg" width="" srcset="/images/blog/fnsys-06-00059-g002-844x293.jpg 1x, /images/blog/fnsys-06-00059-g002-844x293.jpg 2x, /images/blog/fnsys-06-00059-g002-844x293.jpg 3x"> -->
+                <a href="/2014/07/07/libsvm-linear-kernel-normalisation.html" class="image featured">
+
+                    </a>
 								
 									<div class="image featured cite">
 											Image taken from <a href="http://toublanc.info/support/support-vector-machines-python">Tou Blanc </a>
@@ -122,94 +127,98 @@
               
               <p>I have used a variety of tools for binary, multiclass and even incremental SVM problems, today I found something quite nice in binary case for <a href="http://www.csie.ntu.edu.tw/~cjlin/libsvm/">libSVM</a>, although potentially a source of confusion.</p><p>It is common in machine learning to apply a sigmoid function to normalise the boundaries of a problem, this can by empirically defining the upper and lower bound or through experimentation. Within <a href="http://www.csie.ntu.edu.tw/~cjlin/libsvm/">libSVM</a> they do this through experimentation, that is great to save you some time. The only thing to remember is it means through the use of random and cross validation with small sets of data, you are likely to get different results on each run.</p><p>So the function to consider is this:</p>
 
-<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="c1">// Cross-validation decision values for probability estimates
-</span><span class="k">static</span> <span class="kt">void</span> <span class="n">svm_binary_svc_probability</span><span class="p">(</span>
-	<span class="k">const</span> <span class="n">svm_problem</span> <span class="o">*</span><span class="n">prob</span><span class="p">,</span> <span class="k">const</span> <span class="n">svm_parameter</span> <span class="o">*</span><span class="n">param</span><span class="p">,</span>
-	<span class="kt">double</span> <span class="n">Cp</span><span class="p">,</span> <span class="kt">double</span> <span class="n">Cn</span><span class="p">,</span> <span class="kt">double</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span> <span class="n">probA</span><span class="p">,</span> <span class="kt">double</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span> <span class="n">probB</span><span class="p">)</span>
-<span class="p">{</span>
-	<span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
-	<span class="kt">int</span> <span class="n">nr_fold</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-	<span class="kt">int</span> <span class="o">*</span><span class="n">perm</span> <span class="o">=</span> <span class="n">Malloc</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">l</span><span class="p">);</span>
-	<span class="kt">double</span> <span class="o">*</span><span class="n">dec_values</span> <span class="o">=</span> <span class="n">Malloc</span><span class="p">(</span><span class="kt">double</span><span class="p">,</span><span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">l</span><span class="p">);</span>
+``` cpp
 
-	<span class="c1">// random shuffle
-</span>	<span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">l</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">perm</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">i</span><span class="p">;</span>
-	<span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">l</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="n">rand</span><span class="p">()</span><span class="o">%</span><span class="p">(</span><span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">l</span><span class="o">-</span><span class="n">i</span><span class="p">);</span>
-		<span class="n">swap</span><span class="p">(</span><span class="n">perm</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">perm</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span>
-	<span class="p">}</span>
-	<span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">nr_fold</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="kt">int</span> <span class="n">begin</span> <span class="o">=</span> <span class="n">i</span><span class="o">*</span><span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">l</span><span class="o">/</span><span class="n">nr_fold</span><span class="p">;</span>
-		<span class="kt">int</span> <span class="n">end</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">l</span><span class="o">/</span><span class="n">nr_fold</span><span class="p">;</span>
-		<span class="kt">int</span> <span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">;</span>
-		<span class="k">struct</span> <span class="n">svm_problem</span> <span class="n">subprob</span><span class="p">;</span>
+// Cross-validation decision values for probability estimates
+static void svm_binary_svc_probability(
+	const svm_problem *prob, const svm_parameter *param,
+	double Cp, double Cn, double&amp; probA, double&amp; probB)
+{
+	int i;
+	int nr_fold = 5;
+	int *perm = Malloc(int,prob-&gt;l);
+	double *dec_values = Malloc(double,prob-&gt;l);
 
-		<span class="n">subprob</span><span class="p">.</span><span class="n">l</span> <span class="o">=</span> <span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">l</span><span class="o">-</span><span class="p">(</span><span class="n">end</span><span class="o">-</span><span class="n">begin</span><span class="p">);</span>
-		<span class="n">subprob</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">Malloc</span><span class="p">(</span><span class="k">struct</span> <span class="n">svm_node</span><span class="o">*</span><span class="p">,</span><span class="n">subprob</span><span class="p">.</span><span class="n">l</span><span class="p">);</span>
-		<span class="n">subprob</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">Malloc</span><span class="p">(</span><span class="kt">double</span><span class="p">,</span><span class="n">subprob</span><span class="p">.</span><span class="n">l</span><span class="p">);</span>
+	// random shuffle
+	for(i=0;i&lt;prob-&gt;l;i++) perm[i]=i;
+	for(i=0;i&lt;prob-&gt;l;i++)
+	{
+		int j = i+rand()%(prob-&gt;l-i);
+		swap(perm[i],perm[j]);
+	}
+	for(i=0;i&lt;nr_fold;i++)
+	{
+		int begin = i*prob-&gt;l/nr_fold;
+		int end = (i+1)*prob-&gt;l/nr_fold;
+		int j,k;
+		struct svm_problem subprob;
+
+		subprob.l = prob-&gt;l-(end-begin);
+		subprob.x = Malloc(struct svm_node*,subprob.l);
+		subprob.y = Malloc(double,subprob.l);
 			
-		<span class="n">k</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-		<span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">begin</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="n">subprob</span><span class="p">.</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">x</span><span class="p">[</span><span class="n">perm</span><span class="p">[</span><span class="n">j</span><span class="p">]];</span>
-			<span class="n">subprob</span><span class="p">.</span><span class="n">y</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">y</span><span class="p">[</span><span class="n">perm</span><span class="p">[</span><span class="n">j</span><span class="p">]];</span>
-			<span class="o">++</span><span class="n">k</span><span class="p">;</span>
-		<span class="p">}</span>
-		<span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="n">end</span><span class="p">;</span><span class="n">j</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">l</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="n">subprob</span><span class="p">.</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">x</span><span class="p">[</span><span class="n">perm</span><span class="p">[</span><span class="n">j</span><span class="p">]];</span>
-			<span class="n">subprob</span><span class="p">.</span><span class="n">y</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">y</span><span class="p">[</span><span class="n">perm</span><span class="p">[</span><span class="n">j</span><span class="p">]];</span>
-			<span class="o">++</span><span class="n">k</span><span class="p">;</span>
-		<span class="p">}</span>
-		<span class="kt">int</span> <span class="n">p_count</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">n_count</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-		<span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">k</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
-			<span class="k">if</span><span class="p">(</span><span class="n">subprob</span><span class="p">.</span><span class="n">y</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="mi">0</span><span class="p">)</span>
-				<span class="n">p_count</span><span class="o">++</span><span class="p">;</span>
-			<span class="k">else</span>
-				<span class="n">n_count</span><span class="o">++</span><span class="p">;</span>
+		k=0;
+		for(j=0;j&lt;begin;j++)
+		{
+			subprob.x[k] = prob-&gt;x[perm[j]];
+			subprob.y[k] = prob-&gt;y[perm[j]];
+			++k;
+		}
+		for(j=end;j&lt;prob-&gt;l;j++)
+		{
+			subprob.x[k] = prob-&gt;x[perm[j]];
+			subprob.y[k] = prob-&gt;y[perm[j]];
+			++k;
+		}
+		int p_count=0,n_count=0;
+		for(j=0;j&lt;k;j++)
+			if(subprob.y[j]&gt;0)
+				p_count++;
+			else
+				n_count++;
 
-		<span class="k">if</span><span class="p">(</span><span class="n">p_count</span><span class="o">==</span><span class="mi">0</span> <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span> <span class="n">n_count</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
-			<span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="n">begin</span><span class="p">;</span><span class="n">j</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">end</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
-				<span class="n">dec_values</span><span class="p">[</span><span class="n">perm</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-		<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">p_count</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="mi">0</span> <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span> <span class="n">n_count</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-			<span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="n">begin</span><span class="p">;</span><span class="n">j</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">end</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
-				<span class="n">dec_values</span><span class="p">[</span><span class="n">perm</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-		<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">p_count</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span> <span class="n">n_count</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="mi">0</span><span class="p">)</span>
-			<span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="n">begin</span><span class="p">;</span><span class="n">j</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">end</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
-				<span class="n">dec_values</span><span class="p">[</span><span class="n">perm</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-		<span class="k">else</span>
-		<span class="p">{</span>
-			<span class="n">svm_parameter</span> <span class="n">subparam</span> <span class="o">=</span> <span class="o">*</span><span class="n">param</span><span class="p">;</span>
-			<span class="n">subparam</span><span class="p">.</span><span class="n">probability</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-			<span class="n">subparam</span><span class="p">.</span><span class="n">C</span><span class="o">=</span><span class="mf">1.0</span><span class="p">;</span>
-			<span class="n">subparam</span><span class="p">.</span><span class="n">nr_weight</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
-			<span class="n">subparam</span><span class="p">.</span><span class="n">weight_label</span> <span class="o">=</span> <span class="n">Malloc</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
-			<span class="n">subparam</span><span class="p">.</span><span class="n">weight</span> <span class="o">=</span> <span class="n">Malloc</span><span class="p">(</span><span class="kt">double</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
-			<span class="n">subparam</span><span class="p">.</span><span class="n">weight_label</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=+</span><span class="mi">1</span><span class="p">;</span>
-			<span class="n">subparam</span><span class="p">.</span><span class="n">weight_label</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span>
-			<span class="n">subparam</span><span class="p">.</span><span class="n">weight</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">Cp</span><span class="p">;</span>
-			<span class="n">subparam</span><span class="p">.</span><span class="n">weight</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">Cn</span><span class="p">;</span>
-			<span class="k">struct</span> <span class="n">svm_model</span> <span class="o">*</span><span class="n">submodel</span> <span class="o">=</span> <span class="n">svm_train</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">subprob</span><span class="p">,</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">subparam</span><span class="p">);</span>
-			<span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="n">begin</span><span class="p">;</span><span class="n">j</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">end</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
-			<span class="p">{</span>
-				<span class="n">svm_predict_values</span><span class="p">(</span><span class="n">submodel</span><span class="p">,</span><span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">x</span><span class="p">[</span><span class="n">perm</span><span class="p">[</span><span class="n">j</span><span class="p">]],</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;(</span><span class="n">dec_values</span><span class="p">[</span><span class="n">perm</span><span class="p">[</span><span class="n">j</span><span class="p">]]));</span> 
-				<span class="c1">// ensure +1 -1 order; reason not using CV subroutine
-</span>				<span class="n">dec_values</span><span class="p">[</span><span class="n">perm</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span> <span class="o">*=</span> <span class="n">submodel</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">label</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-			<span class="p">}</span>		
-			<span class="n">svm_free_and_destroy_model</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">submodel</span><span class="p">);</span>
-			<span class="n">svm_destroy_param</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">subparam</span><span class="p">);</span>
-		<span class="p">}</span>
-		<span class="n">free</span><span class="p">(</span><span class="n">subprob</span><span class="p">.</span><span class="n">x</span><span class="p">);</span>
-		<span class="n">free</span><span class="p">(</span><span class="n">subprob</span><span class="p">.</span><span class="n">y</span><span class="p">);</span>
-	<span class="p">}</span>		
-	<span class="n">sigmoid_train</span><span class="p">(</span><span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">l</span><span class="p">,</span><span class="n">dec_values</span><span class="p">,</span><span class="n">prob</span><span class="o">-&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">y</span><span class="p">,</span><span class="n">probA</span><span class="p">,</span><span class="n">probB</span><span class="p">);</span>
-	<span class="n">free</span><span class="p">(</span><span class="n">dec_values</span><span class="p">);</span>
-	<span class="n">free</span><span class="p">(</span><span class="n">perm</span><span class="p">);</span>
-<span class="p">}</span></code></pre></figure>
+		if(p_count==0 &amp;&amp; n_count==0)
+			for(j=begin;j&lt;end;j++)
+				dec_values[perm[j]] = 0;
+		else if(p_count &gt; 0 &amp;&amp; n_count == 0)
+			for(j=begin;j&lt;end;j++)
+				dec_values[perm[j]] = 1;
+		else if(p_count == 0 &amp;&amp; n_count &gt; 0)
+			for(j=begin;j&lt;end;j++)
+				dec_values[perm[j]] = -1;
+		else
+		{
+			svm_parameter subparam = *param;
+			subparam.probability=0;
+			subparam.C=1.0;
+			subparam.nr_weight=2;
+			subparam.weight_label = Malloc(int,2);
+			subparam.weight = Malloc(double,2);
+			subparam.weight_label[0]=+1;
+			subparam.weight_label[1]=-1;
+			subparam.weight[0]=Cp;
+			subparam.weight[1]=Cn;
+			struct svm_model *submodel = svm_train(&amp;subprob,&amp;subparam);
+			for(j=begin;j&lt;end;j++)
+			{
+				svm_predict_values(submodel,prob-&gt;x[perm[j]],&amp;(dec_values[perm[j]])); 
+				// ensure +1 -1 order; reason not using CV subroutine
+				dec_values[perm[j]] *= submodel-&gt;label[0];
+			}		
+			svm_free_and_destroy_model(&amp;submodel);
+			svm_destroy_param(&amp;subparam);
+		}
+		free(subprob.x);
+		free(subprob.y);
+	}		
+	sigmoid_train(prob-&gt;l,dec_values,prob-&gt;y,probA,probB);
+	free(dec_values);
+	free(perm);
+}
+```
 
 So if you have few numbers of samples, that is the case in some circumstances then the cross validation is where you hit problems. Of course you can simply re-implement it yourself or you can add a few lines to stop cross validation if the number of samples is too few.<p><br></p><p>Not the most elegant of code, but for the moment it will do. I choose to completely seperate the two steps as opposed to multiple if’s</p><pre class="brush: c++; toolbar: false">static void svm_binary_svc_probability(
+``` cpp
 	const svm_problem *prob, const svm_parameter *param,
 	double Cp, double Cn, double&amp; probA, double&amp; probB)
 {
@@ -362,7 +371,8 @@ So if you have few numbers of samples, that is the case in some circumstances th
 	free(dec_values);
 	free(perm);
 }
-</pre><p><br></p><p>As with a lot of my code based posts, this is more for my memory than anything, but hopefully may help people unlock the secrets of <a href="http://www.csie.ntu.edu.tw/~cjlin/libsvm/">libSVM</a>.</p>
+```
+<p><br></p><p>As with a lot of my code based posts, this is more for my memory than anything, but hopefully may help people unlock the secrets of <a href="http://www.csie.ntu.edu.tw/~cjlin/libsvm/">libSVM</a>.</p>
 							<hr />
 							
 							
@@ -418,78 +428,78 @@ So if you have few numbers of samples, that is the case in some circumstances th
     
       <article class="mini-post">
   	    <header>
+  		    <h3><a href="/2016/08/26/british-library-dataset-style-transfer.html">Transferring old book image style to real world photos</a></h3>
+		      <time class="published" datetime="2016-08-26">August 26, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/08/26/british-library-dataset-style-transfer.html" class="image"><img src="/images/blog/2016-08-26-style.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
+  		    <h3><a href="/2016/08/21/cheddar-gorge-relish-run.html">Cheddar Gorge Relish Run</a></h3>
+		      <time class="published" datetime="2016-08-21">August 21, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/08/21/cheddar-gorge-relish-run.html" class="image"><img src="/images/blog/2016-08-21-cheddar-route.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
+  		    <h3><a href="/2016/07/31/San-Francisco-Second-Half.html">San Francisco Second Half Marathon</a></h3>
+		      <time class="published" datetime="2016-07-31">July 31, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/07/31/San-Francisco-Second-Half.html" class="image"><img src="/images/blog/2016-07-31-san-fran-run.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
   		    <h3><a href="/2016/06/23/getting-back-to-books.html">Getting back to books</a></h3>
 		      <time class="published" datetime="2016-06-23">June 23, 2016</time>
 						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
 			  </header>
         
           <a href="/2016/06/23/getting-back-to-books.html" class="image"><img src="/images/blog/2016-06-23-book.jpg" alt="" /></a>
-        
-		  </article>
-									<!-- Mini Post -->
-									  <!--
-										<article class="mini-post">
-											<header>
-												<h3><a href="#">Vitae sed condimentum</a></h3>
-												<time class="published" datetime="2015-10-20">October 20, 2015</time>
-												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
-										</article>
-									-->
-    
-      <article class="mini-post">
-  	    <header>
-  		    <h3><a href="/2016/06/14/twenty-nine-going-on-thirty.html">29 going on 30</a></h3>
-		      <time class="published" datetime="2016-06-14">June 14, 2016</time>
-						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
-			  </header>
-        
-          <a href="/2016/06/14/twenty-nine-going-on-thirty.html" class="image"><img src="/images/blog/2016-06-14-birthday.jpg" alt="" /></a>
-        
-		  </article>
-									<!-- Mini Post -->
-									  <!--
-										<article class="mini-post">
-											<header>
-												<h3><a href="#">Vitae sed condimentum</a></h3>
-												<time class="published" datetime="2015-10-20">October 20, 2015</time>
-												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
-										</article>
-									-->
-    
-      <article class="mini-post">
-  	    <header>
-  		    <h3><a href="/2016/04/20/working-with-british-library-dataset.html">Working with the British Library Dataset</a></h3>
-		      <time class="published" datetime="2016-04-20">April 20, 2016</time>
-						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
-			  </header>
-        
-          <a href="/2016/04/20/working-with-british-library-dataset.html" class="image"><img src="/images/blog/2016-04-20-header.jpg" alt="" /></a>
-        
-		  </article>
-									<!-- Mini Post -->
-									  <!--
-										<article class="mini-post">
-											<header>
-												<h3><a href="#">Vitae sed condimentum</a></h3>
-												<time class="published" datetime="2015-10-20">October 20, 2015</time>
-												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
-										</article>
-									-->
-    
-      <article class="mini-post">
-  	    <header>
-  		    <h3><a href="/2016/04/14/moving-to-jekyll.html">Moving to Jekyll</a></h3>
-		      <time class="published" datetime="2016-04-14">April 14, 2016</time>
-						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
-			  </header>
-        
-          <a href="/2016/04/14/moving-to-jekyll.html" class="image"><img src="/images/blog/jekyll-logo.png" alt="" /></a>
         
 		  </article>
 									<!-- Mini Post -->

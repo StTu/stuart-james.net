@@ -111,6 +111,7 @@
                 </div>
               </header>
               
+              
               <p>After having some weird connection issues over the last week since migrating my blog and portfolio to an alternative configuration instance based on Windows Server 2008 I decided to do a load test to see whether this was a bigger issue than I expected. The results I just cant explain.</p> <p>&nbsp;</p> <h4 align="left">Windows Server 2008, IIS Installed only with .NET4</h4> <p align="left"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/aws_win2008_performance.png"><img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="AWS_Win2008_Performance" border="0" alt="AWS_Win2008_Performance" src="http://stuartjames.info/Data/Sites/5/media/wlw/aws_win2008_performance_thumb.png" width="642" height="297"></a></p> <p align="left">&nbsp;</p> <h4 align="left">Windows Server 2012, IIS Installed only with .NET4</h4> <p align="left"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/aws_win2012_performance.png"><img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="AWS_Win2012_Performance" border="0" alt="AWS_Win2012_Performance" src="http://stuartjames.info/Data/Sites/5/media/wlw/aws_win2012_performance_thumb.png" width="642" height="297"></a></p> <p align="left">&nbsp;</p> <p align="left">As can be seen from the 2008 graph the server fell over very quickly and took a very long time to recover. After looking at this went to the CPU load and found the answer:</p> <h4 align="left">Windows Server 2008, IIS Installed only with .NET4</h4> <p align="left"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/aws_win2008_cpuload.png"><img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="AWS_Win2008_CPULoad" border="0" alt="AWS_Win2008_CPULoad" src="http://stuartjames.info/Data/Sites/5/media/wlw/aws_win2008_cpuload_thumb.png" width="642" height="276"></a></p> <h4 align="left">Windows Server 2012, IIS Installed only with .NET4</h4> <p align="left"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/aws_win2012_cpuload.png"><img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="AWS_Win2012_CPULoad" border="0" alt="AWS_Win2012_CPULoad" src="http://stuartjames.info/Data/Sites/5/media/wlw/aws_win2012_cpuload_thumb.png" width="642" height="275"></a></p> <p align="left">&nbsp;</p> <p align="left">This wasn’t the profile of the CPU when I first set up the instance, I have no idea what has caused the development of this maxed CPU issue. Will have to look into more, but for the moment am back on 2012! Does demonstrate the importance of setting up alarms though, another nice functionality on the AWS platform.</p> <p>&nbsp;</p> <p>Edit:</p> <h5>Maximum Load Test</h5> <p>I have also done a max load test just to see how much the server could take, maxes out about 70 users. Tested against blog, so all img,js and css are additional calls wrapped into one user call. Granted when server hits max capacity is essentially unresponsive.</p> <p><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/aws_win2012_max_performance.png"><img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="AWS_Win2012_Max_Performance" border="0" alt="AWS_Win2012_Max_Performance" src="http://stuartjames.info/Data/Sites/5/media/wlw/aws_win2012_max_performance_thumb.png" width="642" height="281"></a></p><br /><a href='http://stuartjames.info/Journal/performance-i-just-don’t-understand-win-2008-vs-win-2012-on-aws.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/performance-i-just-don’t-understand-win-2008-vs-win-2012-on-aws.aspx'>...</a>
 
 							<hr />
@@ -168,78 +169,78 @@
     
       <article class="mini-post">
   	    <header>
+  		    <h3><a href="/2016/08/26/british-library-dataset-style-transfer.html">Transferring old book image style to real world photos</a></h3>
+		      <time class="published" datetime="2016-08-26">August 26, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/08/26/british-library-dataset-style-transfer.html" class="image"><img src="/images/blog/2016-08-26-style.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
+  		    <h3><a href="/2016/08/21/cheddar-gorge-relish-run.html">Cheddar Gorge Relish Run</a></h3>
+		      <time class="published" datetime="2016-08-21">August 21, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/08/21/cheddar-gorge-relish-run.html" class="image"><img src="/images/blog/2016-08-21-cheddar-route.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
+  		    <h3><a href="/2016/07/31/San-Francisco-Second-Half.html">San Francisco Second Half Marathon</a></h3>
+		      <time class="published" datetime="2016-07-31">July 31, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/07/31/San-Francisco-Second-Half.html" class="image"><img src="/images/blog/2016-07-31-san-fran-run.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
   		    <h3><a href="/2016/06/23/getting-back-to-books.html">Getting back to books</a></h3>
 		      <time class="published" datetime="2016-06-23">June 23, 2016</time>
 						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
 			  </header>
         
           <a href="/2016/06/23/getting-back-to-books.html" class="image"><img src="/images/blog/2016-06-23-book.jpg" alt="" /></a>
-        
-		  </article>
-									<!-- Mini Post -->
-									  <!--
-										<article class="mini-post">
-											<header>
-												<h3><a href="#">Vitae sed condimentum</a></h3>
-												<time class="published" datetime="2015-10-20">October 20, 2015</time>
-												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
-										</article>
-									-->
-    
-      <article class="mini-post">
-  	    <header>
-  		    <h3><a href="/2016/06/14/twenty-nine-going-on-thirty.html">29 going on 30</a></h3>
-		      <time class="published" datetime="2016-06-14">June 14, 2016</time>
-						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
-			  </header>
-        
-          <a href="/2016/06/14/twenty-nine-going-on-thirty.html" class="image"><img src="/images/blog/2016-06-14-birthday.jpg" alt="" /></a>
-        
-		  </article>
-									<!-- Mini Post -->
-									  <!--
-										<article class="mini-post">
-											<header>
-												<h3><a href="#">Vitae sed condimentum</a></h3>
-												<time class="published" datetime="2015-10-20">October 20, 2015</time>
-												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
-										</article>
-									-->
-    
-      <article class="mini-post">
-  	    <header>
-  		    <h3><a href="/2016/04/20/working-with-british-library-dataset.html">Working with the British Library Dataset</a></h3>
-		      <time class="published" datetime="2016-04-20">April 20, 2016</time>
-						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
-			  </header>
-        
-          <a href="/2016/04/20/working-with-british-library-dataset.html" class="image"><img src="/images/blog/2016-04-20-header.jpg" alt="" /></a>
-        
-		  </article>
-									<!-- Mini Post -->
-									  <!--
-										<article class="mini-post">
-											<header>
-												<h3><a href="#">Vitae sed condimentum</a></h3>
-												<time class="published" datetime="2015-10-20">October 20, 2015</time>
-												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
-										</article>
-									-->
-    
-      <article class="mini-post">
-  	    <header>
-  		    <h3><a href="/2016/04/14/moving-to-jekyll.html">Moving to Jekyll</a></h3>
-		      <time class="published" datetime="2016-04-14">April 14, 2016</time>
-						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
-			  </header>
-        
-          <a href="/2016/04/14/moving-to-jekyll.html" class="image"><img src="/images/blog/jekyll-logo.png" alt="" /></a>
         
 		  </article>
 									<!-- Mini Post -->

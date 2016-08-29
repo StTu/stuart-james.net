@@ -98,6 +98,173 @@
   <article class="post">
     <header>
       <div class="title">
+        <h2><a href="/2012/11/17/boost-serialization-for-inherited-objects.html">Boost Serialization for inherited objects</a></h2>
+        <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
+      </div>
+      <div class="meta">
+        <time class="published" datetime="2012-11-17">November 17, 2012</time>
+        
+        <!--
+        <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
+        -->
+      </div>
+    </header>
+    
+    <p>Preface:</p> <p>When chatting with a colleague yesterday, I referenced a blog post I never actually wrote. So to remedy that here we go, how to use boost in the case of inheritance.</p> <p>How To:</p> <p>Inheritance in C++ is very important, a long with classes and templates I would say the most important triplet (of course inheritance cant exist without classes). As I mentioned in a previous blog post I found a new love of boost serialization allowing me to easily be able to save out my objects in binary,text or xml, but there is a spanner in the works when it comes to inheritance, this is due to the serializer not being able to know it has a parent or even what that parent is.This is actually solved with a small amount additional of code but is critical to put in or your objects wont behave in the expected way.</p> <div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9D7513F9-C04C-4721-824A-2B34F0212519:b89b25f2-4794-4ac9-99e1-d0411e210bfe" class="wlWriterEditableSmartContent"><pre style=" width: 709px; height: 487px;background-color:White;overflow: hidden;"><div><!--
+
+Code highlighting produced by Actipro CodeHighlighter (freeware)
+http://www.CodeHighlighter.com/
+
+--><span style="color: #008080;"> 1</span> <span style="color: #0000FF;">class</span><span style="color: #000000;"> MyParent {
+</span><span style="color: #008080;"> 2</span> <span style="color: #000000;"></span><span style="color: #0000FF;">public</span><span style="color: #000000;">:
+</span><span style="color: #008080;"> 3</span> <span style="color: #000000;">    MyParent() {};
+</span><span style="color: #008080;"> 4</span> <span style="color: #000000;">    </span><span style="color: #0000FF;">virtual</span><span style="color: #000000;"> </span><span style="color: #000000;">~</span><span style="color: #000000;">MyParent() {};
+</span><span style="color: #008080;"> 5</span> <span style="color: #000000;">    </span><span style="color: #0000FF;">int</span><span style="color: #000000;"> getID(){ </span><span style="color: #0000FF;">return</span><span style="color: #000000;"> ID;  } ;
+</span><span style="color: #008080;"> 6</span> <span style="color: #000000;">    </span><span style="color: #0000FF;">int</span><span style="color: #000000;"> setID(</span><span style="color: #0000FF;">int</span><span style="color: #000000;"> num){ ID </span><span style="color: #000000;">=</span><span style="color: #000000;"> num;  } ;
+</span><span style="color: #008080;"> 7</span> <span style="color: #000000;">
+</span><span style="color: #008080;"> 8</span> <span style="color: #000000;"></span><span style="color: #0000FF;">private</span><span style="color: #000000;">:
+</span><span style="color: #008080;"> 9</span> <span style="color: #000000;">    </span><span style="color: #0000FF;">int</span><span style="color: #000000;"> ID;
+</span><span style="color: #008080;">10</span> <span style="color: #000000;">    friend </span><span style="color: #0000FF;">class</span><span style="color: #000000;"> boost::serialization::access;
+</span><span style="color: #008080;">11</span> <span style="color: #000000;">    template</span><span style="color: #000000;">&lt;</span><span style="color: #0000FF;">class</span><span style="color: #000000;"> Archive</span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> </span><span style="color: #0000FF;">void</span><span style="color: #000000;"> serialize(Archive</span><span style="color: #000000;">&amp;</span><span style="color: #000000;"> ar,
+</span><span style="color: #008080;">12</span> <span style="color: #000000;">        </span><span style="color: #0000FF;">const</span><span style="color: #000000;"> unsigned </span><span style="color: #0000FF;">int</span><span style="color: #000000;"> version) {
+</span><span style="color: #008080;">13</span> <span style="color: #000000;">            ar </span><span style="color: #000000;">&amp;</span><span style="color: #000000;"> BOOST_SERIALIZATION_NVP(ID);
+</span><span style="color: #008080;">14</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">15</span> <span style="color: #000000;">};
+</span><span style="color: #008080;">16</span> <span style="color: #000000;">
+</span><span style="color: #008080;">17</span> <span style="color: #000000;"></span><span style="color: #0000FF;">class</span><span style="color: #000000;"> MyChild : </span><span style="color: #0000FF;">public</span><span style="color: #000000;"> MyParent {
+</span><span style="color: #008080;">18</span> <span style="color: #000000;"></span><span style="color: #0000FF;">public</span><span style="color: #000000;">:
+</span><span style="color: #008080;">19</span> <span style="color: #000000;">    MyChild() {};
+</span><span style="color: #008080;">20</span> <span style="color: #000000;">    </span><span style="color: #000000;">~</span><span style="color: #000000;">MyChild() {};
+</span><span style="color: #008080;">21</span> <span style="color: #000000;">
+</span><span style="color: #008080;">22</span> <span style="color: #000000;"></span><span style="color: #0000FF;">private</span><span style="color: #000000;">:
+</span><span style="color: #008080;">23</span> <span style="color: #000000;">    friend </span><span style="color: #0000FF;">class</span><span style="color: #000000;"> boost::serialization::access;
+</span><span style="color: #008080;">24</span> <span style="color: #000000;">    template</span><span style="color: #000000;">&lt;</span><span style="color: #0000FF;">class</span><span style="color: #000000;"> Archive</span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> </span><span style="color: #0000FF;">void</span><span style="color: #000000;"> serialize(Archive</span><span style="color: #000000;">&amp;</span><span style="color: #000000;"> ar,
+</span><span style="color: #008080;">25</span> <span style="color: #000000;">        </span><span style="color: #0000FF;">const</span><span style="color: #000000;"> unsigned </span><span style="color: #0000FF;">int</span><span style="color: #000000;"> version) {
+</span><span style="color: #008080;">26</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">27</span> <span style="color: #000000;">};</span></div></pre><!-- Code inserted with Steve Dunn's Windows Live Writer Code Formatter Plugin.  http://dunnhq.com --></div>
+<p>So we serialize out the child class and what do we get? Well actually it is very clean elegant empty file. Not what was intended, but with a small change to tell the compiler of the classes parent we are able to serialize out child classes and parents without a problem</p>
+<div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9D7513F9-C04C-4721-824A-2B34F0212519:4dd2414d-0b90-4e20-9584-2fb513379093" class="wlWriterEditableSmartContent"><pre style=" width: 709px; height: 43px;background-color:White;overflow: hidden;"><div><!--
+
+Code highlighting produced by Actipro CodeHighlighter (freeware)
+http://www.CodeHighlighter.com/
+
+--><span style="color: #008080;">1</span> <span style="color: #000000;">ar </span><span style="color: #000000;">&amp;</span><span style="color: #000000;"> boost::serialization::make_nvp(</span><span style="color: #800000;">&quot;</span><span style="color: #800000;">MyParent</span><span style="color: #800000;">&quot;</span><span style="color: #000000;">,
+</span><span style="color: #008080;">2</span> <span style="color: #000000;">    boost::serialization::base_object</span><span style="color: #000000;">&lt;</span><span style="color: #000000;">MyParent</span><span style="color: #000000;">&gt;</span><span style="color: #000000;">(</span><span style="color: #000000;">*</span><span style="color: #0000FF;">this</span><span style="color: #000000;">))</span></div></pre><!-- Code inserted with Steve Dunn's Windows Live Writer Code Formatter Plugin.  http://dunnhq.com --></div>
+<p>As you hopefully can see this tells the compiler what the object parent is and provides a reference to it so therefore you can serialize that out. Of course you can put this line at the beginning or end depending on how you want to structure your outputs, but to my brain coming first makes sense.</p>
+<p>The final solution being:</p>
+<div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9D7513F9-C04C-4721-824A-2B34F0212519:afc26a73-55e3-420a-a29c-d5b689b3d069" class="wlWriterEditableSmartContent"><pre style=" width: 709px; height: 563px;background-color:White;overflow: hidden;"><div><!--
+
+Code highlighting produced by Actipro CodeHighlighter (freeware)
+http://www.CodeHighlighter.com/
+
+--><span style="color: #008080;"> 1</span> <span style="color: #0000FF;">class</span><span style="color: #000000;"> MyParent {
+</span><span style="color: #008080;"> 2</span> <span style="color: #000000;"></span><span style="color: #0000FF;">public</span><span style="color: #000000;">:
+</span><span style="color: #008080;"> 3</span> <span style="color: #000000;">    MyParent() {};
+</span><span style="color: #008080;"> 4</span> <span style="color: #000000;">    </span><span style="color: #0000FF;">virtual</span><span style="color: #000000;"> </span><span style="color: #000000;">~</span><span style="color: #000000;">MyParent() {};
+</span><span style="color: #008080;"> 5</span> <span style="color: #000000;">    </span><span style="color: #0000FF;">int</span><span style="color: #000000;"> getID(){ </span><span style="color: #0000FF;">return</span><span style="color: #000000;"> ID;  } ;
+</span><span style="color: #008080;"> 6</span> <span style="color: #000000;">    </span><span style="color: #0000FF;">int</span><span style="color: #000000;"> setID(</span><span style="color: #0000FF;">int</span><span style="color: #000000;"> num){ ID </span><span style="color: #000000;">=</span><span style="color: #000000;"> num;  } ;
+</span><span style="color: #008080;"> 7</span> <span style="color: #000000;">
+</span><span style="color: #008080;"> 8</span> <span style="color: #000000;"></span><span style="color: #0000FF;">private</span><span style="color: #000000;">:
+</span><span style="color: #008080;"> 9</span> <span style="color: #000000;">    </span><span style="color: #0000FF;">int</span><span style="color: #000000;"> ID;
+</span><span style="color: #008080;">10</span> <span style="color: #000000;">    friend </span><span style="color: #0000FF;">class</span><span style="color: #000000;"> boost::serialization::access;
+</span><span style="color: #008080;">11</span> <span style="color: #000000;">    template</span><span style="color: #000000;">&lt;</span><span style="color: #0000FF;">class</span><span style="color: #000000;"> Archive</span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> </span><span style="color: #0000FF;">void</span><span style="color: #000000;"> serialize(Archive</span><span style="color: #000000;">&amp;</span><span style="color: #000000;"> ar,
+</span><span style="color: #008080;">12</span> <span style="color: #000000;">        </span><span style="color: #0000FF;">const</span><span style="color: #000000;"> unsigned </span><span style="color: #0000FF;">int</span><span style="color: #000000;"> version) {
+</span><span style="color: #008080;">13</span> <span style="color: #000000;">            ar </span><span style="color: #000000;">&amp;</span><span style="color: #000000;"> BOOST_SERIALIZATION_NVP(ID);
+</span><span style="color: #008080;">14</span> <span style="color: #000000;">
+</span><span style="color: #008080;">15</span> <span style="color: #000000;">            
+</span><span style="color: #008080;">16</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">17</span> <span style="color: #000000;">};
+</span><span style="color: #008080;">18</span> <span style="color: #000000;">
+</span><span style="color: #008080;">19</span> <span style="color: #000000;"></span><span style="color: #0000FF;">class</span><span style="color: #000000;"> MyChild : </span><span style="color: #0000FF;">public</span><span style="color: #000000;"> MyParent {
+</span><span style="color: #008080;">20</span> <span style="color: #000000;"></span><span style="color: #0000FF;">public</span><span style="color: #000000;">:
+</span><span style="color: #008080;">21</span> <span style="color: #000000;">    MyChild() {};
+</span><span style="color: #008080;">22</span> <span style="color: #000000;">    </span><span style="color: #000000;">~</span><span style="color: #000000;">MyChild() {};
+</span><span style="color: #008080;">23</span> <span style="color: #000000;">
+</span><span style="color: #008080;">24</span> <span style="color: #000000;"></span><span style="color: #0000FF;">private</span><span style="color: #000000;">:
+</span><span style="color: #008080;">25</span> <span style="color: #000000;">    friend </span><span style="color: #0000FF;">class</span><span style="color: #000000;"> boost::serialization::access;
+</span><span style="color: #008080;">26</span> <span style="color: #000000;">    template</span><span style="color: #000000;">&lt;</span><span style="color: #0000FF;">class</span><span style="color: #000000;"> Archive</span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> </span><span style="color: #0000FF;">void</span><span style="color: #000000;"> serialize(Archive</span><span style="color: #000000;">&amp;</span><span style="color: #000000;"> ar,
+</span><span style="color: #008080;">27</span> <span style="color: #000000;">        </span><span style="color: #0000FF;">const</span><span style="color: #000000;"> unsigned </span><span style="color: #0000FF;">int</span><span style="color: #000000;"> version) {
+</span><span style="color: #008080;">28</span> <span style="color: #000000;">            ar </span><span style="color: #000000;">&amp;</span><span style="color: #000000;"> boost::serialization::make_nvp(</span><span style="color: #800000;">&quot;</span><span style="color: #800000;">MyParent</span><span style="color: #800000;">&quot;</span><span style="color: #000000;">,
+</span><span style="color: #008080;">29</span> <span style="color: #000000;">                        boost::serialization::base_object</span><span style="color: #000000;">&lt;</span><span style="color: #000000;">MyParent</span><span style="color: #000000;">&gt;</span><span style="color: #000000;">(</span><span style="color: #000000;">*</span><span style="color: #0000FF;">this</span><span style="color: #000000;">))
+</span><span style="color: #008080;">30</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">31</span> <span style="color: #000000;">};</span></div></pre><!-- Code inserted with Steve Dunn's Windows Live Writer Code Formatter Plugin.  http://dunnhq.com --></div><br /><a href='http://stuartjames.info/Journal/boost-serialization-for-inherited-objects.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/boost-serialization-for-inherited-objects.aspx'>...</a>
+
+    <footer>
+       
+      <ul class="stats">
+        
+        <!--
+        <li><a href="#">General</a></li>
+        <li><a href="#" class="icon fa-heart">28</a></li>
+        <li><a href="#" class="icon fa-comment">128</a></li>
+        -->
+      </ul>
+    </footer>
+  </article>
+
+  <article class="post">
+    <header>
+      <div class="title">
+        <h2><a href="/2012/10/12/asus-reason-you-may-not-want-to-purchase-one.html">Asus reason you may not want to purchase one</a></h2>
+        <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
+      </div>
+      <div class="meta">
+        <time class="published" datetime="2012-10-12">October 12, 2012</time>
+        
+        <!--
+        <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
+        -->
+      </div>
+    </header>
+    
+    <p><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/transformer.jpg"><img style="display: inline" title="transformer" alt="transformer" src="http://stuartjames.info/Data/Sites/5/media/wlw/transformer_thumb.jpg" width="640" height="134"></a></p> <p>A year and a half ago, I order an Asus N73SV. At the time I was incredible impressed with it’s state of the art spec great expandability. I knew at the time it was a bit of a gamble with Asus not being a major player in the laptop market and the price being quite a bit cheaper than its rivals for similar spec. After using for a year I have done upgrades to RAM 6gb –&gt; 10gb and replaced HDD for a hybrid and a larger second drive. It has been a great laptop till recently things have gone a little wrong. </p> <p>Now I am not blaming asus for its product the two components that have gone wrong are completely under my control but my issue comes with the service and availability of replacements(in the UK). The two parts that have gone wrong is the battery is now completely shot, lasting about 10 mins going to 70% and turning off, and the power cable getting damaged as seen above.</p> <p>These are normal issues you hit with portable electrical products, replacing the parts though is proving not to be so easy. The battery is out of warranty so I just need a replacement, the transformer is in warranty but I don't really want to loose my laptop for a couple of weeks since it has become a very important part of my life replacing my home computer completely and having heavy usage in the office although accompanied by other computers. So sending it away wasn’t really tempting when I would be ordering another part anyway, also I am not about to pay £150 in labour fees to replace a battery.</p> <p>So customer support was out, but I want the official replacements so called them, first time they just hung up on me a little concerning they don't have a queue system. Second time I got through promptly, and found out they don't sell the items over the phone you can go to the asus shop website (<a href="http://shop.asus.co.uk/">http://shop.asus.co.uk/</a>) and order there. I am slightly embarrassed that I never actually found this in my googling around for official products. So went on the site after the call and they are sold out of most things and don't actually list anything to do with my laptop.</p> <p>So what do you do? well look at contact page and call this UK website help line, and what charming welcoming voice do you hear? A nice recorded German lady speaking German that I don't understand, I assume it leads to options but I don't understand. So I have resorted to emailing them.</p> <p>In summary, the point of this rant was to express that Asus sell great products but there are no official replacements easily available. For a company of which I have enjoyed many great products from, I am shocked they fell down so badly on such an easy thing they can make a great deal of money from.</p> <p>Hopefully will be able to get the replacement parts soon and have something better to say about Asus!</p><br /><a href='http://stuartjames.info/Journal/asus-reason-you-may-not-want-to-purchase-one.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/asus-reason-you-may-not-want-to-purchase-one.aspx'>...</a>
+
+    <footer>
+       
+      <ul class="stats">
+        
+        <!--
+        <li><a href="#">General</a></li>
+        <li><a href="#" class="icon fa-heart">28</a></li>
+        <li><a href="#" class="icon fa-comment">128</a></li>
+        -->
+      </ul>
+    </footer>
+  </article>
+
+  <article class="post">
+    <header>
+      <div class="title">
+        <h2><a href="/2012/09/23/skeletons-from-sketches-of-dancing-poses-paper-for-vl-hcc-2012-demo.html">Skeletons from Sketches of Dancing Poses paper for VL/HCC 2012 Demo</a></h2>
+        <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
+      </div>
+      <div class="meta">
+        <time class="published" datetime="2012-09-23">September 23, 2012</time>
+        
+        <!--
+        <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
+        -->
+      </div>
+    </header>
+    
+    <p>I have put together a quick demo for the upcoming conference. Sadly I wont be there to present the work but the main author Manuel J. Fonseca from IST is going to be there.</p> <p>&nbsp;</p> <p><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/image_8.png"><img style="display: inline" title="image" alt="image" src="http://stuartjames.info/Data/Sites/5/media/wlw/image_thumb_8.png" width="300" height="323"></a><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/image_9.png"><img style="display: inline" title="image" alt="image" src="http://stuartjames.info/Data/Sites/5/media/wlw/image_thumb_9.png" width="300" height="327"></a></p> <p>&nbsp;</p> <p>Give it a play and let us know what you think. This is a heuristic approach to parsing of sketched postures into a skeleton.</p> <p>Paper Details and Demo from: <a href="http://stuartjames.info/skeletons-from-sketches-of-dancing-poses.aspx">http://stuartjames.info/skeletons-from-sketches-of-dancing-poses.aspx</a></p><br /><a href='http://stuartjames.info/Journal/skeletons-from-sketches-of-dancing-poses-paper-for-vlhcc-2012-demo.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/skeletons-from-sketches-of-dancing-poses-paper-for-vlhcc-2012-demo.aspx'>...</a>
+
+    <footer>
+       
+      <ul class="stats">
+        
+        <!--
+        <li><a href="#">General</a></li>
+        <li><a href="#" class="icon fa-heart">28</a></li>
+        <li><a href="#" class="icon fa-comment">128</a></li>
+        -->
+      </ul>
+    </footer>
+  </article>
+
+  <article class="post">
+    <header>
+      <div class="title">
         <h2><a href="/2012/09/08/paralympic-swimming-and-wheelchair-tennis-just-wow.html">Paralympic Swimming and Wheelchair Tennis, just wow</a></h2>
         <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
       </div>
@@ -192,165 +359,6 @@ http://www.CodeHighlighter.com/
     </footer>
   </article>
 
-  <article class="post">
-    <header>
-      <div class="title">
-        <h2><a href="/2012/09/08/bmvc-2012.html">BMVC 2012</a></h2>
-        <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
-      </div>
-      <div class="meta">
-        <time class="published" datetime="2012-09-08">September 08, 2012</time>
-        
-        <!--
-        <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
-        -->
-      </div>
-    </header>
-    
-    <p>After helping as a “Student Helper” (aka Helen’s Minion) for this week at BMVC 2012, I thought would post up a few shots taken over the week. We had a photographer there so haven't taken too many but to give you a taster of the conference.</p>
-<p><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/dsc_0404.jpg"><img style="display: inline;" title="BMVC Conference Reception" alt="BMVC Conference Reception" src="http://stuartjames.info/Data/Sites/5/media/wlw/dsc_0404_thumb.jpg" height="425" width="640" /></a></p>
-<p>Conference Reception Inside Guildford Cathedral</p>
-<p> </p>
-<p><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/dsc_0505.jpg"><img style="display: inline;" title="BMVC T-Shirt" alt="BMVC T-Shirt" src="http://stuartjames.info/Data/Sites/5/media/wlw/dsc_0505_thumb.jpg" height="425" width="640" /></a></p>
-<p>BMVC Helper T-Shirt Back, Surrey last hosted in ‘93!</p>
-<p> </p>
-<p><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/dsc_0523.jpg"><img style="display: inline;" title="BMVC Our gracious hosts" alt="BMVC Our gracious hosts" src="http://stuartjames.info/Data/Sites/5/media/wlw/dsc_0523_thumb.jpg" height="480" width="618" /></a></p>
-<p>Our gracious hosts minus Krystian welcoming us to Brooklands Museum</p>
-<p> </p>
-<p><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/dsc_0541.jpg"><img style="display: inline;" title="BMVC Looking around the Brooklands" alt="BMVC Looking around the Brooklands" src="http://stuartjames.info/Data/Sites/5/media/wlw/dsc_0541_thumb.jpg" height="371" width="640" /></a></p>
-<p>Looking around the Brooklands</p>
-<p> </p>
-<p><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/dsc_0557.jpg"><img style="display: inline;" title="..." alt="..." src="http://stuartjames.info/Data/Sites/5/media/wlw/dsc_0557_thumb.jpg" height="425" width="640" /></a></p>
-<p>…</p>
-<p> </p>
-<p><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/dsc_0562.jpg"><img style="display: inline;" title="BMVC Brooklands Engine Room" alt="BMVC Brooklands Engine Room" src="http://stuartjames.info/Data/Sites/5/media/wlw/dsc_0562_thumb.jpg" height="389" width="640" /></a></p>
-<p>Engine room with moving parts!</p>
-<p> </p>
-<p><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/dsc_0576.jpg"><img style="display: inline;" title="BMVC Conference Banquet" alt="BMVC Conference Banquet" src="http://stuartjames.info/Data/Sites/5/media/wlw/dsc_0576_thumb.jpg" height="383" width="640" /></a></p>
-<p>Conference Banquet</p>
-<p><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/dsc_0598.jpg"><img style="display: inline;" title="BMVC Andrew Fitzgibbon" alt="BMVC Andrew Fitzgibbon" src="http://stuartjames.info/Data/Sites/5/media/wlw/dsc_0598_thumb.jpg" height="480" width="319" /></a>   <a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/dsc_0599.jpg"><img style="display: inline;" title="BMVC John Illingworth" alt="BMVC John Illingworth" src="http://stuartjames.info/Data/Sites/5/media/wlw/dsc_0599_thumb.jpg" height="480" width="319" /></a></p>
-<p>Andrew Fitzgibbon introducing John Illingworth as BMVA Distinguished Fellow</p>
-<p> </p>
-<p><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/dsc_0611.jpg"><img style="display: inline;" title="BMVC2013 Bristol" alt="BMVC2013 Bristol" src="http://stuartjames.info/Data/Sites/5/media/wlw/dsc_0611_thumb.jpg" height="322" width="640" /></a></p>
-<p>Finally get ready for next year, BMVC 2013 hosted by University of Bristol</p><br /><a href='http://stuartjames.info/Journal/bmvc-2012.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/bmvc-2012.aspx'>...</a>
-
-    <footer>
-       
-      <ul class="stats">
-        
-        <!--
-        <li><a href="#">General</a></li>
-        <li><a href="#" class="icon fa-heart">28</a></li>
-        <li><a href="#" class="icon fa-comment">128</a></li>
-        -->
-      </ul>
-    </footer>
-  </article>
-
-  <article class="post">
-    <header>
-      <div class="title">
-        <h2><a href="/2012/08/18/looking-at-optical-flow-in-real-scenarios.html">Looking at Optical Flow in real scenarios</a></h2>
-        <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
-      </div>
-      <div class="meta">
-        <time class="published" datetime="2012-08-18">August 18, 2012</time>
-        
-        <!--
-        <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
-        -->
-      </div>
-    </header>
-    
-    <p>In many scenarios knowing how an object moves between frames is important, for example if you are trying to separate moving objects from the background or to calculate the speed of a tennis ball. Generally within Computer Vision people default to the Lucas Kanade[1] Tracker or the Pyramid expansion, although this tracker is commonly used it is not generally considered to work particularly well in real world scenarios. To help understand a little better I have compared 3 different techniques over a selection of different video types varying in object and quality.</p> <p>We compare:</p> <ul> <li>Lucas-Kanade  <li>Brox[2]  <li>Sun[3]</li></ul> <p>To note in these experiments we use default settings provided by the implementations, with tweaking you will get better results. Also I am sure there are faster implementations than the matlab ones used. I also realise they are very hard test cases with low quality, lots of noise motion blur.</p> <h3>Vector Comparison</h3> <table style="color: #000000" border="0" cellspacing="0" cellpadding="0"> <tbody> <tr> <td valign="top">Frame 1</td> <td valign="top">Frame 2</td> <td valign="top">LucasKanade</td> <td valign="top">Brox</td> <td valign="top">Sun</td></tr> <tr> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/horse-a.png"><img style="display: inline" title="horse-a" alt="horse-a" src="http://stuartjames.info/Data/Sites/5/media/wlw/horse-a_thumb.png" width="150" height="84"></a></td> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/horse-b.png"><img style="display: inline" title="horse-b" alt="horse-b" src="http://stuartjames.info/Data/Sites/5/media/wlw/horse-b_thumb.png" width="150" height="84"></a></td> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/pyrlk_flow.jpg"><img style="display: inline" title="pyrlk_flow" alt="pyrlk_flow" src="http://stuartjames.info/Data/Sites/5/media/wlw/pyrlk_flow_thumb.jpg" width="150" height="84"></a></td> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/horse_brox_flow.jpg"><img style="display: inline" title="horse_brox_flow" alt="horse_brox_flow" src="http://stuartjames.info/Data/Sites/5/media/wlw/horse_brox_flow_thumb.jpg" width="150" height="84"></a></td> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/horse_sun_flow.jpg"><img style="display: inline" title="horse_sun_flow" alt="horse_sun_flow" src="http://stuartjames.info/Data/Sites/5/media/wlw/horse_sun_flow_thumb.jpg" width="150" height="84"></a></td></tr> <tr> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/dance-a.jpg"><img style="display: inline" title="dance-a" alt="dance-a" src="http://stuartjames.info/Data/Sites/5/media/wlw/dance-a_thumb.jpg" width="150" height="150"></a></td> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/dance-b.jpg"><img style="display: inline" title="dance-b" alt="dance-b" src="http://stuartjames.info/Data/Sites/5/media/wlw/dance-b_thumb.jpg" width="150" height="150"></a></td> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/dance_pyrlk_flow.jpg"><img style="display: inline" title="dance_pyrlk_flow" alt="dance_pyrlk_flow" src="http://stuartjames.info/Data/Sites/5/media/wlw/dance_pyrlk_flow_thumb.jpg" width="150" height="150"></a></td> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/dance_brox_flow.jpg"><img style="display: inline" title="dance_brox_flow" alt="dance_brox_flow" src="http://stuartjames.info/Data/Sites/5/media/wlw/dance_brox_flow_thumb.jpg" width="150" height="150"></a></td> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/dance_sun_flow.jpg"><img style="display: inline" title="dance_sun_flow" alt="dance_sun_flow" src="http://stuartjames.info/Data/Sites/5/media/wlw/dance_sun_flow_thumb.jpg" width="150" height="150"></a></td></tr> <tr> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/snow3-a.png"><img style="display: inline" title="snow3-a" alt="snow3-a" src="http://stuartjames.info/Data/Sites/5/media/wlw/snow3-a_thumb.png" width="150" height="120"></a></td> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/snow3-b.png"><img style="display: inline" title="snow3-b" alt="snow3-b" src="http://stuartjames.info/Data/Sites/5/media/wlw/snow3-b_thumb.png" width="150" height="120"></a></td> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/snowboard_pyrlk_flow.jpg"><img style="display: inline" title="snowboard_pyrlk_flow" alt="snowboard_pyrlk_flow" src="http://stuartjames.info/Data/Sites/5/media/wlw/snowboard_pyrlk_flow_thumb.jpg" width="150" height="119"></a></td> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/snowboard_brox_flow.jpg"><img style="display: inline" title="snowboard_brox_flow" alt="snowboard_brox_flow" src="http://stuartjames.info/Data/Sites/5/media/wlw/snowboard_brox_flow_thumb.jpg" width="150" height="120"></a></td> <td valign="top"><a href="http://stuartjames.info/Journal/Data/Sites/5/media/wlw/snowboard_sun_flow.jpg"><img style="display: inline" title="snowboard_sun_flow" alt="snowboard_sun_flow" src="http://stuartjames.info/Data/Sites/5/media/wlw/snowboard_sun_flow_thumb.jpg" width="150" height="120"></a></td></tr></tbody></table> <p>&nbsp;</p> <h3>Performance</h3> <table style="color: #000000" border="0" cellspacing="0" cellpadding="0" width="685"> <tbody> <tr> <td valign="top" width="192">&nbsp;</td> <td valign="top" width="181">Lucas-Kanade</td> <td valign="top" width="105">Brox</td> <td valign="top" width="236">Sun</td></tr> <tr> <td valign="top" width="192">Horse (1280x720)</td> <td valign="top" width="181">105s</td> <td valign="top" width="105">64s</td> <td valign="top" width="236">619s</td></tr> <tr> <td valign="top" width="192">Dance(400x400)</td> <td valign="top" width="181">26s</td> <td valign="top" width="105">15s</td> <td valign="top" width="236">134s</td></tr> <tr> <td valign="top" width="192">Snowboarder(720x576)</td> <td valign="top" width="181">30s</td> <td valign="top" width="105">28s</td> <td valign="top" width="236">294s</td></tr></tbody></table> <p>&nbsp;</p> <h3>Conclusion</h3> <p>Well as you can see they are inconclusive results, Sun’s approach I would say works better at too higher computational cost LK works well on the dance footage or at least in that specific example, less noisy frames of the dance footage I have found LK performed poorly on. Brox, seems generally not to cope very well in these cases. To conclude, optical flow is still a very very incomplete field, you have to test on your problem to find the best solution.</p> <h3>References</h3> <p>[1] Lucas, B., &amp; Kanade, T. (1981). An iterative image registration technique with an application to stereo vision. <i>Proceedings of the 7th international joint …</i> (Vol. 130, pp. 121–129). Retrieved from <a href="http://www.ri.cmu.edu/pub_files/pub3/lucas_bruce_d_1981_1/lucas_bruce_d_1981_1.ps.gz">http://www.ri.cmu.edu/pub_files/pub3/lucas_bruce_d_1981_1/lucas_bruce_d_1981_1.ps.gz</a></p> <p>[2] Brox, T., Bruhn, A., Papenberg, N., &amp; Weickert, J. (2004). High accuracy optical flow estimation based on a theory for warping. <i>Computer Vision-ECCV 2004</i>, <i>4</i>(May), 25–36. Retrieved from <a href="http://www.springerlink.com/index/87a4ckjqm92lp3j9.pdf">http://www.springerlink.com/index/87a4ckjqm92lp3j9.pdf</a></p> <p>[3] Sun, D., Roth, S., &amp; Black, M. J. (2010). Secrets of optical flow estimation and their principles. <i>2010 IEEE Computer Society Conference on Computer Vision and Pattern Recognition</i>, 2432–2439. doi:10.1109/CVPR.2010.5539939</p> <h3>Disclaimer</h3> <p>This evaluation was done by taking openly available code for full references see the download file, that contains readme references in the relevant subfolders. If you have developed your own implementation of one of these methods or an alternative approach it would be great to expand with your results.</p><br /><a href='http://stuartjames.info/Journal/looking-at-optical-flow-in-real-scenarios.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/looking-at-optical-flow-in-real-scenarios.aspx'>...</a>
-
-    <footer>
-       
-      <ul class="stats">
-        
-        <!--
-        <li><a href="#">General</a></li>
-        <li><a href="#" class="icon fa-heart">28</a></li>
-        <li><a href="#" class="icon fa-comment">128</a></li>
-        -->
-      </ul>
-    </footer>
-  </article>
-
-  <article class="post">
-    <header>
-      <div class="title">
-        <h2><a href="/2012/08/18/boost-dijkstra-shortest-path-example-utilising-backtracking-from-target.html">Boost Dijkstra Shortest Path Example utilising backtracking from target</a></h2>
-        <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
-      </div>
-      <div class="meta">
-        <time class="published" datetime="2012-08-18">August 18, 2012</time>
-        
-        <!--
-        <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
-        -->
-      </div>
-    </header>
-    
-    <p>Often API documentation can be difficult to follow and your memory might fail for algorithms you learnt in school, so a simple example often explains how to use a function. Well unless you are very familiar with the way Boost Graph library works then you may find the Dijkstra shortest path documentation confusing.</p> <p>So this is what you get from boost…</p> <div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9D7513F9-C04C-4721-824A-2B34F0212519:9b519333-47b4-4710-9e39-112e7a46e03b" class="wlWriterEditableSmartContent"><pre style=" width: 750px; height: 426px;background-color:White;overflow: auto;"><div><!--
-
-Code highlighting produced by Actipro CodeHighlighter (freeware)
-http://www.CodeHighlighter.com/
-
---><span style="color: #008080;"> 1</span> <span style="color: #000000;">typedef adjacency_list </span><span style="color: #000000;">&lt;</span><span style="color: #000000;"> listS, vecS, directedS,
-</span><span style="color: #008080;"> 2</span> <span style="color: #000000;">  no_property, property </span><span style="color: #000000;">&lt;</span><span style="color: #000000;"> edge_weight_t, </span><span style="color: #0000FF;">int</span><span style="color: #000000;"> </span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> </span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> graph_t;
-</span><span style="color: #008080;"> 3</span> <span style="color: #000000;">typedef graph_traits </span><span style="color: #000000;">&lt;</span><span style="color: #000000;"> graph_t </span><span style="color: #000000;">&gt;</span><span style="color: #000000;">::vertex_descriptor vertex_descriptor;
-</span><span style="color: #008080;"> 4</span> <span style="color: #000000;">typedef graph_traits </span><span style="color: #000000;">&lt;</span><span style="color: #000000;"> graph_t </span><span style="color: #000000;">&gt;</span><span style="color: #000000;">::edge_descriptor edge_descriptor;
-</span><span style="color: #008080;"> 5</span> <span style="color: #000000;">typedef std::pair</span><span style="color: #000000;">&lt;</span><span style="color: #0000FF;">int</span><span style="color: #000000;">, </span><span style="color: #0000FF;">int</span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> Edge;
-</span><span style="color: #008080;"> 6</span> <span style="color: #000000;">
-</span><span style="color: #008080;"> 7</span> <span style="color: #000000;"></span><span style="color: #0000FF;">const</span><span style="color: #000000;"> </span><span style="color: #0000FF;">int</span><span style="color: #000000;"> num_nodes </span><span style="color: #000000;">=</span><span style="color: #000000;"> </span><span style="color: #800080;">5</span><span style="color: #000000;">;
-</span><span style="color: #008080;"> 8</span> <span style="color: #000000;"></span><span style="color: #0000FF;">enum</span><span style="color: #000000;"> nodes { A, B, C, D, E };
-</span><span style="color: #008080;"> 9</span> <span style="color: #000000;"></span><span style="color: #0000FF;">char</span><span style="color: #000000;"> name[] </span><span style="color: #000000;">=</span><span style="color: #000000;"> </span><span style="color: #800000;">&quot;</span><span style="color: #800000;">ABCDE</span><span style="color: #800000;">&quot;</span><span style="color: #000000;">;
-</span><span style="color: #008080;">10</span> <span style="color: #000000;">Edge edge_array[] </span><span style="color: #000000;">=</span><span style="color: #000000;"> { Edge(A, C), Edge(B, B), Edge(B, D), Edge(B, E),
-</span><span style="color: #008080;">11</span> <span style="color: #000000;">  Edge(C, B), Edge(C, D), Edge(D, E), Edge(E, A), Edge(E, B)
-</span><span style="color: #008080;">12</span> <span style="color: #000000;">};
-</span><span style="color: #008080;">13</span> <span style="color: #000000;"></span><span style="color: #0000FF;">int</span><span style="color: #000000;"> weights[] </span><span style="color: #000000;">=</span><span style="color: #000000;"> { </span><span style="color: #800080;">1</span><span style="color: #000000;">, </span><span style="color: #800080;">2</span><span style="color: #000000;">, </span><span style="color: #800080;">1</span><span style="color: #000000;">, </span><span style="color: #800080;">2</span><span style="color: #000000;">, </span><span style="color: #800080;">7</span><span style="color: #000000;">, </span><span style="color: #800080;">3</span><span style="color: #000000;">, </span><span style="color: #800080;">1</span><span style="color: #000000;">, </span><span style="color: #800080;">1</span><span style="color: #000000;">, </span><span style="color: #800080;">1</span><span style="color: #000000;"> };
-</span><span style="color: #008080;">14</span> <span style="color: #000000;"></span><span style="color: #0000FF;">int</span><span style="color: #000000;"> num_arcs </span><span style="color: #000000;">=</span><span style="color: #000000;"> </span><span style="color: #0000FF;">sizeof</span><span style="color: #000000;">(edge_array) </span><span style="color: #000000;">/</span><span style="color: #000000;"> </span><span style="color: #0000FF;">sizeof</span><span style="color: #000000;">(Edge);
-</span><span style="color: #008080;">15</span> <span style="color: #000000;">
-</span><span style="color: #008080;">16</span> <span style="color: #000000;">graph_t g(edge_array, edge_array </span><span style="color: #000000;">+</span><span style="color: #000000;"> num_arcs, weights, num_nodes);
-</span><span style="color: #008080;">17</span> <span style="color: #000000;">property_map</span><span style="color: #000000;">&lt;</span><span style="color: #000000;">graph_t, edge_weight_t</span><span style="color: #000000;">&gt;</span><span style="color: #000000;">::type weightmap </span><span style="color: #000000;">=</span><span style="color: #000000;"> </span><span style="color: #0000FF;">get</span><span style="color: #000000;">(edge_weight, g);
-</span><span style="color: #008080;">18</span> <span style="color: #000000;">
-</span><span style="color: #008080;">19</span> <span style="color: #000000;">std::vector</span><span style="color: #000000;">&lt;</span><span style="color: #000000;">vertex_descriptor</span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> p(num_vertices(g));
-</span><span style="color: #008080;">20</span> <span style="color: #000000;">std::vector</span><span style="color: #000000;">&lt;</span><span style="color: #0000FF;">int</span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> d(num_vertices(g));
-</span><span style="color: #008080;">21</span> <span style="color: #000000;">vertex_descriptor s </span><span style="color: #000000;">=</span><span style="color: #000000;"> vertex(A, g);
-</span><span style="color: #008080;">22</span> <span style="color: #000000;">
-</span><span style="color: #008080;">23</span> <span style="color: #000000;">dijkstra_shortest_paths(g, s, predecessor_map(</span><span style="color: #000000;">&amp;</span><span style="color: #000000;">p[</span><span style="color: #800080;">0</span><span style="color: #000000;">]).distance_map(</span><span style="color: #000000;">&amp;</span><span style="color: #000000;">d[</span><span style="color: #800080;">0</span><span style="color: #000000;">]));</span></div></pre><!-- Code inserted with Steve Dunn's Windows Live Writer Code Formatter Plugin.  http://dunnhq.com --></div>
-<p align="right"><em>Taken from <a href="http://www.boost.org/doc/libs/1_49_0/libs/graph/example/dijkstra-example.cpp">http://www.boost.org/doc/libs/1_49_0/libs/graph/example/dijkstra-example.cpp</a></em></p>
-<p>From this example you are able to get the predecessor map and the distances travelled from a root node to all other nodes. But this doesn’t answer the question of how you get the shortest path from point A to point B. The way to do this is called backtracking and is very easy but not necessarily obvious when you don't know the data structures. </p>
-<div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9D7513F9-C04C-4721-824A-2B34F0212519:7a26d093-f40e-41d5-96b5-13939418994e" class="wlWriterEditableSmartContent"><pre style=" width: 750px; height: 169px;background-color:White;overflow: auto;"><div><!--
-
-Code highlighting produced by Actipro CodeHighlighter (freeware)
-http://www.CodeHighlighter.com/
-
---><span style="color: #008080;">1</span> <span style="color: #008000;">//</span><span style="color: #008000;"> Backtrack from end node, storing distances</span><span style="color: #008000;">
-</span><span style="color: #008080;">2</span> <span style="color: #008000;"></span><span style="color: #0000FF;">int</span><span style="color: #000000;"> target </span><span style="color: #000000;">=</span><span style="color: #000000;"> vertex(B, g);
-</span><span style="color: #008080;">3</span> <span style="color: #000000;">std::vector</span><span style="color: #000000;">&lt;</span><span style="color: #0000FF;">int</span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> nodes;
-</span><span style="color: #008080;">4</span> <span style="color: #000000;">std::vector</span><span style="color: #000000;">&lt;</span><span style="color: #0000FF;">float</span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> distance;
-</span><span style="color: #008080;">5</span> <span style="color: #000000;"></span><span style="color: #0000FF;">do</span><span style="color: #000000;">{
-</span><span style="color: #008080;">6</span> <span style="color: #000000;">    nodes.push_back(target);
-</span><span style="color: #008080;">7</span> <span style="color: #000000;">    distances.push_back(d[target]);
-</span><span style="color: #008080;">8</span> <span style="color: #000000;">    target </span><span style="color: #000000;">=</span><span style="color: #000000;"> p[target];
-</span><span style="color: #008080;">9</span> <span style="color: #000000;">}</span><span style="color: #0000FF;">while</span><span style="color: #000000;">(target </span><span style="color: #000000;">!=</span><span style="color: #000000;"> s);</span></div></pre><!-- Code inserted with Steve Dunn's Windows Live Writer Code Formatter Plugin.  http://dunnhq.com --></div>
-<p>The vector nodes then contains a list of nodes passed through, that can be reversed easily using std lib functions to find the route from A to B.</p><br /><a href='http://stuartjames.info/Journal/boost-dijkstra-shortest-path-example-utilising-backtracking-from-target.aspx'>Stuart James</a>&nbsp;&nbsp;<a href='http://stuartjames.info/Journal/boost-dijkstra-shortest-path-example-utilising-backtracking-from-target.aspx'>...</a>
-
-    <footer>
-       
-      <ul class="stats">
-        
-        <!--
-        <li><a href="#">General</a></li>
-        <li><a href="#" class="icon fa-heart">28</a></li>
-        <li><a href="#" class="icon fa-comment">128</a></li>
-        -->
-      </ul>
-    </footer>
-  </article>
-
 
   					<ul class="actions pagination">
   					  
@@ -394,78 +402,78 @@ http://www.CodeHighlighter.com/
     
       <article class="mini-post">
   	    <header>
+  		    <h3><a href="/2016/08/26/british-library-dataset-style-transfer.html">Transferring old book image style to real world photos</a></h3>
+		      <time class="published" datetime="2016-08-26">August 26, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/08/26/british-library-dataset-style-transfer.html" class="image"><img src="/images/blog/2016-08-26-style.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
+  		    <h3><a href="/2016/08/21/cheddar-gorge-relish-run.html">Cheddar Gorge Relish Run</a></h3>
+		      <time class="published" datetime="2016-08-21">August 21, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/08/21/cheddar-gorge-relish-run.html" class="image"><img src="/images/blog/2016-08-21-cheddar-route.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
+  		    <h3><a href="/2016/07/31/San-Francisco-Second-Half.html">San Francisco Second Half Marathon</a></h3>
+		      <time class="published" datetime="2016-07-31">July 31, 2016</time>
+						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
+			  </header>
+        
+          <a href="/2016/07/31/San-Francisco-Second-Half.html" class="image"><img src="/images/blog/2016-07-31-san-fran-run.jpg" alt="" /></a>
+        
+		  </article>
+									<!-- Mini Post -->
+									  <!--
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">Vitae sed condimentum</a></h3>
+												<time class="published" datetime="2015-10-20">October 20, 2015</time>
+												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
+										</article>
+									-->
+    
+      <article class="mini-post">
+  	    <header>
   		    <h3><a href="/2016/06/23/getting-back-to-books.html">Getting back to books</a></h3>
 		      <time class="published" datetime="2016-06-23">June 23, 2016</time>
 						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
 			  </header>
         
           <a href="/2016/06/23/getting-back-to-books.html" class="image"><img src="/images/blog/2016-06-23-book.jpg" alt="" /></a>
-        
-		  </article>
-									<!-- Mini Post -->
-									  <!--
-										<article class="mini-post">
-											<header>
-												<h3><a href="#">Vitae sed condimentum</a></h3>
-												<time class="published" datetime="2015-10-20">October 20, 2015</time>
-												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
-										</article>
-									-->
-    
-      <article class="mini-post">
-  	    <header>
-  		    <h3><a href="/2016/06/14/twenty-nine-going-on-thirty.html">29 going on 30</a></h3>
-		      <time class="published" datetime="2016-06-14">June 14, 2016</time>
-						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
-			  </header>
-        
-          <a href="/2016/06/14/twenty-nine-going-on-thirty.html" class="image"><img src="/images/blog/2016-06-14-birthday.jpg" alt="" /></a>
-        
-		  </article>
-									<!-- Mini Post -->
-									  <!--
-										<article class="mini-post">
-											<header>
-												<h3><a href="#">Vitae sed condimentum</a></h3>
-												<time class="published" datetime="2015-10-20">October 20, 2015</time>
-												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
-										</article>
-									-->
-    
-      <article class="mini-post">
-  	    <header>
-  		    <h3><a href="/2016/04/20/working-with-british-library-dataset.html">Working with the British Library Dataset</a></h3>
-		      <time class="published" datetime="2016-04-20">April 20, 2016</time>
-						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
-			  </header>
-        
-          <a href="/2016/04/20/working-with-british-library-dataset.html" class="image"><img src="/images/blog/2016-04-20-header.jpg" alt="" /></a>
-        
-		  </article>
-									<!-- Mini Post -->
-									  <!--
-										<article class="mini-post">
-											<header>
-												<h3><a href="#">Vitae sed condimentum</a></h3>
-												<time class="published" datetime="2015-10-20">October 20, 2015</time>
-												<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
-										</article>
-									-->
-    
-      <article class="mini-post">
-  	    <header>
-  		    <h3><a href="/2016/04/14/moving-to-jekyll.html">Moving to Jekyll</a></h3>
-		      <time class="published" datetime="2016-04-14">April 14, 2016</time>
-						<!--<a href="#" class="author"><img src="/images/avatar.jpg" alt="" /></a>-->
-			  </header>
-        
-          <a href="/2016/04/14/moving-to-jekyll.html" class="image"><img src="/images/blog/jekyll-logo.png" alt="" /></a>
         
 		  </article>
 									<!-- Mini Post -->
